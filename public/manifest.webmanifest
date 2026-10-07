@@ -1,0 +1,17 @@
+{
+  "name": "KI Kompass · Dein Weg zum KI-Manager",
+  "short_name": "KI Kompass",
+  "lang": "de",
+  "description": "Dein KI-Management Lernpfad: 12 Module, 48 Wochen und ein überprüfbares Portfolio.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8f4",
+  "theme_color": "#285c48",
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

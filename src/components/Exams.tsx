@@ -1,0 +1,75 @@
+import { useEffect, useRef, useState } from 'react';
+import { ArrowLeft, ArrowRight, Award, Check, CheckCircle2, ChevronRight, ClipboardCheck, Clock3, Flag, RotateCcw, ShieldCheck, Target, X } from 'lucide-react';
+import { useLearning } from '../context';
+import { phases } from '../data/catalog';
+import { shuffle } from '../lib/learning';
+import type { ExamAttempt, Question } from '../types';
+
+export function ExamsPage() {
+  const { progress, content, startExam } = useLearning();
+  const [week, setWeek] = useState(1);
+  const [phase, setPhase] = useState(1);
+  const wrongIds = [...new Set(progress.attempts.flatMap(a => a.wrongIds))].filter(id => content.weeks.some(w => w.questions.some(q => q.id === id)));
+  const passed = progress.attempts.filter(a => a.correct / a.total >= 0.8).length;
+  return <><div className="page-heading"><div className="eyebrow">WISSEN ZEIGEN. LÜCKEN FINDEN.</div><h1>Bereit für den nächsten Meilenstein?</h1><p className="page-description">Trainiere ohne Druck oder teste dich unter Prüfungsbedingungen.</p></div><div className="exam-summary"><div><ClipboardCheck size={21} /><strong>{progress.attempts.length}</strong><span>abgeschlossene Tests</span></div><div><CheckCircle2 size={21} /><strong>{passed}</strong><span>mit mindestens 80 %</span></div><div><Target size={21} /><strong>{wrongIds.length}</strong><span>Fragen zum Vertiefen</span></div></div><div className="exam-grid"><article className="card exam-card"><span className="phase-icon sage"><BookIcon /></span><span className="badge badge-sage">OHNE ZEITDRUCK</span><h2>Modultest</h2><p>Fünf Fragen zu einem Thema. Mit Erklärung nach jeder Antwort und beliebig vielen Versuchen.</p><label className="field"><span>Modul auswählen</span><select value={week} onChange={e => setWeek(Number(e.target.value))}>{content.weeks.map(w => <option key={w.id} value={w.id}>{w.id} · {w.title}</option>)}</select></label><button className="btn btn-secondary" onClick={() => startExam(`week:${week}`)}>Wissen testen <ArrowRight size={17} /></button></article><article className="card exam-card"><span className="phase-icon blue"><ShieldCheck size={24} /></span><span className="badge badge-blue">KONZEPTE VERBINDEN</span><h2>Kompetenzcheck</h2><p>Setze die Themen eines Kompetenzfelds miteinander in Beziehung. Die Auswertung folgt am Ende.</p><label className="field"><span>Kompetenzfeld auswählen</span><select value={phase} onChange={e => setPhase(Number(e.target.value))}>{phases.map(p => <option key={p.id} value={p.id}>{p.id} · {p.short}</option>)}</select></label><button className="btn btn-secondary" onClick={() => startExam(`phase:${phase}`)}>Kompetenz prüfen <ArrowRight size={17} /></button></article><article className="card exam-card final-exam-card"><span className="phase-icon lilac"><Award size={24} /></span><span className="badge badge-lilac">DEIN PERSÖNLICHER ABSCHLUSS</span><h2>KI-Manager Wissensprüfung</h2><p>36 gemischte Fragen aus allen 12 Modulen. 45 Minuten, mindestens 80 % als persönliches Lernziel.</p><div className="exam-facts"><span><ClipboardCheck size={16} />36 Fragen</span><span><Clock3 size={16} />45 Minuten</span></div><button className="btn btn-primary" onClick={() => startExam('final')}>Prüfung starten <ArrowUpIcon /></button></article><article className="card exam-card"><span className="phase-icon peach"><RotateCcw size={24} /></span><span className="badge badge-peach">GEZIELT WEITERLERNEN</span><h2>Aus Fehlern lernen</h2><p>Wiederhole bis zu 15 bisher falsch beantwortete Fragen. Jede Frage enthält eine verständliche Erklärung.</p><span className="muted">{wrongIds.length ? `${wrongIds.length} Fragen aus deinen bisherigen Tests` : 'Nach deinem ersten Test findest du hier deine Lernlücken.'}</span><button className="btn btn-secondary" disabled={!wrongIds.length} onClick={() => startExam('weak')}>Lernlücken bearbeiten <ArrowRight size={17} /></button></article></div><div className="callout exam-notice"><Flag size={20} /><div><strong>Ein Meilenstein auf deinem Lernweg.</strong><p>Diese Prüfungen dienen der Selbstkontrolle. Sie verleihen kein anerkanntes Berufs- oder Anbieterzertifikat. Praktische Fähigkeiten trainierst du zusätzlich in der Praxiswerkstatt; externe Zertifikatsrouten findest du in der Bibliothek.</p></div></div><section className="exam-history"><div className="section-heading"><h2>Deine bisherigen Versuche</h2><span className="muted">Lernen ist ein Prozess.</span></div>{progress.attempts.length ? <div className="card history-list">{[...progress.attempts].reverse().map(a => <div className="history-item" key={a.id}><span className={`history-icon ${a.correct / a.total >= 0.8 ? 'passed' : ''}`}><ClipboardCheck size={19} /></span><div><strong>{a.label}</strong><span>{new Date(a.date).toLocaleDateString('de-DE')} · {a.correct} von {a.total} richtig</span></div><span className={`badge ${a.correct / a.total >= 0.8 ? 'badge-sage' : 'badge-peach'}`}>{Math.round(a.correct / a.total * 100)} %</span><button className="icon-button" aria-label={`${a.label} erneut starten`} onClick={() => startExam(a.scope)}><RotateCcw size={17} /></button></div>)}</div> : <div className="card empty-state compact"><ClipboardCheck size={29} /><h3>Dein erster Test wartet auf dich.</h3><p>Starte mit einem Modultest. Dein Ergebnis erscheint anschließend hier.</p></div>}</section></>;
+}
+function BookIcon() { return <ClipboardCheck size={24} />; }
+function ArrowUpIcon() { return <ArrowRight size={17} />; }
+
+export function ExamRunner({ scope, close }: { scope: string; close: () => void }) {
+  const { content, progress, updateProgress, openLesson } = useLearning();
+  const allQuestions = content.weeks.flatMap(w => w.questions);
+  const weekId = Number(scope.split(':')[1]);
+  const isFinal = scope === 'final';
+  const training = scope.startsWith('week:') || scope === 'weak';
+  const started = useRef(Date.now());
+  const [questions] = useState<Question[]>(() => {
+    if (scope.startsWith('week:')) return shuffle(content.weeks.find(w => w.id === weekId)?.questions || []);
+    if (scope.startsWith('month:')) {
+      const ids = new Set((content.library?.monthly_plan.find(m => m.month === weekId)?.module_ids || []).map(id => Number(id.slice(1))));
+      return shuffle(content.weeks.filter(w => ids.has(w.id)).flatMap(w => w.questions));
+    }
+    if (scope.startsWith('phase:')) return shuffle(content.weeks.filter(w => w.phase === weekId).flatMap(w => w.questions));
+    if (scope === 'weak') { const ids = new Set(progress.attempts.flatMap(a => a.wrongIds)); return shuffle(allQuestions.filter(q => ids.has(q.id))).slice(0, 15); }
+    // Three questions per module keep the final balanced across the entire curriculum.
+    return shuffle(content.weeks.flatMap(w => shuffle(w.questions).slice(0, 3)));
+  });
+  const [index, setIndex] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [revealed, setRevealed] = useState<Record<string, boolean>>({});
+  const [remaining, setRemaining] = useState(45 * 60);
+  const [result, setResult] = useState<ExamAttempt | null>(null);
+  const [confirmExit, setConfirmExit] = useState(false);
+  const completedRef = useRef(false);
+  const answerRef = useRef(answers); answerRef.current = answers;
+  const question = questions[index];
+  const label = isFinal ? 'KI-Manager Wissensprüfung' : scope === 'weak' ? 'Gezielte Wiederholung' : scope.startsWith('month:') ? `Monat ${weekId} · ${content.library?.monthly_plan.find(m => m.month === weekId)?.focus || 'Monatscheck'}` : scope.startsWith('phase:') ? `Kompetenzfeld ${weekId} · ${phases.find(p => p.id === weekId)?.short}` : `Modul ${weekId} · ${content.weeks.find(w => w.id === weekId)?.title}`;
+  const hasAnswer = question && answers[question.id] !== undefined;
+  const answered = Object.keys(answers).length;
+  useEffect(() => {
+    const onEscape = (event: KeyboardEvent) => { if (event.key === 'Escape') { if (result) close(); else setConfirmExit(true); } };
+    window.addEventListener('keydown', onEscape);
+    return () => window.removeEventListener('keydown', onEscape);
+  }, [result, close]);
+  function finish() {
+    if (completedRef.current || !questions.length) return;
+    completedRef.current = true;
+    const current = answerRef.current;
+    const wrongIds = questions.filter(q => current[q.id] !== q.correct).map(q => q.id);
+    const minutes = Math.max(0.1, Math.round((Date.now() - started.current) / 6000) / 10);
+    const attempt: ExamAttempt = { id: crypto.randomUUID(), date: new Date().toISOString(), label, scope, correct: questions.length - wrongIds.length, total: questions.length, minutes, wrongIds };
+    updateProgress(p => ({ ...p, attempts: [...p.attempts, attempt] }));
+    setResult(attempt);
+  }
+  useEffect(() => {
+    if (!isFinal || result) return;
+    const timer = window.setInterval(() => { const left = Math.max(0, 45 * 60 - Math.floor((Date.now() - started.current) / 1000)); setRemaining(left); if (left === 0) finish(); }, 1000);
+    return () => window.clearInterval(timer);
+  // The attempt owns its immutable question set; current answers are read through a ref.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFinal, result]);
+  const correct = result ? result.correct : 0;
+  const wrong = result ? questions.filter(q => result.wrongIds.includes(q.id)) : [];
+  return <div className="reader-overlay exam-overlay" role="dialog" aria-modal="true" aria-labelledby="exam-title"><header className="reader-header"><button className="btn btn-ghost" onClick={() => result ? close() : setConfirmExit(true)}><ArrowLeft size={17} />Prüfungstraining</button><span className="meta"><Clock3 size={16} />{isFinal && !result ? `${Math.floor(remaining / 60)}:${String(remaining % 60).padStart(2, '0')} verbleibend` : training ? 'Ohne Zeitdruck' : 'Auswertung am Ende'}</span><button className="icon-button" aria-label="Prüfung schließen" onClick={() => result ? close() : setConfirmExit(true)}><X size={22} /></button></header><main className="exam-content">{confirmExit && <div className="callout callout-warning"><strong>Den laufenden Versuch beenden?</strong><p>Ein abgebrochener Versuch wird nicht als Prüfungsergebnis gespeichert.</p><div className="button-row"><button className="btn btn-secondary" onClick={() => setConfirmExit(false)}>Weiterlernen</button><button className="btn btn-danger" onClick={close}>Versuch abbrechen</button></div></div>}{!questions.length ? <div className="empty-state"><CheckCircle2 size={40} /><h1 id="exam-title">Gerade keine Fragen verfügbar.</h1><button className="btn btn-primary" onClick={close}>Zurück</button></div> : result ? <><div className="exam-result"><span className={`success-icon ${correct / questions.length >= 0.8 ? '' : 'peach'}`}>{correct / questions.length >= 0.8 ? <Award size={39} /> : <LightbulbIcon />}</span><span className="eyebrow">DEINE AUSWERTUNG</span><h1 id="exam-title">{correct / questions.length >= 0.8 ? 'Ein richtig guter Schritt.' : 'Jetzt weißt du, wo du ansetzen kannst.'}</h1><p>{label}</p><div className="score-number">{Math.round(correct / questions.length * 100)}<span>%</span></div><p>{correct} von {questions.length} Fragen richtig · {result.minutes} Minuten</p><span className={`badge ${correct / questions.length >= 0.8 ? 'badge-sage' : 'badge-peach'}`}>{correct / questions.length >= 0.8 ? 'Persönliches Lernziel von 80 % erreicht' : 'Dein nächstes Lernziel: mindestens 80 %'}</span><div className="button-row"><button className="btn btn-primary" onClick={close}>Zum Prüfungstraining <ArrowRight size={17} /></button></div></div>{wrong.length > 0 && <section className="result-details"><h2>Hier kannst du weiterlernen.</h2><p className="muted">Nicht beantwortete Fragen zählen als falsch. Lies die Erklärung und wiederhole das passende Thema.</p>{wrong.map(q => { const week = content.weeks.find(w => w.questions.some(x => x.id === q.id))!; return <article className="card" key={q.id}><span className="eyebrow">MODUL {week.id}</span><h3>{q.prompt}</h3><p className="answer-yours">Deine Antwort: {answers[q.id] === undefined ? 'Nicht beantwortet' : q.options[answers[q.id]]}</p><p className="answer-right"><Check size={17} />{q.options[q.correct]}</p><p>{q.explanation}</p><button className="text-link" onClick={() => { close(); openLesson(week.lessons[0].id); }}>Thema wiederholen <ChevronRight size={15} /></button></article>; })}</section>}<p className="fine-print exam-result-note">Interner Lernnachweis zur Selbstkontrolle. Kein offizielles Zertifikat.</p></> : <><div className="eyebrow">{training ? 'WISSENSTRAINING' : 'WISSENSPRÜFUNG'} · {label}</div><div className="exam-question-heading"><h1 id="exam-title">Frage {index + 1} <span>von {questions.length}</span></h1><span className="badge badge-sage">{answered} beantwortet</span></div><div className="progress-track"><span style={{ width: `${answered / questions.length * 100}%` }} /></div><section className="card exam-question"><h2>{question.prompt}</h2><div className="question-options">{question.options.map((option, i) => <button key={i} disabled={training && revealed[question.id]} className={`question-option ${answers[question.id] === i ? 'selected' : ''} ${training && revealed[question.id] && i === question.correct ? 'correct' : ''} ${training && revealed[question.id] && answers[question.id] === i && i !== question.correct ? 'incorrect' : ''}`} onClick={() => setAnswers(a => ({ ...a, [question.id]: i }))}><span>{String.fromCharCode(65 + i)}</span>{option}{training && revealed[question.id] && i === question.correct && <Check size={19} />}</button>)}</div>{training && revealed[question.id] && <div className={`answer-feedback ${answers[question.id] === question.correct ? 'positive' : 'negative'}`}><strong>{answers[question.id] === question.correct ? 'Richtig.' : 'Eine wichtige Lernstelle.'}</strong><p>{question.explanation}</p></div>}</section><div className="exam-question-nav">{questions.map((q, i) => <button className={`${i === index ? 'current' : ''} ${answers[q.id] !== undefined ? 'answered' : ''}`} key={q.id} aria-label={`Zu Frage ${i + 1}${answers[q.id] !== undefined ? ', beantwortet' : ''}`} onClick={() => setIndex(i)}>{i + 1}</button>)}</div><footer className="exam-footer"><button className="btn btn-secondary" disabled={index === 0} onClick={() => setIndex(i => i - 1)}><ArrowLeft size={16} />Zurück</button>{training && !revealed[question.id] ? <button className="btn btn-primary" disabled={!hasAnswer} onClick={() => setRevealed(r => ({ ...r, [question.id]: true }))}>Antwort prüfen <Check size={17} /></button> : index < questions.length - 1 ? <button className="btn btn-primary" onClick={() => setIndex(i => i + 1)}>Nächste Frage <ArrowRight size={17} /></button> : <button className="btn btn-primary" onClick={finish}>Test auswerten <CheckCircle2 size={17} /></button>}</footer>{!training && <button className="text-link early-finish" onClick={finish}>Jetzt abgeben ({answered} / {questions.length} beantwortet)</button>}</>}</main></div>;
+}
+function LightbulbIcon() { return <Target size={39} />; }

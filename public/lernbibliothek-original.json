@@ -1,0 +1,3417 @@
+{
+  "schema_version": "1.0",
+  "document": {
+    "title": "Lernbibliothek für KI Management",
+    "subtitle": "Vom Grundlagenwissen zum überprüfbaren Projektassistenten",
+    "language": "de-DE",
+    "created_on": "2026-10-07",
+    "source_context": "KI_Manager_Exzellenzbericht_2026_strukturiert(1).json",
+    "target_profile": "AI Transformation und Product Manager für dokumentenintensive technische Geschäftsprozesse"
+  },
+  "methodology": {
+    "selection": "Vorrang für Hochschulen, öffentliche Lernplattformen, Originaldokumentationen, Behörden und Fachrahmenwerke. Anbieterquellen werden als solche gekennzeichnet.",
+    "priority": {
+      "Kern": "Empfohlene Hauptquelle oder Ersatzquelle für das Lernziel; keine gesetzliche Pflichtlektüre",
+      "Vertiefung": "Gezielte Ergänzung bei einem konkreten Kompetenzbedarf",
+      "Optional": "Technische Spezialisierung, historisches Material oder Zertifikatsorientierung"
+    },
+    "verification": "Öffentliche Angebotsseiten, offizielle Suchtreffer und Dokumentbeschreibungen geprüft. Kursinhalte hinter Registrierung, PRO oder Paywall wurden nicht vollständig absolviert. Prüfart und Einschränkungen stehen bei jeder Quelle.",
+    "time_budget": "Alle selection_budget_hours sind eigene Schätzungen für die angegebene Auswahl. provider_duration ist separat und nur befüllt, wenn eine Anbieterangabe erfasst wurde.",
+    "costs": "Es wurden keine Kurse, Normtexte, Prüfungen oder Abonnements gekauft. Ein kostenloser Lerntext kann kostenpflichtige Ausführungsdienste voraussetzen.",
+    "legal_sources": "Rechtsquellen, behördliche Orientierung, freiwillige Rahmenwerke und eigene didaktische Empfehlungen sind getrennte Kategorien. ISO-Volltexte sind nicht Bestandteil der Auswertung.",
+    "update_cycle": "Recht und Produktdokumentation vor betrieblicher Nutzung erneut prüfen; Quellenkatalog vierteljährlich aktualisieren; Marktberichte jährlich ergänzen."
+  },
+  "study_assumptions": {
+    "weekly_hours": 6,
+    "planned_weeks": 48,
+    "planned_hours": 288,
+    "annual_buffer_weeks": 4,
+    "buffer_hours": 24,
+    "monthly_theory_hours": 6,
+    "monthly_practice_hours": 14,
+    "monthly_review_hours": 4,
+    "experience": "Einstiegsstand nicht vorausgesetzt; vorhandenes Wissen durch den Selbstcheck berücksichtigen.",
+    "scope": "Quellen sind eine Auswahlbibliothek. Der Jahresplan sieht gezielte Abschnitte und eigene Praxis vor, nicht die vollständige Absolvierung sämtlicher Kurse."
+  },
+  "modules": [
+    {
+      "id": "M01",
+      "title": "KI und Sprachmodelle verstehen",
+      "goal": "Du erklärst, welche Probleme KI bearbeiten kann und welche Grenzen eine Projektanwendung hat.",
+      "concepts": [
+        "KI ist der Oberbegriff. Maschinelles Lernen nutzt Beispiele, um Muster zu lernen. Ein Sprachmodell erzeugt Ausgaben aus erlernten Zusammenhängen und dem gegebenen Kontext. Ein regelbasiertes Verfahren führt dagegen ausdrücklich festgelegte Bedingungen aus. Für einen Arbeitsprozess können diese Verfahren kombiniert werden.",
+        "Unterscheide Modellwissen, bereitgestellte Projektdaten und aktuelle externe Quellen. Eine flüssige Formulierung zeigt weder Quellenkenntnis noch fachliche Richtigkeit. Das Modell kann eine plausible Artikelnummer erzeugen, ohne dass diese in deinem freigegebenen Artikelstamm existiert."
+      ],
+      "lessons": [
+        [
+          "Begriffe und Aufgaben",
+          "KI, ML, GenAI, Klassifikation, Extraktion und regelbasierte Prüfung unterscheiden."
+        ],
+        [
+          "Wie ein LLM arbeitet",
+          "Tokens, Kontext, Inferenz und variable Antworten konzeptuell erklären."
+        ],
+        [
+          "Grenzen und sinnvolle Arbeitsteilung",
+          "Festlegen, welche Aufgabe eine Datenbank, eine Regel oder ein Modell zuverlässig bearbeiten soll."
+        ]
+      ],
+      "practice_task": "Erstelle eine Aufgabenlandkarte für deinen Vertriebs- und Projektalltag.",
+      "practice_steps": [
+        "Sammle zehn wiederkehrende Tätigkeiten und ihren heutigen Zeitbedarf als erste Schätzung.",
+        "Ordne jede Tätigkeit der Suche, Extraktion, Formulierung, Berechnung oder Entscheidung zu.",
+        "Prüfe, ob eine feste Regel oder strukturierte Abfrage bereits genügt.",
+        "Beschreibe für drei KI-Kandidaten den benötigten Input, Output und die mögliche Fehlerfolge."
+      ],
+      "portfolio_artifact": "Aufgabenlandkarte mit zehn Tätigkeiten und drei begründeten Kandidaten",
+      "completion_criteria": [
+        "Du kannst KI, ML und GenAI mit eigenen Beispielen erklären.",
+        "Du benennst für jeden Kandidaten die erforderlichen Quellen.",
+        "Mindestens ein Kandidat wird wegen fehlendem Nutzen oder zu hohem Prüfaufwand zurückgestellt."
+      ],
+      "self_check": [
+        {
+          "question": "Ist eine gut formulierte Antwort bereits ein Qualitätsnachweis?",
+          "answer": "Nein. Qualität muss an der Aufgabe, den Quellen und den fachlichen Kriterien geprüft werden."
+        },
+        {
+          "question": "Wofür ist eine exakte Datenbankabfrage oft geeigneter?",
+          "answer": "Für eindeutige Artikelnummern, freigegebene Stammdaten und nachvollziehbare strukturierte Abfragen."
+        },
+        {
+          "question": "Welche Information fehlt einer reinen Modellantwort?",
+          "answer": "Der Nachweis, dass sie den aktuellen und für dieses Projekt gültigen Dokumentstand verwendet."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q01",
+        "Q03"
+      ],
+      "recommended_deep_sources": [
+        "Q04",
+        "Q06",
+        "Q07"
+      ],
+      "source_ids": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q05",
+        "Q06",
+        "Q07"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    },
+    {
+      "id": "M02",
+      "title": "Prompts und Projektkontext gestalten",
+      "goal": "Du formulierst reproduzierbare Arbeitsanweisungen und überprüfbare Ausgaben.",
+      "concepts": [
+        "Ein belastbarer Prompt beschreibt Zweck, Aufgabe, bereitgestellte Informationen, Ausgabeformat und den Umgang mit fehlenden oder widersprüchlichen Angaben. Beispiele helfen, wenn sie typische Grenzfälle zeigen. Der Test eines Prompts benötigt mehrere konstante Aufgaben statt nur einer gelungenen Antwort.",
+        "Context Engineering entscheidet, welche Informationen die Anwendung tatsächlich bereitstellt. Dokumentversion, Projektkennung und Quellenstatus gehören dazu. Mehr Text kann zusätzliche relevante Informationen liefern, aber auch Widersprüche und irrelevante Inhalte einführen. Strukturierte Ausgaben helfen bei der Verarbeitung; sie beweisen keine fachliche Richtigkeit."
+      ],
+      "lessons": [
+        [
+          "Aufgabenbeschreibung",
+          "Eine eindeutige Anweisung mit Inputs, Ergebnis und Einschränkungen schreiben."
+        ],
+        [
+          "Kontextauswahl",
+          "Relevante Dokumente, Versionen und Entscheidungen auswählen und gewichten."
+        ],
+        [
+          "Strukturierte Ergebnisse",
+          "Datentypen, fehlende Werte, Statusfelder und Quellenbezüge festlegen."
+        ]
+      ],
+      "practice_task": "Entwirf einen Prompt für die Extraktion und Prüfung von LV-Positionen.",
+      "practice_steps": [
+        "Formuliere die Aufgabe ohne eine bestimmte Modellmarke vorauszusetzen.",
+        "Lege Felder für Position, Menge, Einheit, Artikel, Dokument und Seitenstelle fest.",
+        "Erlaube unbekannte Angaben ausdrücklich und definiere, wie Widersprüche auszugeben sind.",
+        "Vergleiche drei Versionen an zehn gleichbleibenden Testpositionen."
+      ],
+      "portfolio_artifact": "Promptvorlage und Ausgabeformat mit dokumentiertem Variantenvergleich",
+      "completion_criteria": [
+        "Eine fehlende Menge wird nicht ergänzt oder geraten.",
+        "Felder bleiben zwischen den Testfällen konsistent.",
+        "Eine widersprüchliche Quelle führt zu einem sichtbaren Prüfpunkt."
+      ],
+      "self_check": [
+        {
+          "question": "Ist gültiges JSON automatisch eine richtige Extraktion?",
+          "answer": "Nein. Das Format kann stimmen, obwohl Menge, Einheit oder Quelle falsch sind."
+        },
+        {
+          "question": "Wie vergleichst du zwei Prompts?",
+          "answer": "Mit den gleichen Inputs, fachlichen Kriterien und dokumentierten Einstellungen."
+        },
+        {
+          "question": "Was gehört zur Kontextverwaltung?",
+          "answer": "Unter anderem Dokumentauswahl, Version, Projektbezug, Berechtigung und der Umgang mit alten Entscheidungen."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q10",
+        "Q11",
+        "Q12"
+      ],
+      "recommended_deep_sources": [
+        "Q08",
+        "Q09"
+      ],
+      "source_ids": [
+        "Q08",
+        "Q09",
+        "Q10",
+        "Q11",
+        "Q12"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    },
+    {
+      "id": "M03",
+      "title": "Daten und Schnittstellen beherrschen",
+      "goal": "Du liest strukturierte Daten, verstehst APIs und führst einfache Prüfregeln aus.",
+      "concepts": [
+        "JSON organisiert benannte Felder und verschachtelte Daten. CSV bildet Tabellen ab. SQL fragt relationale Daten ab. Python eignet sich für kleine Prüfungen und Aufbereitungsschritte. Artikelnummern sind Kennungen und müssen häufig als Text behandelt werden, damit führende Nullen oder Bindestriche erhalten bleiben.",
+        "Eine API transportiert Daten zwischen Systemen. Für einen belastbaren Workflow brauchst du definierte Eingaben, Fehlerfälle und eindeutige Kennungen. Ein JOIN über ähnliche Artikelbezeichnungen kann falsche Zuordnungen erzeugen. Eine Berechnung benötigt außerdem eine geklärte Einheit und Bedeutung des Felds."
+      ],
+      "lessons": [
+        [
+          "Strukturierte Formate",
+          "JSON, CSV, Kennungen, Datentypen und Validierung verstehen."
+        ],
+        [
+          "Abfragen und Zuordnung",
+          "Eindeutige Schlüssel, Joins, Leerwerte und Duplikate prüfen."
+        ],
+        [
+          "HTTP und Fehlerbehandlung",
+          "Request, Response, Authentifizierung und Statuscodes einordnen."
+        ]
+      ],
+      "practice_task": "Erstelle einen kleinen Prüfer für anonymisierte Artikel- und Angebotsdaten.",
+      "practice_steps": [
+        "Lege zehn fiktive Positionen mit Menge, Einheit und Artikelkennung an.",
+        "Baue je einen Fall mit Leerwert, doppelter Kennung und unbekannter Artikelnummer ein.",
+        "Prüfe diese Fälle mit festen Regeln und speichere das Ergebnis als JSON.",
+        "Beschreibe, wie die Daten über eine API übertragen würden und welche Fehler sichtbar bleiben müssen."
+      ],
+      "portfolio_artifact": "Datenmodell, Beispiel-JSON und nachvollziehbare Regelprüfung",
+      "completion_criteria": [
+        "Kennungen bleiben unverändert erhalten.",
+        "Leerwert und echte Null werden unterschieden.",
+        "Doppelte Schlüssel und unbekannte Artikel führen zu klaren Meldungen."
+      ],
+      "self_check": [
+        {
+          "question": "Warum sollte eine Artikelnummer häufig Text sein?",
+          "answer": "Weil sie eine Kennung ist und führende Nullen oder Sonderzeichen enthalten kann."
+        },
+        {
+          "question": "Was kann bei einem Join über eine Bezeichnung schiefgehen?",
+          "answer": "Mehrdeutige oder abweichende Texte können falsche Zuordnungen und doppelte Ergebnisse erzeugen."
+        },
+        {
+          "question": "Ist eine fehlende Menge gleich null?",
+          "answer": "Nein. Ein Leerwert bedeutet fehlende Information; null ist eine konkrete Mengenangabe."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q14",
+        "Q15",
+        "Q17",
+        "Q18"
+      ],
+      "recommended_deep_sources": [
+        "Q13",
+        "Q16"
+      ],
+      "source_ids": [
+        "Q13",
+        "Q14",
+        "Q15",
+        "Q16",
+        "Q17",
+        "Q18"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    },
+    {
+      "id": "M04",
+      "title": "Eine verlässliche Dokumentenwissensbasis bauen",
+      "goal": "Du planst RAG mit Dokumentqualität, Quellenstellen und Projektberechtigung.",
+      "concepts": [
+        "Ein RAG-System sucht relevante Informationen und stellt sie einem Modell zur Antworterzeugung bereit. Der Ablauf umfasst Dokumentauswahl, Aufbereitung, Indexierung, Suche, Kontextbildung und Antwort. Fehler in der Suche können später nicht zuverlässig durch eine bessere Formulierung behoben werden.",
+        "Technische Dokumente benötigen besondere Aufmerksamkeit für Tabellen, Fußnoten, Artikelnummern, Einheiten und Versionsstände. Semantische Suche ist hilfreich für Bedeutungsähnlichkeit; exakte Kennungen und Filter können zusätzliche Suchverfahren erfordern. Eine Quellenangabe muss auf die tatsächlich passende Stelle und gültige Version verweisen."
+      ],
+      "lessons": [
+        [
+          "Dokumentaufbereitung",
+          "Text, OCR, Tabellen und Seitenbezug gegen das Original prüfen."
+        ],
+        [
+          "Suche und Chunking",
+          "Zusammengehörige Abschnitte, Metadaten, exakte Suche und Filter planen."
+        ],
+        [
+          "Projektkontext und Belege",
+          "Berechtigung, Version, Quellenstatus und Widersprüche berücksichtigen."
+        ]
+      ],
+      "practice_task": "Entwirf eine kleine Wissensbasis aus zwölf fiktiven Projektdokumenten.",
+      "practice_steps": [
+        "Verteile die Unterlagen auf zwei Projekte und mehrere Dokumentversionen.",
+        "Definiere Metadaten für Projekt, Dokumenttyp, Datum, Version, Freigabe und Zugriffsgruppe.",
+        "Formuliere zwanzig Fragen mit bekannten Quellenstellen und bewusst unbeantwortbaren Fällen.",
+        "Prüfe separat, ob die richtige Stelle gefunden und ob sie korrekt in der Antwort verwendet wird."
+      ],
+      "portfolio_artifact": "Dokumentenregister, Architekturübersicht und erster RAG-Testbericht",
+      "completion_criteria": [
+        "Jede belegte Antwort nennt Dokument, Version und Stelle.",
+        "Eine ältere Quelle wird nicht stillschweigend als aktuelle Vorgabe ausgegeben.",
+        "Projektfremde oder gesperrte Dokumente stehen dem jeweiligen Nutzer nicht als Kontext zur Verfügung."
+      ],
+      "self_check": [
+        {
+          "question": "Verhindert RAG jede erfundene Antwort?",
+          "answer": "Nein. Retrieval, Kontextbildung und Antworterzeugung können weiterhin Fehler erzeugen."
+        },
+        {
+          "question": "Welche zwei Schritte prüfst du getrennt?",
+          "answer": "Ob die richtigen Informationen gefunden wurden und ob die Antwort diese Informationen korrekt und vollständig verwendet."
+        },
+        {
+          "question": "Warum braucht der Index Metadaten?",
+          "answer": "Damit Projekt, Version, Dokumenttyp und Berechtigung die Suche und Verwendung steuern können."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q24",
+        "Q48"
+      ],
+      "recommended_deep_sources": [
+        "Q19",
+        "Q20",
+        "Q21",
+        "Q23"
+      ],
+      "source_ids": [
+        "Q19",
+        "Q20",
+        "Q21",
+        "Q22",
+        "Q23",
+        "Q24",
+        "Q25"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    },
+    {
+      "id": "M05",
+      "title": "Qualität messen und Fehler erklären",
+      "goal": "Du baust ein Testset, differenzierte Metriken und einen nachvollziehbaren Reviewprozess.",
+      "concepts": [
+        "Evaluation beginnt mit der fachlichen Aufgabe. Für die Extraktion sind korrekte Felder und Werte wichtig; für einen Angebotsvergleich erkannte und übersehene Abweichungen; für einen Wissensassistenten Suchtreffer, Quellenpassung und Antwortvollständigkeit. Eine gemeinsame Gesamtnote kann kritische Fehler verdecken.",
+        "Ein Golden Set enthält fachlich geprüfte Erwartungen und Quellen. Es benötigt Normalfälle, Grenzfälle, Widersprüche und fehlende Informationen. Entwicklung und spätere Kontrolle sollten getrennte Fälle verwenden. Automatische Bewertungen können unterstützen, müssen aber an menschlichen Bewertungen kalibriert werden."
+      ],
+      "lessons": [
+        [
+          "Testdaten und Erwartungen",
+          "Aufgabenkategorien, geprüfte Quellen und geeignete Testaufteilung festlegen."
+        ],
+        [
+          "Metriken und Schweregrad",
+          "Precision, Recall, Quellenkorrektheit, Auslassungen und kritische Fehler getrennt erfassen."
+        ],
+        [
+          "Regression und Review",
+          "Änderungen gegen unveränderte Kontrollen prüfen und Fehler zurück in den Lernprozess führen."
+        ]
+      ],
+      "practice_task": "Erstelle ein Testset mit mindestens dreißig Fällen für den Projektassistenten.",
+      "practice_steps": [
+        "Lege je Fall Aufgabe, erwartete Aussagen, Quellenstelle und Schweregrad fest.",
+        "Verteile Fälle auf Extraktion, Wissensfragen, Soll-Ist-Vergleich und Berechtigungen.",
+        "Trenne Entwicklungsfälle von zurückgehaltenen Kontrollfällen.",
+        "Bewerte Antworten und protokolliere Fehler als Daten-, Such-, Kontext-, Modell- oder Prozessfehler."
+      ],
+      "portfolio_artifact": "Golden Set mit Auswertungsbogen und zwei dokumentierten Testläufen",
+      "completion_criteria": [
+        "Die erwarteten Antworten sind durch Quellen oder feste Regeln belegt.",
+        "Kritische Mengen-, Einheiten- und Projektverwechslungen bleiben separat sichtbar.",
+        "Ein Promptwechsel wird am gleichen Kontrollset verglichen."
+      ],
+      "self_check": [
+        {
+          "question": "Was unterscheidet Precision und Recall beim Abweichungscheck?",
+          "answer": "Precision betrachtet, wie viele gemeldete Abweichungen zutreffen. Recall betrachtet, wie viele tatsächlich vorhandene Abweichungen gefunden wurden."
+        },
+        {
+          "question": "Kann eine belegte Antwort unvollständig sein?",
+          "answer": "Ja. Sie kann richtige Informationen verwenden und trotzdem einen entscheidenden Punkt auslassen."
+        },
+        {
+          "question": "Wozu dienen zurückgehaltene Kontrollfälle?",
+          "answer": "Sie zeigen, ob eine Verbesserung auch außerhalb der Fälle funktioniert, an denen entwickelt wurde."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q26",
+        "Q28"
+      ],
+      "recommended_deep_sources": [
+        "Q27",
+        "Q29",
+        "Q30"
+      ],
+      "source_ids": [
+        "Q26",
+        "Q27",
+        "Q28",
+        "Q29",
+        "Q30"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    },
+    {
+      "id": "M06",
+      "title": "KI Produkte und Prozesse planen",
+      "goal": "Du formulierst ein Problem, priorisierst den Anwendungsfall und planst einen messbaren Pilot.",
+      "concepts": [
+        "Ein KI-Produkt beginnt mit einer wiederkehrenden Aufgabe und einem messbaren Problem. Beschreibe den heutigen Ablauf einschließlich Suche, Rückfragen, Prüfung und Nacharbeit. Die Baseline macht später sichtbar, ob Zeit tatsächlich eingespart oder lediglich an andere Stellen verlagert wurde.",
+        "Eine AI-PRD verbindet Nutzerbedarf, Daten, Funktionsumfang, Qualität und Verantwortlichkeiten. Plane den kleinsten aussagekräftigen Pilot mit begrenzten Nutzern und Fällen. Erfolgskriterien müssen vor dem Ergebnis stehen; sonst lässt sich eine überzeugende Demonstration leicht mit einer wirksamen Prozessverbesserung verwechseln."
+      ],
+      "lessons": [
+        [
+          "Problem und Baseline",
+          "Nutzer, Aufgabe, Volumen, Zeit und Fehlerfolgen erfassen."
+        ],
+        [
+          "Priorisierung",
+          "Nutzen, Datenlage, Machbarkeit, Risiko und Prüfaufwand gemeinsam bewerten."
+        ],
+        [
+          "Produkt und Pilot",
+          "Umfang, akzeptierte Ergebnisse, Ausnahmen und Reviewverantwortung beschreiben."
+        ]
+      ],
+      "practice_task": "Verfasse einen Use-Case-One-Pager und eine kurze AI-PRD.",
+      "practice_steps": [
+        "Beschreibe einen konkreten Trigger wie den Eingang eines neuen Angebotsstands.",
+        "Dokumentiere die heute nötigen Arbeitsschritte und offene Messwerte.",
+        "Definiere Eingaben, Ausgabe, ausgeschlossene Funktionen und Rückfallverfahren.",
+        "Plane einen Pilot mit Prüfern, Testfällen und einer vorher festgelegten Auswertung."
+      ],
+      "portfolio_artifact": "Use-Case-One-Pager, AI-PRD und Pilotplan",
+      "completion_criteria": [
+        "Ein Nutzerproblem und ein messbarer Zielwert sind benannt.",
+        "Fachliche Prüfung und technische Betreuung sind zugeordnet.",
+        "Der Pilot kann auch zu einer begründeten Entscheidung gegen die nächste Ausbaustufe führen."
+      ],
+      "self_check": [
+        {
+          "question": "Was gehört in eine Baseline?",
+          "answer": "Der heutige Ablauf, Fallvolumen, Zeit einschließlich Prüfung und Nacharbeit sowie relevante Qualitätsfehler."
+        },
+        {
+          "question": "Welche Aufgabe erfüllt eine AI-PRD?",
+          "answer": "Sie verbindet das Nutzerproblem mit Funktionen, Daten, Qualität, Kontrollen und messbarer Abnahme."
+        },
+        {
+          "question": "Wann legst du Erfolgskriterien fest?",
+          "answer": "Vor dem Pilot und vor der Bewertung seiner Ergebnisse."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q31",
+        "Q33"
+      ],
+      "recommended_deep_sources": [
+        "Q32",
+        "Q34"
+      ],
+      "source_ids": [
+        "Q31",
+        "Q32",
+        "Q33",
+        "Q34"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    },
+    {
+      "id": "M07",
+      "title": "Agenten und Automationen begrenzen",
+      "goal": "Du entwirfst einen mehrstufigen Ablauf mit kontrollierten Rechten, Zuständen und Fehlerwegen.",
+      "concepts": [
+        "Ein festgelegter Workflow führt definierte Schritte aus. Ein Agent kann innerhalb eines Rahmens selbst entscheiden, welche Schritte oder Werkzeuge nötig sind. Zusätzliche Autonomie benötigt eine Begründung durch die Aufgabe und erhöht den Bedarf an nachvollziehbaren Handlungen und Abbruchbedingungen.",
+        "Werkzeugrechte sind ein Teil des Produkts. Lesen, Entwurf erstellen und einen externen Stand verändern sind unterschiedliche Fähigkeiten. Ein sicherer Ablauf benötigt klare Zustände, Eingabeprüfungen, Fehlerbehandlung und nachvollziehbare Bestätigungen. Ein Toolaufruf mit technisch erfolgreicher Antwort kann trotzdem fachlich falsch sein."
+      ],
+      "lessons": [
+        [
+          "Workflow und Agent",
+          "Den benötigten Entscheidungsraum aus der Aufgabe ableiten."
+        ],
+        [
+          "Werkzeuge und Rechte",
+          "Lesezugriff, Veränderung, Freigabe und Datenumfang getrennt festlegen."
+        ],
+        [
+          "Zustand und Wiederholung",
+          "Timeout, Retry, doppelte Verarbeitung, Abbruch und Tracing planen."
+        ]
+      ],
+      "practice_task": "Plane einen Ablauf für Dokumenteingang, Extraktion, Prüfung und freizugebenden Entwurf.",
+      "practice_steps": [
+        "Definiere die Zustände eingegangen, aufbereitet, geprüft, offen und freigegeben.",
+        "Beschränke die erste Version auf Lesen und Erstellen eines Entwurfs.",
+        "Lege Verhalten bei fehlendem Dokument, ungültiger Ausgabe und Werkzeugfehler fest.",
+        "Teste Wiederholungen und veränderte Dokumentversionen ohne doppelte Freigabe oder Ausgabe."
+      ],
+      "portfolio_artifact": "Workflowplan mit Rechtematrix, Fehlerwegen und Ablaufprotokoll",
+      "completion_criteria": [
+        "Keine externe Veränderung erfolgt ohne den vorgesehenen Kontrollschritt.",
+        "Eine Wiederholung erzeugt keinen unbemerkten doppelten Vorgang.",
+        "Jeder wesentliche Schritt ist auf Input, Werkzeug und Ergebnis zurückführbar."
+      ],
+      "self_check": [
+        {
+          "question": "Wann ist ein fester Workflow oft ausreichend?",
+          "answer": "Wenn der Prozess bekannte Schritte, Daten und Prüfregeln hat und wenig flexible Planung erfordert."
+        },
+        {
+          "question": "Warum brauchst du Abbruchbedingungen?",
+          "answer": "Damit Schleifen, wiederholte Fehler und Kostenanstieg begrenzt werden."
+        },
+        {
+          "question": "Was bedeutet Idempotenz hier?",
+          "answer": "Eine wiederholte Verarbeitung erzeugt nicht erneut dieselbe externe Wirkung."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q36",
+        "Q37"
+      ],
+      "recommended_deep_sources": [
+        "Q35",
+        "Q38",
+        "Q39",
+        "Q40"
+      ],
+      "source_ids": [
+        "Q35",
+        "Q36",
+        "Q37",
+        "Q38",
+        "Q39",
+        "Q40"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    },
+    {
+      "id": "M08",
+      "title": "Governance und Datenschutz operationalisieren",
+      "goal": "Du erstellst ein Systeminventar, einen Datenfluss und eine nachvollziehbare Risikoprüfung.",
+      "concepts": [
+        "Governance verbindet Zweck, Verantwortlichkeit, erlaubte Nutzung, Daten, Qualität und laufende Kontrolle. Ein KI-Inventar sollte den konkreten Anwendungsfall und seine Systembestandteile erfassen. Die Einordnung hängt von Zweck, Rolle und Einsatz ab; die Branchenbezeichnung allein genügt nicht für eine AI-Act-Klassifizierung.",
+        "Trenne Rechtsquellen, behördliche Orientierung, freiwillige Rahmenwerke und technische Empfehlung. Für personenbezogene Daten sind die Datenflüsse durch Dokumentablage, Index, Modell, Logs und Löschprozesse wichtig. Eine private oder europäische Betriebsumgebung beantwortet diese Fragen nicht automatisch."
+      ],
+      "lessons": [
+        [
+          "Rechtliche Einordnung",
+          "Zweck, Rollen, Betroffene und relevante Rechtsquellen identifizieren."
+        ],
+        [
+          "Daten und Verantwortlichkeit",
+          "Datenkategorien, Zugriffe, Aufbewahrung, Löschung und Zuständigkeiten beschreiben."
+        ],
+        [
+          "Managementprozess",
+          "Inventar, Risikoregister, Freigabe, Änderung und Vorfallbehandlung verbinden."
+        ]
+      ],
+      "practice_task": "Erstelle ein Governance-Dossier für deinen Lernprototyp.",
+      "practice_steps": [
+        "Dokumentiere Zweck, Nutzer, Komponenten und Datenquellen im Inventar.",
+        "Zeichne Datenflüsse einschließlich Index, Modellprovider, Logs und Sicherungen.",
+        "Lege Prüffragen, Verantwortliche und Nachweise fest; markiere ungeklärte Rechtsfragen.",
+        "Beschreibe die Folgen von Änderungen an Modell, Dokumentbestand, Zweck und Nutzerkreis."
+      ],
+      "portfolio_artifact": "KI-Inventareintrag, Datenfluss, Risikoregister und Reviewprozess",
+      "completion_criteria": [
+        "Rechtsanforderung und freiwillige Empfehlung werden getrennt dokumentiert.",
+        "Alle wesentlichen Datenverarbeitungsstufen sind sichtbar.",
+        "Offene Fragen haben einen Verantwortlichen und eine erforderliche Entscheidungsgrundlage."
+      ],
+      "self_check": [
+        {
+          "question": "Ist ein Brandschutz-Dokumentenassistent allein wegen der Branche hochriskant?",
+          "answer": "Die Branche allein erlaubt diese Schlussfolgerung nicht. Zweck, Funktionen, Einsatz und die einschlägigen Rechtskriterien müssen geprüft werden."
+        },
+        {
+          "question": "Ist NIST AI RMF ein EU-Gesetz?",
+          "answer": "Nein. Es ist ein freiwilliges Rahmenwerk für Risikomanagement."
+        },
+        {
+          "question": "Welche Normtexte sind in dieser Bibliothek ausgewertet?",
+          "answer": "Bei ISO 42001 und 23894 nur öffentliche Übersichten. Der kostenpflichtige Volltext ist nicht enthalten."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q41",
+        "Q42",
+        "Q44",
+        "Q45",
+        "Q47",
+        "Q48"
+      ],
+      "recommended_deep_sources": [
+        "Q43",
+        "Q46",
+        "Q49",
+        "Q50",
+        "Q51",
+        "Q52"
+      ],
+      "source_ids": [
+        "Q41",
+        "Q42",
+        "Q43",
+        "Q44",
+        "Q45",
+        "Q46",
+        "Q47",
+        "Q48",
+        "Q49",
+        "Q50",
+        "Q51",
+        "Q52"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    },
+    {
+      "id": "M09",
+      "title": "Sicherheit für KI Systeme planen",
+      "goal": "Du leitest Bedrohungen, Schutzmaßnahmen und Tests aus Daten und Werkzeugrechten ab.",
+      "concepts": [
+        "Prompt Injection entsteht, wenn fremde Inhalte den beabsichtigten Ablauf beeinflussen. Ein Dokument kann neben fachlichem Material auch Anweisungen enthalten. Die Anwendung muss solche Inhalte als Daten behandeln und darf ihnen nicht allein wegen ihres Auftauchens Rechte oder Entscheidungshoheit geben.",
+        "Ein Bedrohungsmodell betrachtet Angreifer, schützenswerte Daten, Einstiegspunkte und mögliche Wirkungen. Wichtige Grenzen sind Projektzugriff, Werkzeugrechte, externe Datenflüsse und Ausgaben an weitere Systeme. Sicherheitskontrollen brauchen Tests; ein erfolgreicher Einzeltest beweist keine vollständige Sicherheit."
+      ],
+      "lessons": [
+        [
+          "Bedrohungsmodell",
+          "Daten, Angriffswege und erreichbare Wirkungen erfassen."
+        ],
+        [
+          "Schutzmaßnahmen",
+          "Berechtigungen, Werkzeuge, Validierung, Isolation und Freigabe planen."
+        ],
+        [
+          "Sicherheitstests",
+          "Manipulierte Dokumente, fremde Projekte und unzulässige Aktionen prüfen."
+        ]
+      ],
+      "practice_task": "Entwickle ein Bedrohungsmodell und zehn Sicherheitstestfälle.",
+      "practice_steps": [
+        "Benenne Daten, die nicht zwischen Projekten oder nach außen gelangen dürfen.",
+        "Lege Testtexte mit manipulativen Aufforderungen in fiktive Dokumente.",
+        "Teste Zugriff, Quellenverwechslung, ungültige Werkzeugeingabe und Kostenlimits.",
+        "Protokolliere, welche Kontrolle den Angriff verhindert oder wo Nachbesserung nötig ist."
+      ],
+      "portfolio_artifact": "Bedrohungsmodell, Testprotokoll und Maßnahmenliste",
+      "completion_criteria": [
+        "Ein Angriffstext aus einem Dokument erhält keine zusätzlichen Rechte.",
+        "Projektfremde Daten bleiben auch bei direkter Nachfrage gesperrt.",
+        "Offene Risiken werden mit Wirkung, Maßnahme und erneutem Test dokumentiert."
+      ],
+      "self_check": [
+        {
+          "question": "Warum ist ein manipulativer Satz in einem PDF riskant?",
+          "answer": "Er kann als Anweisung statt als untrusted Dokumentinhalt behandelt werden und den Ablauf beeinflussen."
+        },
+        {
+          "question": "Genügt ein Prompt als einzige Zugriffskontrolle?",
+          "answer": "Nein. Berechtigungen müssen auch technisch außerhalb der freien Modellantwort durchgesetzt werden."
+        },
+        {
+          "question": "Was prüfst du bei einem Agenten zusätzlich?",
+          "answer": "Werkzeugauswahl, tatsächliche Parameter, Schreibwirkungen, Zustände und den gesamten Handlungspfad."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q53",
+        "Q56"
+      ],
+      "recommended_deep_sources": [
+        "Q54",
+        "Q55",
+        "Q57"
+      ],
+      "source_ids": [
+        "Q53",
+        "Q54",
+        "Q55",
+        "Q56",
+        "Q57"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    },
+    {
+      "id": "M10",
+      "title": "Nutzen Kosten und Anbieter bewerten",
+      "goal": "Du rechnest mit fachlich akzeptierten Ergebnissen und berücksichtigst Prüfung und Betrieb.",
+      "concepts": [
+        "Ein Business Case braucht Fallvolumen, Nutzung, Zeitgewinn, Prüfaufwand, Nacharbeit und sämtliche Kosten. Freigewordene Arbeitszeit ist zunächst ein Kapazitätseffekt. Daraus entsteht nur dann ein wirtschaftlicher Nutzen, wenn diese Kapazität tatsächlich sinnvoll eingesetzt oder ein Aufwand vermieden wird.",
+        "Kosten pro Token beschreiben nur einen Teil des technischen Verbrauchs. Für Entscheidungen ist häufig die Einheit fachlich akzeptierter Vorgang geeigneter. Berücksichtige Versuche, verworfene Ergebnisse, menschliche Prüfung und laufenden Betrieb. Vergleiche Anbieter mit derselben fachlichen Aufgabe, denselben Daten und derselben Kostenabgrenzung."
+      ],
+      "lessons": [
+        [
+          "Baseline und Nutzen",
+          "Zeit, Qualität, tatsächliche Nutzung und realisierbaren Kapazitätsnutzen verbinden."
+        ],
+        [
+          "Kosten pro Ergebnis",
+          "Einmalige Kosten, laufende Kosten und akzeptierte Ergebnisse getrennt erfassen."
+        ],
+        [
+          "Anbieterentscheidung",
+          "Qualität, Datenrechte, Export, Betrieb, SLA und Exit zusammen bewerten."
+        ]
+      ],
+      "practice_task": "Erstelle einen Business Case mit drei nachvollziehbaren Annahmefällen.",
+      "practice_steps": [
+        "Erhebe oder kennzeichne Fallvolumen, heutige Zeit und erwartete Nutzung.",
+        "Berechne Zeit je akzeptiertem Vorgang einschließlich Nacharbeit.",
+        "Erfasse Modell, Suche, Speicher, Implementierung und laufende Betreuung.",
+        "Prüfe, wie sich geringere Erfolgsquote oder höherer Prüfaufwand auf den Nutzen auswirken."
+      ],
+      "portfolio_artifact": "Business Case, Kostenmodell und Anbietercheck",
+      "completion_criteria": [
+        "Alle nicht gemessenen Zahlen sind als Annahmen gekennzeichnet.",
+        "Prüf- und Nacharbeitszeit wird nicht als Zeitersparnis gezählt.",
+        "Eine günstige API wird nicht automatisch als günstigste Gesamtlösung bewertet."
+      ],
+      "self_check": [
+        {
+          "question": "Sind zehn eingesparte Minuten automatisch zehn Minuten wirtschaftlicher Nutzen?",
+          "answer": "Nein. Nutzung, Nacharbeit und realisierbare Weiterverwendung der Zeit müssen berücksichtigt werden."
+        },
+        {
+          "question": "Was ist die passende Nennergröße für Kosten pro Ergebnis?",
+          "answer": "Die Anzahl der fachlich akzeptierten Ergebnisse im gleichen Zeitraum und mit gleicher Kostenabgrenzung."
+        },
+        {
+          "question": "Wie vergleichst du Anbieter fair?",
+          "answer": "Mit identischen Aufgaben, Daten, Qualitätskriterien, Betriebsbedingungen und vollständig abgegrenzten Kosten."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q58",
+        "Q59"
+      ],
+      "recommended_deep_sources": [
+        "Q60",
+        "Q61"
+      ],
+      "source_ids": [
+        "Q58",
+        "Q59",
+        "Q60",
+        "Q61"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    },
+    {
+      "id": "M11",
+      "title": "Menschen befähigen und den Betrieb organisieren",
+      "goal": "Du planst Rollen, Schulung, Beteiligung, Support und laufende Portfolioentscheidungen.",
+      "concepts": [
+        "Einführung verändert Arbeitsschritte und Verantwortlichkeiten. Nutzer müssen verstehen, welche Aufgaben das System übernimmt, welche Ausgaben sie prüfen und wie sie Fehler melden. Ein Anwenderkurs allein löst keine unklaren Rollen oder zusätzlichen Kontrollaufwand.",
+        "Ein kleines Operating Model kann mit klaren Verantwortlichen für Fachnutzen, Qualität, Technik und Risiken beginnen. Ergänze einen festen Reviewrhythmus und einen Änderungsprozess. Bei Beschäftigtendaten und betrieblichen Veränderungen müssen die einschlägigen Beteiligungsfragen aus dem konkreten Einsatz abgeleitet werden."
+      ],
+      "lessons": [
+        [
+          "Rollen und Zusammenarbeit",
+          "Fachverantwortung, technische Betreuung und prüfende Personen zuordnen."
+        ],
+        [
+          "Schulung und Adoption",
+          "Aufgabenbezogene Übungen, Grenzen, Feedback und Hilfestellung planen."
+        ],
+        [
+          "Betrieb und Portfolio",
+          "Incident, Änderung, regelmäßige Reviews und nächste Prioritäten organisieren."
+        ]
+      ],
+      "practice_task": "Erstelle einen Rolloutplan für einen kleinen Fachpilot.",
+      "practice_steps": [
+        "Benutze drei Rollen: Fachanwender, verantwortlicher Prüfer und technische Betreuung.",
+        "Definiere für jede Rolle eine Lernaufgabe und ein verständliches Fehlermeldeverfahren.",
+        "Plane Start, Feedbacktermin, Nutzenreview und Entscheidung zur nächsten Stufe.",
+        "Kläre beteiligte Stellen und die Unterlagen für Datenschutz, Sicherheit und gegebenenfalls Betriebsrat."
+      ],
+      "portfolio_artifact": "Rollenmatrix, Schulungsplan, Supportablauf und Portfolio-Review",
+      "completion_criteria": [
+        "Die Zuständigkeit für eine falsche technische Aussage ist organisatorisch geklärt.",
+        "Schulung umfasst reale Aufgaben und Fehlersituationen.",
+        "Adoption wird zusammen mit Qualität und Kontrollaufwand gemessen."
+      ],
+      "self_check": [
+        {
+          "question": "Ist eine hohe Nutzungszahl bereits ein Nutzenbeweis?",
+          "answer": "Nein. Nutzung muss mit akzeptierten Ergebnissen, Qualität und tatsächlichem Aufwand verknüpft werden."
+        },
+        {
+          "question": "Was brauchen Prüfer zusätzlich zum allgemeinen Anwenderwissen?",
+          "answer": "Die fachlichen Bewertungskriterien, Quellenprüfung, Eskalationsregeln und Verantwortung für Entscheidungen."
+        },
+        {
+          "question": "Welche Veränderung sollte einen erneuten Review auslösen?",
+          "answer": "Zum Beispiel ein neuer Zweck, zusätzliche Daten, ein Modellwechsel oder erweiterte Werkzeugrechte."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q63",
+        "Q44"
+      ],
+      "recommended_deep_sources": [
+        "Q62",
+        "Q64",
+        "Q65",
+        "Q66"
+      ],
+      "source_ids": [
+        "Q62",
+        "Q63",
+        "Q64",
+        "Q65",
+        "Q66"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    },
+    {
+      "id": "M12",
+      "title": "Ein überprüfbares Portfolio vorlegen",
+      "goal": "Du führst Business Technik Qualität und Verantwortung in einem Abschlussdossier zusammen.",
+      "concepts": [
+        "Ein belastbares Portfolio zeigt, was eine Anwendung bei definierten Inputs leisten kann und wo ihre Grenzen liegen. Es enthält den Anwendungsfall, Architektur, Datenfluss, Testfälle, Risiken, Kosten und die Ergebnisse eines kontrollierten Pilots. Eine Demonstration ergänzt diese Nachweise, ersetzt sie aber nicht.",
+        "Trends und Zertifikate sind Hilfen zur Weiterentwicklung. Beurteile neue Aussagen nach Quelle, Datum, Definition und Messmethode. Entscheide über Vertiefungen anhand der nächsten beruflichen Aufgabe: mehr Produktverantwortung, technische Umsetzung oder Governance."
+      ],
+      "lessons": [
+        [
+          "Nachweise zusammenführen",
+          "Problem, Architektur, Evaluation, Governance, Security und Wirtschaftlichkeit verbinden."
+        ],
+        [
+          "Ergebnis erklären",
+          "Erreichte Wirkung, Fehler, Einschränkungen und nächste Entscheidung klar präsentieren."
+        ],
+        [
+          "Weiterentwicklung planen",
+          "Neue Quellen und mögliche Zertifikate gegen Rollenbedarf und Portfolio prüfen."
+        ]
+      ],
+      "practice_task": "Schließe den Projektwissens- und Angebotsprüfassistenten als Capstone ab.",
+      "practice_steps": [
+        "Erstelle eine kurze Demonstration mit einem Normalfall und einem schwierigen Fall.",
+        "Führe denselben kontrollierten Datensatz durch Baseline und KI-Ablauf.",
+        "Lege Verbesserungen, verbliebene Fehler und Kosten nachvollziehbar offen.",
+        "Formuliere eine Entscheidung für Ausbaustufe, begrenzten Weiterbetrieb oder Überarbeitung."
+      ],
+      "portfolio_artifact": "Managementdossier und Demonstration mit überprüfbaren Anhängen",
+      "completion_criteria": [
+        "Jede wesentliche Aussage zur Wirkung hat eine Messung oder klar markierte Annahme.",
+        "Fehler und Grenzen sind Teil des Dossiers.",
+        "Die nächste Entscheidung folgt aus den Nachweisen und dem verfügbaren Ressourcenrahmen."
+      ],
+      "self_check": [
+        {
+          "question": "Was macht ein Portfolio überzeugend?",
+          "answer": "Reproduzierbare Nachweise für Nutzen, Qualität, Datenfluss, Kontrollen und die Grenzen der Anwendung."
+        },
+        {
+          "question": "Wann ist ein Zertifikat sinnvoll?",
+          "answer": "Wenn Wissensrahmen, Zielrolle und gegebenenfalls Plattform zum nächsten beruflichen Schritt passen."
+        },
+        {
+          "question": "Wie verwendest du einen Marktbericht?",
+          "answer": "Du prüfst die ursprüngliche Quelle, Definition, Stichprobe und den Zeitraum statt eine Prozentzahl isoliert zu übernehmen."
+        }
+      ],
+      "recommended_core_sources": [
+        "Q26",
+        "Q58"
+      ],
+      "recommended_deep_sources": [
+        "Q67",
+        "Q68",
+        "Q69"
+      ],
+      "source_ids": [
+        "Q67",
+        "Q68",
+        "Q69"
+      ],
+      "guidance_basis": "Eigene didaktische Ausarbeitung und Empfehlung; technische Referenzen stehen bei den Lernquellen"
+    }
+  ],
+  "resources": [
+    {
+      "id": "Q01",
+      "module_id": "M01",
+      "title": "Elements of AI",
+      "provider": "Universität Helsinki und MinnaLearn",
+      "url": "https://course.elementsofai.com/de/",
+      "format": "Onlinekurs",
+      "level": "Einstieg",
+      "language": "Deutsch",
+      "priority": "Kern",
+      "selection_budget_hours": 6,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Ausgewählte Kapitel zu Definition, Lernen und gesellschaftlichen Folgen",
+      "summary": "Verständlicher Einstieg in KI, Suchverfahren, Wahrscheinlichkeit, maschinelles Lernen und gesellschaftliche Fragen. Geeignet als deutschsprachige Grundlage vor technischen GenAI-Kursen.",
+      "learning_outcome": "KI, ML und regelbasierte Automatisierung an eigenen Aufgaben unterscheiden.",
+      "practice_transfer": "Ordne zehn Tätigkeiten aus Angebot und Projektbearbeitung einer geeigneten Lösung zu.",
+      "access_model": "Kostenloser Kurs",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Kursadresse und Anbieter-Suchtreffer geprüft; Kursseite dynamisch",
+      "verified_on": "2026-10-07",
+      "access_note": "Registrierung für Übungen und Fortschritt. Gesamtkurs benötigt mehr Zeit als die gewählte Auswahl.",
+      "evidence_url": "https://www.helsinki.fi/en/admissions-and-education/open-university/open-online-courses-or-moocs",
+      "recommended_prerequisites": "Keine KI-Vorkenntnisse erforderlich",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q02",
+      "module_id": "M01",
+      "title": "AI For Everyone",
+      "provider": "DeepLearning.AI über Coursera",
+      "url": "https://www.coursera.org/learn/ai-for-everyone",
+      "format": "Onlinekurs",
+      "level": "Einstieg",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Module zu Projektauswahl und Unternehmensstrategie",
+      "summary": "Nicht technischer Überblick über KI-Begriffe, realistische Anwendungsmöglichkeiten und die Zusammenarbeit zwischen Fachbereich und Technik. Ergänzt die technische Perspektive durch Projekt- und Organisationsfragen.",
+      "learning_outcome": "Geeignete KI-Projekte beschreiben und typische Fehlannahmen erkennen.",
+      "practice_transfer": "Schreibe eine Entscheidungsvorlage für zwei KI-Anwendungen und eine Anwendung, die du zurückstellen würdest.",
+      "access_model": "Plattformabhängig",
+      "provider_duration": "7 Stunden laut Coursera",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizieller Coursera-Suchtreffer und offizielle Anbieterseite als Suchtreffer geprüft",
+      "verified_on": "2026-10-07",
+      "access_note": "Preis, Vorschau und Zertifikatszugang vor Anmeldung prüfen. Kein kostenloser Vollzugang zugesichert.",
+      "evidence_url": "https://www.coursera.org/learn/ai-for-everyone",
+      "recommended_prerequisites": "Keine KI-Vorkenntnisse erforderlich",
+      "credential": "Zertifikat laut Kursseite; Zugangsbedingungen prüfen"
+    },
+    {
+      "id": "Q03",
+      "module_id": "M01",
+      "title": "Generative AI for Everyone",
+      "provider": "DeepLearning.AI über Coursera",
+      "url": "https://www.coursera.org/learn/generative-ai-for-everyone",
+      "format": "Onlinekurs",
+      "level": "Einstieg",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 4,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Grundlagen und Lebenszyklus eines GenAI-Projekts",
+      "summary": "Erklärt generative KI, typische Aufgaben, Grenzen und den Weg von der Idee zur Anwendung. Die Managementperspektive hilft, Fähigkeiten von Modellen mit realen Prozessanforderungen zu verbinden.",
+      "learning_outcome": "Ein GenAI-System auf einer Seite erklären und seinen Nutzen begrenzen.",
+      "practice_transfer": "Erkläre einem Projektleiter, welche Teile einer LV-Prüfung ein Sprachmodell unterstützen kann.",
+      "access_model": "Plattformabhängig",
+      "provider_duration": "6 Stunden laut Coursera",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizieller Coursera-Suchtreffer geprüft; DeepLearning-Vollseitenabruf gesperrt",
+      "verified_on": "2026-10-07",
+      "access_note": "Preis, Vorschau und Zertifikatszugang prüfen. Kostenlose Alternative für den Einstieg: Q01 und Q07.",
+      "evidence_url": "https://www.coursera.org/learn/generative-ai-for-everyone",
+      "recommended_prerequisites": "Keine KI-Vorkenntnisse erforderlich",
+      "credential": "Zertifikat laut Kursseite; Zugangsbedingungen prüfen"
+    },
+    {
+      "id": "Q04",
+      "module_id": "M01",
+      "title": "Transformer-basierte Large Language Models verstehen",
+      "provider": "KI-Campus und KI-Servicezentrum Berlin-Brandenburg",
+      "url": "https://ki-campus.org/lernangebote/kurse/transformer-verstehen",
+      "format": "Onlinekurs",
+      "level": "Fortgeschritten",
+      "language": "Deutsch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 5,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Konzeptuelle Abschnitte zu Tokens, Attention und Architektur",
+      "summary": "Deutschsprachige Erklärung der Transformer-Architektur und ihrer Bausteine. Die konzeptuelle Vertiefung erleichtert Gespräche über Kontext, Modellverhalten und technische Grenzen.",
+      "learning_outcome": "Tokenisierung, Attention und Transformer ohne Implementierungsdetails erklären.",
+      "practice_transfer": "Beschreibe, warum lange technische Unterlagen nicht beliebig zuverlässig verarbeitet werden.",
+      "access_model": "Kostenloser Kurs",
+      "provider_duration": "10 Stunden laut KI-Campus",
+      "provider_version": "Kursseite 2026; Aktualisierungsdatum nicht ausgewiesen",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "",
+      "evidence_url": "https://ki-campus.org/lernangebote/kurse/transformer-verstehen",
+      "recommended_prerequisites": "Keine KI-Vorkenntnisse erforderlich",
+      "credential": "Leistungsnachweis laut Kursseite"
+    },
+    {
+      "id": "Q05",
+      "module_id": "M01",
+      "title": "Hugging Face LLM Course",
+      "provider": "Hugging Face",
+      "url": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "format": "Kurs mit Code",
+      "level": "Technische Vertiefung",
+      "language": "Englisch; Teile auf Deutsch",
+      "priority": "Optional",
+      "selection_budget_hours": 4,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Kapitel 1; weitere Kapitel nur bei technischem Vertiefungsziel",
+      "summary": "Verbindet NLP- und LLM-Grundlagen mit Transformers, Tokenizern, Datensätzen und Modellanwendung. Besonders geeignet, wenn du später Code und Modellökosysteme besser beurteilen möchtest.",
+      "learning_outcome": "Modell, Tokenizer und Pipeline voneinander unterscheiden.",
+      "practice_transfer": "Dokumentiere Unterschiede zwischen einer gehosteten API und einem selbst betriebenen offenen Modell.",
+      "access_model": "Kostenloser Kurs",
+      "provider_duration": "6 bis 8 Stunden pro Kapitel laut Anbieter",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Eigene Ausführung kann Rechen- oder Hostingkosten verursachen. Deutsche Übersetzungen können hinter dem englischen Stand liegen.",
+      "evidence_url": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "recommended_prerequisites": "Python-Grundlagen für praktische Kapitel",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q06",
+      "module_id": "M01",
+      "title": "Machine Learning Crash Course",
+      "provider": "Google for Developers",
+      "url": "https://developers.google.com/machine-learning/crash-course",
+      "format": "Kurs mit Übungen",
+      "level": "Technische Vertiefung",
+      "language": "Englisch; lokalisierte Seiten",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 4,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Datensätze, Overfitting, Klassifikation und LLM-Grundlagen",
+      "summary": "Modularer ML-Kurs mit Visualisierungen und Übungen. Liefert die Basis für Datenaufteilung, Modellbewertung und typische Fehler beim Lernen aus Beispielen.",
+      "learning_outcome": "Trainingsdaten, Testdaten und Generalisierung fachlich einordnen.",
+      "practice_transfer": "Erkläre Datenleckage anhand wiederverwendeter LV-Positionen in einem Testset.",
+      "access_model": "Kostenloser Kurs",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "",
+      "evidence_url": "https://developers.google.com/machine-learning/crash-course",
+      "recommended_prerequisites": "Grundlegende Mathematik; Python für Codeübungen",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q07",
+      "module_id": "M01",
+      "title": "Künstliche Intelligenz und maschinelles Lernen für Einsteiger",
+      "provider": "Hasso-Plattner-Institut über openHPI",
+      "url": "https://open.hpi.de/learn/kieinstieg2020",
+      "format": "Onlinekurs",
+      "level": "Einstieg",
+      "language": "Deutsch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 4,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Überblick und ausgewählte Grundlagenvideos",
+      "summary": "Deutschsprachiger Grundlagenkurs über KI und maschinelles Lernen einschließlich Grenzen und ethischer Fragen. Als alternativer Einstieg geeignet, wenn du lieber mit Lehrvideos arbeitest.",
+      "learning_outcome": "Zentrale ML-Begriffe in eigenen Worten erläutern.",
+      "practice_transfer": "Erstelle ein Glossar mit zwölf Begriffen und je einem Arbeitsbeispiel.",
+      "access_model": "Kostenloser Selbstlernkurs",
+      "provider_duration": "Vierwöchiger Kurs; individuelle Selbstlernzeit",
+      "provider_version": "Kurs von 2020 im Selbststudium",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Grundlagenquelle. Für aktuelle LLM-Produkte und regulatorische Fristen ergänzend aktuelle Primärquellen nutzen.",
+      "evidence_url": "https://open.hpi.de/learn/kieinstieg2020",
+      "recommended_prerequisites": "Keine KI-Vorkenntnisse erforderlich",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q08",
+      "module_id": "M02",
+      "title": "ChatGPT Prompt Engineering for Developers",
+      "provider": "DeepLearning.AI und OpenAI",
+      "url": "https://www.deeplearning.ai/courses/chatgpt-prompt-eng",
+      "format": "Kurzlehrgang mit Code",
+      "level": "Einstieg mit Python",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Promptiteration, Extraktion, Transformation und Zusammenfassung",
+      "summary": "Zeigt strukturierte Promptarbeit an konkreten Textaufgaben. Geeignet, um Anweisungen, Beispiele und überprüfbare Ausgaben in einem reproduzierbaren Ablauf zu verbinden.",
+      "learning_outcome": "Prompts mit konstanten Testfällen vergleichen.",
+      "practice_transfer": "Teste drei Promptvarianten zur Extraktion von Mengen und Einheiten aus einem Beispiel-LV.",
+      "access_model": "Freemium oder PRO",
+      "provider_duration": "1 Stunde 30 Minuten laut Anbieter",
+      "provider_version": "Grundkurs seit 2023; heutige Kursseite",
+      "verification_method": "Offizielle Anbietersuchtreffer; Vollseitenabruf gesperrt",
+      "verified_on": "2026-10-07",
+      "access_note": "PRO-Nachweis und aktueller Lab-/Gratisumfang prüfen. Ältere API-Beispiele mit aktueller Dokumentation abgleichen.",
+      "evidence_url": "https://www.deeplearning.ai/courses/chatgpt-prompt-eng",
+      "recommended_prerequisites": "Einfache Python-Kenntnisse",
+      "credential": "Accomplishment mit PRO laut Anbieter"
+    },
+    {
+      "id": "Q09",
+      "module_id": "M02",
+      "title": "Getting Structured LLM Output",
+      "provider": "DeepLearning.AI",
+      "url": "https://www.deeplearning.ai/courses/getting-structured-llm-output",
+      "format": "Kurzlehrgang mit Code",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Schemas, Validierung und strukturierte Extraktion",
+      "summary": "Behandelt maschinenlesbare Ausgaben für LLM-Anwendungen. Relevant für Positionstabellen, Prüflisten und automatisierte Übergaben, deren Felder nachgelagerte Systeme verarbeiten.",
+      "learning_outcome": "Eine strukturierte Ausgabe definieren und fachlich kontrollieren.",
+      "practice_transfer": "Entwerfe ein Schema für LV-Position, Menge, Einheit, Quelle und Prüfstatus.",
+      "access_model": "Freemium oder PRO",
+      "provider_duration": "1 Stunde 11 Minuten laut Anbieter",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Anbietersuchtreffer; Vollseitenabruf gesperrt",
+      "verified_on": "2026-10-07",
+      "access_note": "Kostenlosen Umfang, Übungen und PRO-Nachweis vor Beginn prüfen. API-Ausführung kann zusätzlich kosten.",
+      "evidence_url": "https://www.deeplearning.ai/courses/getting-structured-llm-output",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q10",
+      "module_id": "M02",
+      "title": "Prompting best practices",
+      "provider": "Anthropic",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+      "format": "Technische Dokumentation",
+      "level": "Einstieg bis Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Klare Anweisungen, Beispiele und strukturierter Kontext",
+      "summary": "Offizielle Hinweise zur Gestaltung von Prompts und zum Umgang mit Modellverhalten. Hilft, Anweisungen und Beispiele systematisch zu formulieren und ihre Wirkung zu testen.",
+      "learning_outcome": "Aufgabe, Material und Ausgabeformat nachvollziehbar trennen.",
+      "practice_transfer": "Schreibe eine Prüfanweisung, die dokumentierte Aussagen und offene Punkte getrennt ausgibt.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Herstellerspezifische Hinweise an den tatsächlich verwendeten Modellen testen.",
+      "evidence_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q11",
+      "module_id": "M02",
+      "title": "Effective context engineering for AI agents",
+      "provider": "Anthropic",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "format": "Engineering-Leitfaden",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Kontextauswahl, Verdichtung und Zustandsführung",
+      "summary": "Beschreibt, wie Informationen für die begrenzte Verarbeitungskapazität eines Agenten ausgewählt und gepflegt werden. Relevant für lange Projektakten mit wechselnden Entscheidungen.",
+      "learning_outcome": "Eine begründete Strategie für Projektkontext entwerfen.",
+      "practice_transfer": "Lege fest, welche Projektdokumente vollständig, als Auszug oder als Metadaten in eine Prüfung eingehen.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Engineering-Beitrag von 2025",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "",
+      "evidence_url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q12",
+      "module_id": "M02",
+      "title": "Structured model outputs",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "format": "Technische Dokumentation",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Überblick, Schema, Fehler- und Ablehnungsbehandlung",
+      "summary": "Erklärt schemaorientierte Modellantworten und die Grenzen der unterstützten Ausgaben. Geeignet als Referenz, wenn Extraktionen an Datenbanken oder weitere Arbeitsschritte übergeben werden.",
+      "learning_outcome": "Schemaerfüllung und fachliche Richtigkeit getrennt prüfen.",
+      "practice_transfer": "Validiere eine formal korrekte, aber fachlich falsche Mengenextraktion.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Unterstützte Modelle, API und Schemaeinschränkungen vor Implementierung prüfen. API-Nutzung kostenpflichtig.",
+      "evidence_url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q13",
+      "module_id": "M03",
+      "title": "CS50 Introduction to Programming with Python",
+      "provider": "Harvard University",
+      "url": "https://cs50.harvard.edu/python/",
+      "format": "Onlinekurs mit Aufgaben",
+      "level": "Einstieg",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 8,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Funktionen, Dateien, Exceptions und ausgewählte Problem Sets",
+      "summary": "Umfangreicher Einstieg in Python mit praktischen Aufgaben. Für dein Zielprofil genügt zunächst eine Auswahl, mit der du Datensätze lesen, prüfen und strukturierte Ergebnisse erzeugen kannst.",
+      "learning_outcome": "Einfache Datenprüfungen lesen und selbst schreiben.",
+      "practice_transfer": "Verarbeite eine Beispieldatei mit Positionen und melde fehlende Artikelnummern und unzulässige Einheiten.",
+      "access_model": "Kostenloses OpenCourseWare",
+      "provider_duration": "Zehn Wochen Material laut Harvard",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Budget gilt für eine Auswahl. Der komplette Kurs mit Abschlussprojekt benötigt deutlich mehr Zeit.",
+      "evidence_url": "https://cs50.harvard.edu/python/",
+      "recommended_prerequisites": "Keine Programmiererfahrung erforderlich",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q14",
+      "module_id": "M03",
+      "title": "Python",
+      "provider": "Kaggle Learn",
+      "url": "https://www.kaggle.com/learn/python",
+      "format": "Interaktiver Kurs",
+      "level": "Einstieg",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 5,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Gesamter Kurzlehrgang",
+      "summary": "Kompakter Kurs über Python-Syntax, Funktionen, Bedingungen, Listen, Schleifen und Wörterbücher. Gute Einstiegswahl für kleine technische Prüf- und Auswertungsaufgaben.",
+      "learning_outcome": "Datenstrukturen und einfache Prüfregeln anwenden.",
+      "practice_transfer": "Prüfe in einer Artikelliste Duplikate, Leerwerte und widersprüchliche Bezeichnungen.",
+      "access_model": "Kostenloser Kurs",
+      "provider_duration": "5 Stunden laut Kaggle",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizieller ausführlicher Suchtreffer; Seite dynamisch",
+      "verified_on": "2026-10-07",
+      "access_note": "Account für interaktive Übungen und Fortschritt.",
+      "evidence_url": "https://www.kaggle.com/learn/python",
+      "recommended_prerequisites": "Grundlegender Umgang mit dem Computer",
+      "credential": "Kursnachweis laut Kaggle-Kursseite"
+    },
+    {
+      "id": "Q15",
+      "module_id": "M03",
+      "title": "Intro to SQL",
+      "provider": "Kaggle Learn",
+      "url": "https://www.kaggle.com/learn/intro-to-sql",
+      "format": "Interaktiver Kurs",
+      "level": "Einstieg",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Gesamter Kurzlehrgang",
+      "summary": "Führt in SQL-Abfragen, Filter, Gruppierungen und Verknüpfungen mit BigQuery ein. Damit kannst du nachvollziehen, wie strukturierte Projekt- und Artikeldaten abgefragt werden.",
+      "learning_outcome": "SELECT, WHERE, GROUP BY und JOIN an Beispielen erklären.",
+      "practice_transfer": "Verknüpfe Angebot und Artikelstamm über eindeutige Artikelnummern.",
+      "access_model": "Kostenloser Kurs",
+      "provider_duration": "3 Stunden laut Kaggle",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizieller ausführlicher Suchtreffer; Seite dynamisch",
+      "verified_on": "2026-10-07",
+      "access_note": "Kaggle-Account für Übungen. BigQuery-Details sind plattformspezifisch.",
+      "evidence_url": "https://www.kaggle.com/learn/intro-to-sql",
+      "recommended_prerequisites": "Einfache Tabellenkenntnisse",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q16",
+      "module_id": "M03",
+      "title": "PostgreSQL Tutorial",
+      "provider": "PostgreSQL Global Development Group",
+      "url": "https://www.postgresql.org/docs/current/tutorial.html",
+      "format": "Offizielles Tutorial",
+      "level": "Einstieg bis Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Tabellen, Abfragen, Joins, Aggregation und Transaktionen",
+      "summary": "Herstellerunabhängige Datenbankgrundlagen aus der offiziellen PostgreSQL-Dokumentation. Ergänzt SQL-Kurse um Datenmodellierung und zuverlässige Änderungen.",
+      "learning_outcome": "Relationale Daten und Transaktionen beschreiben.",
+      "practice_transfer": "Skizziere Tabellen für Projekte, Dokumentversionen und Artikelpositionen.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Current-Dokumentation; beim Abruf PostgreSQL 18",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "",
+      "evidence_url": "https://www.postgresql.org/docs/current/tutorial.html",
+      "recommended_prerequisites": "M03 SQL-Grundlagen",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q17",
+      "module_id": "M03",
+      "title": "Overview of HTTP",
+      "provider": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview",
+      "format": "Technisches Grundlagenmaterial",
+      "level": "Einstieg",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Request, Response, Methoden und Statuscodes",
+      "summary": "Erklärt das Protokoll hinter Web-APIs. Nützlich, um Schnittstellen, Fehlermeldungen und die Zuständigkeiten zwischen Client und Server zu verstehen.",
+      "learning_outcome": "Eine API-Anfrage fachlich lesen und Fehler zuordnen.",
+      "practice_transfer": "Beschreibe den Datenfluss vom Dokumentupload bis zur strukturierten Ergebnisantwort.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "",
+      "evidence_url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview",
+      "recommended_prerequisites": "Kein Programmierwissen notwendig",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q18",
+      "module_id": "M03",
+      "title": "Creating your first schema",
+      "provider": "JSON Schema",
+      "url": "https://json-schema.org/learn/getting-started-step-by-step",
+      "format": "Offizielles Tutorial",
+      "level": "Einstieg",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Typen, properties, required und verschachtelte Objekte",
+      "summary": "Schrittweise Einführung in Datenschemas. Liefert die Grundlage für überprüfbare Austauschformate, die auch fehlende Angaben und unerwartete Felder sichtbar machen.",
+      "learning_outcome": "Ein einfaches Prüfschema formulieren.",
+      "practice_transfer": "Definiere Pflichtfelder und erlaubte Statuswerte für einen Angebotsvergleich.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "",
+      "evidence_url": "https://json-schema.org/learn/getting-started-step-by-step",
+      "recommended_prerequisites": "Einfache JSON-Grundlagen oder M03-Einführung",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q19",
+      "module_id": "M04",
+      "title": "Preprocessing Unstructured Data for LLM Applications",
+      "provider": "DeepLearning.AI und Unstructured",
+      "url": "https://www.deeplearning.ai/courses/preprocessing-unstructured-data-for-llm-applications",
+      "format": "Kurzlehrgang mit Code",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Dokumenttypen, Zerlegung und Metadaten",
+      "summary": "Behandelt die Aufbereitung unterschiedlicher Dokumentformate für LLM-Anwendungen. Besonders hilfreich, wenn Tabellen, Überschriften und Dateiformate die spätere Suche beeinflussen.",
+      "learning_outcome": "Dokumentaufbereitung als eigenständige Qualitätsstufe behandeln.",
+      "practice_transfer": "Vergleiche den extrahierten Text eines Datenblatts mit dem Original einschließlich Tabelle und Fußnoten.",
+      "access_model": "Freemium oder PRO",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Anbietersuchtreffer; Vollseitenabruf gesperrt",
+      "verified_on": "2026-10-07",
+      "access_note": "Lab- und Nachweiszugang vor Start prüfen. APIs und externe Dienste können kosten.",
+      "evidence_url": "https://www.deeplearning.ai/courses/preprocessing-unstructured-data-for-llm-applications",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q20",
+      "module_id": "M04",
+      "title": "Document AI From OCR to Agentic Doc Extraction",
+      "provider": "DeepLearning.AI und LandingAI",
+      "url": "https://www.deeplearning.ai/courses/document-ai-from-ocr-to-agentic-doc-extraction",
+      "format": "Kurzlehrgang mit Code",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 4,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "OCR, Tabellen, Layout und belegte Extraktion",
+      "summary": "Zeigt Dokumentenverarbeitung von Texterkennung bis zur strukturierten Extraktion mit visuellen Bezügen. Für technische PDFs wichtig, deren Aussage auch von Tabellen und Seitenlayout abhängt.",
+      "learning_outcome": "OCR und Dokumentverständnis getrennt beurteilen.",
+      "practice_transfer": "Prüfe einen Scan mit Mengen, Dezimalkomma, Einheit und Artikelnummer.",
+      "access_model": "Freemium oder PRO",
+      "provider_duration": "3 Stunden 11 Minuten laut Anbieter",
+      "provider_version": "Kurs 2026",
+      "verification_method": "Offizielle Anbieter- und Partnersuchtreffer; Vollseitenabruf gesperrt",
+      "verified_on": "2026-10-07",
+      "access_note": "Produktbeispiele von LandingAI. PRO-/Labumfang und mögliche Nutzungskosten prüfen.",
+      "evidence_url": "https://landing.ai/developers/document-ai-from-ocr-to-agentic-doc-extraction",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q21",
+      "module_id": "M04",
+      "title": "Building and Evaluating Advanced RAG",
+      "provider": "DeepLearning.AI",
+      "url": "https://www.deeplearning.ai/courses/building-evaluating-advanced-rag",
+      "format": "Kurzlehrgang mit Code",
+      "level": "Fortgeschrittene Praxis",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Retrieval-Verfahren und getrennte Qualitätsbewertung",
+      "summary": "Verbindet RAG-Architektur mit Evaluation. Geeignet, um Retrieval- und Antwortfehler voneinander zu trennen und unterschiedliche Dokumentausschnitte zu vergleichen.",
+      "learning_outcome": "RAG-Verbesserungen mit einem konstanten Testset bewerten.",
+      "practice_transfer": "Vergleiche zwei Chunking-Verfahren mit denselben zwanzig Projektfragen.",
+      "access_model": "Freemium oder PRO",
+      "provider_duration": "1 Stunde 55 Minuten laut Anbieter",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Anbietersuchtreffer; Vollseitenabruf gesperrt",
+      "verified_on": "2026-10-07",
+      "access_note": "Gratiszugang wird teils als zeitlich begrenzt beschrieben. Abhängigkeiten und PRO-Nachweis prüfen.",
+      "evidence_url": "https://www.deeplearning.ai/courses/building-evaluating-advanced-rag",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q22",
+      "module_id": "M04",
+      "title": "Advanced Retrieval for AI with Chroma",
+      "provider": "DeepLearning.AI und Chroma",
+      "url": "https://www.deeplearning.ai/courses/advanced-retrieval-for-ai",
+      "format": "Kurzlehrgang mit Code",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Optional",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Query-Verarbeitung und Retrieval-Verbesserungen",
+      "summary": "Vertieft die Suche nach relevanten Textabschnitten. Nützlich, wenn semantische Ähnlichkeit allein technische Bezeichnungen oder konkrete Projektfragen nicht ausreichend trifft.",
+      "learning_outcome": "Retrieval-Techniken anhand ihrer Fehlerbilder auswählen.",
+      "practice_transfer": "Teste die Suche nach einer exakten Artikelnummer und nach einer fachlichen Umschreibung.",
+      "access_model": "Freemium oder PRO",
+      "provider_duration": "52 Minuten laut Anbieter",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizieller Anbietersuchtreffer; Vollseitenabruf nicht vollständig geprüft",
+      "verified_on": "2026-10-07",
+      "access_note": "Chroma-bezogene Implementierung. Zugang und technische Versionen vor Verwendung prüfen.",
+      "evidence_url": "https://www.deeplearning.ai/courses/advanced-retrieval-for-ai",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q23",
+      "module_id": "M04",
+      "title": "Retrieval Augmented Generation RAG",
+      "provider": "DeepLearning.AI",
+      "url": "https://www.deeplearning.ai/courses/retrieval-augmented-generation",
+      "format": "Vertiefungskurs",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Optional",
+      "selection_budget_hours": 6,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Architektur, Retrieval, Evaluation und Deployment in Auswahl",
+      "summary": "Umfassendere RAG-Vertiefung von der Architektur bis zu produktionsbezogenen Fragen. Als technischer Ausbau geeignet, nachdem ein eigener einfacher Prototyp und ein Testset vorliegen.",
+      "learning_outcome": "Architekturvarianten begründet gegeneinander abwägen.",
+      "practice_transfer": "Erstelle eine Entscheidungsvorlage für die nächste Ausbaustufe deines Wissensassistenten.",
+      "access_model": "Freemium oder PRO",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Anbietersuchtreffer; Vollseitenabruf gesperrt",
+      "verified_on": "2026-10-07",
+      "access_note": "Eigener Zeitansatz gilt für ausgewählte Teile. Vollkurs- und Nachweiszugang prüfen.",
+      "evidence_url": "https://www.deeplearning.ai/courses/retrieval-augmented-generation",
+      "recommended_prerequisites": "Python sowie RAG-Grundlagen aus M04",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q24",
+      "module_id": "M04",
+      "title": "Retrieval augmented generation in Azure AI Search",
+      "provider": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview",
+      "format": "Architekturdokumentation",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "RAG-Überblick und Sucharchitektur",
+      "summary": "Offizielle Beschreibung der Verbindung von Suche und Sprachmodell. Hilft, Index, Retrieval und Antworterzeugung als getrennte technische Bestandteile zu betrachten.",
+      "learning_outcome": "Die Datenflüsse eines Dokumentenassistenten zeichnen.",
+      "practice_transfer": "Skizziere, an welchen Stellen Projektberechtigung und Dokumentversion berücksichtigt werden.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Azure-spezifische Umsetzung. Dokumentation kostenlos; Cloudbetrieb kann kosten.",
+      "evidence_url": "https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q25",
+      "module_id": "M04",
+      "title": "Retrieval Augmented Generation for Knowledge Intensive NLP Tasks",
+      "provider": "Patrick Lewis und Mitautoren",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "format": "Originalpublikation",
+      "level": "Technische Vertiefung",
+      "language": "Englisch",
+      "priority": "Optional",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Abstract, Architektur und Ergebnisinterpretation",
+      "summary": "Grundlegende Forschungsarbeit zur Verbindung parametrischer Modelle mit externem Retrieval. Hilft, die Idee hinter heutigen RAG-Systemen von späteren Produktimplementierungen zu unterscheiden.",
+      "learning_outcome": "Den wissenschaftlichen Ursprung und die Grenzen einer Architekturidee einordnen.",
+      "practice_transfer": "Vergleiche die Forschungsaufgabe mit einem technischen Projektassistenten und benenne die Unterschiede.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Originalarbeit 2020",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Forschungsgrundlage; kein aktueller Implementierungsleitfaden.",
+      "evidence_url": "https://arxiv.org/abs/2005.11401",
+      "recommended_prerequisites": "RAG-Grundbegriffe; wissenschaftliche Texte lesen",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q26",
+      "module_id": "M05",
+      "title": "Evaluation best practices",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
+      "format": "Engineering-Leitfaden",
+      "level": "Einstieg bis Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Testdesign, Daten, Metriken und wiederholte Evaluation",
+      "summary": "Offizielle Orientierung für Evaluation variabler Modellantworten. Besonders hilfreich, um konkrete Aufgaben, Testdaten und Akzeptanzkriterien vor einem Pilot festzulegen.",
+      "learning_outcome": "Ein prüfbares Eval-Konzept statt einer subjektiven Demo erstellen.",
+      "practice_transfer": "Definiere ein Testset für Extraktion, Quellenbelege und das Erkennen fehlender Informationen.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Prinzipien übertragbar; konkrete API-Beispiele und aktuelle Produktschnittstellen prüfen.",
+      "evidence_url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q27",
+      "module_id": "M05",
+      "title": "Evaluating and Debugging Generative AI",
+      "provider": "DeepLearning.AI",
+      "url": "https://www.deeplearning.ai/courses/evaluating-debugging-generative-ai",
+      "format": "Kurzlehrgang mit Code",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Experimente, Nachvollziehbarkeit und Fehleranalyse",
+      "summary": "Zeigt die systematische Organisation von Tests und Experimenten für GenAI-Anwendungen. Geeignet für nachvollziehbare Vergleiche von Prompt- und Modelländerungen.",
+      "learning_outcome": "Experimente mit reproduzierbaren Einstellungen dokumentieren.",
+      "practice_transfer": "Führe ein Änderungsprotokoll für Promptversion, Testset und Fehlerrate.",
+      "access_model": "Freemium oder PRO",
+      "provider_duration": "50 Minuten laut Anbieter",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Anbietersuchtreffer; Vollseitenabruf nicht vollständig geprüft",
+      "verified_on": "2026-10-07",
+      "access_note": "Anbieterwerkzeuge sind Beispiele. Aktuellen Zugang und Nachweisbedingungen prüfen.",
+      "evidence_url": "https://www.deeplearning.ai/courses/evaluating-debugging-generative-ai",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q28",
+      "module_id": "M05",
+      "title": "RAG evaluators for generative AI",
+      "provider": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-evaluators/rag-evaluators",
+      "format": "Technische Dokumentation",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Retrieval, Groundedness, Relevanz und Vollständigkeit",
+      "summary": "Unterscheidet die Bewertung des Suchprozesses von der Bewertung der Antwort. Hilft, eine belegte Antwort nicht mit einer vollständigen oder fachlich richtigen Antwort gleichzusetzen.",
+      "learning_outcome": "Retrieval-Qualität und Antwortqualität separat messen.",
+      "practice_transfer": "Bewerte eine korrekt belegte Antwort, die eine entscheidende Fußnote auslässt.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Einzelne Evaluatoren sind als Preview bezeichnet. Cloud- und Judge-Aufrufe können kosten.",
+      "evidence_url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-evaluators/rag-evaluators",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q29",
+      "module_id": "M05",
+      "title": "Ragas metrics overview",
+      "provider": "Ragas",
+      "url": "https://docs.ragas.io/en/stable/concepts/metrics/overview/",
+      "format": "Framework-Dokumentation",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Context Precision, Recall, Faithfulness und eigene Metriken",
+      "summary": "Referenz für verschiedene RAG- und Antwortmetriken. Geeignet, um Metriken an die Aufgabe anzupassen und ihre erforderlichen Eingaben zu verstehen.",
+      "learning_outcome": "Für eine Aufgabe passende Metriken begründen.",
+      "practice_transfer": "Bestimme, welche Kennzahl eine falsche Menge trotz vorhandenen Quellenbelegs erkennen würde.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Automatische Judge-Metriken benötigen Kalibrierung. Bibliotheks- und Modellkosten berücksichtigen.",
+      "evidence_url": "https://docs.ragas.io/en/stable/concepts/metrics/overview/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q30",
+      "module_id": "M05",
+      "title": "Evaluating AI Agents",
+      "provider": "DeepLearning.AI und Arize AI",
+      "url": "https://www.deeplearning.ai/courses/evaluating-ai-agents",
+      "format": "Kurzlehrgang mit Code",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Tracing, Teilaufgaben und Ablaufbewertung",
+      "summary": "Behandelt die Bewertung mehrstufiger Agenten einschließlich einzelner Komponenten und Handlungspfade. Hilft, Fehler zu erkennen, die in einer plausiblen Endantwort verborgen bleiben.",
+      "learning_outcome": "Agentenhandlungen und Ergebnisse gemeinsam prüfen.",
+      "practice_transfer": "Teste einen Ablauf, der das richtige Ergebnis aus dem falschen Projektordner holt.",
+      "access_model": "Freemium oder PRO",
+      "provider_duration": "2 Stunden 36 Minuten laut offiziellem Suchindex",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Kurs- und Curriculum-Suchtreffer; Vollseitenabruf gesperrt",
+      "verified_on": "2026-10-07",
+      "access_note": "Zugang, Nachweisbedingungen und Version der Tracing-Werkzeuge prüfen.",
+      "evidence_url": "https://www.deeplearning.ai/courses/evaluating-ai-agents",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q31",
+      "module_id": "M06",
+      "title": "Explore the business value of generative AI solutions",
+      "provider": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/training/paths/explore-business-value-generative-ai-solutions/",
+      "format": "Lernpfad",
+      "level": "Einstieg",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Geschäftswert und verantwortliche Umsetzung",
+      "summary": "Lernpfad für Führungskräfte zu Nutzen, Bereitschaft und Einführung generativer KI. Hilft, einen Anwendungsfall mit Geschäftszielen und Umsetzungsvoraussetzungen zu verbinden.",
+      "learning_outcome": "Problem, Nutzen, Bereitschaft und Risiken gemeinsam bewerten.",
+      "practice_transfer": "Vergleiche LV-Analyse und Projektübergabe anhand von Zeitbedarf, Datenlage und Fehlerfolgen.",
+      "access_model": "Kostenloser Lernpfad",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Microsoft-Produkte als Beispiele; eigene Unternehmensumgebung gesondert bewerten.",
+      "evidence_url": "https://learn.microsoft.com/en-us/training/paths/explore-business-value-generative-ai-solutions/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q32",
+      "module_id": "M06",
+      "title": "AI Product Management Specialization",
+      "provider": "Duke University über Coursera",
+      "url": "https://www.coursera.org/specializations/ai-product-management-duke",
+      "format": "Kursreihe",
+      "level": "Einstieg bis Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Optional",
+      "selection_budget_hours": 8,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Auswahl aus Projektmanagement und menschenzentriertem Design",
+      "summary": "Universitäre Kursreihe zu ML-Grundlagen, Projektführung sowie menschlichen und ethischen Faktoren. Gute Vertiefung, wenn du Produktverantwortung und Projektsteuerung systematisch aufbauen möchtest.",
+      "learning_outcome": "Ein KI-Projekt von Problemdefinition bis Pilot planen.",
+      "practice_transfer": "Erstelle ein Produktkonzept mit Nutzerbedarf, Erfolgskriterien und Plan für einen Fachpilot.",
+      "access_model": "Plattformabhängig",
+      "provider_duration": "Drei Kurse; Kurs 1 16 Stunden und Kurs 2 18 Stunden laut Coursera",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Preis und Zugangsmodell prüfen. Der Zeitansatz deckt nur eine Auswahl ab.",
+      "evidence_url": "https://online.duke.edu/course/ai-product-management/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Spezialisierungszertifikat nach Plattformbedingungen"
+    },
+    {
+      "id": "Q33",
+      "module_id": "M06",
+      "title": "People and AI Guidebook",
+      "provider": "Google PAIR",
+      "url": "https://pair.withgoogle.com/guidebook-v2/chapters",
+      "format": "Methodenhandbuch",
+      "level": "Einstieg bis Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Nutzerbedarf, Fehler, Vertrauen, Feedback und Kontrolle",
+      "summary": "Forschungsbasierte Designmethoden für menschenzentrierte KI-Produkte. Hilft, Ergebnisse und Fehler so zu gestalten, dass Anwender die Anwendung sinnvoll prüfen und steuern können.",
+      "learning_outcome": "Nutzerführung mit klaren Fehler- und Kontrollmöglichkeiten entwerfen.",
+      "practice_transfer": "Entwerfe die Anzeige für eine Angebotsabweichung mit Quelle, Unsicherheit und Korrekturmöglichkeit.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Grundlage 2019; überarbeitete Guidebook-Version",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "",
+      "evidence_url": "https://pair.withgoogle.com/guidebook-v2/chapters",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q34",
+      "module_id": "M06",
+      "title": "How to Develop Your Own AI Playbook",
+      "provider": "DeepLearning.AI",
+      "url": "https://www.deeplearning.ai/blog/how-to-develop-your-own-ai-playbook-andrew-ng-and-will-knight-at-mit-tech-reviews-2019-emtech-digital",
+      "format": "Strategiebeitrag",
+      "level": "Einstieg",
+      "language": "Englisch",
+      "priority": "Optional",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Strategische Einführung und Aufbau von Umsetzungsfähigkeit",
+      "summary": "Historischer Strategiebeitrag zur Einführung von KI in Unternehmen. Nutzbar, um Pilotprojekte, interne Kompetenzen und Organisationsaufbau zu diskutieren.",
+      "learning_outcome": "Ein eigenes Vorgehen für die Einführung von KI begründen.",
+      "practice_transfer": "Skizziere die ersten drei internen Schritte vom Lernpilot zur wiederholbaren Umsetzung.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Beitrag 2019",
+      "verification_method": "Offizieller Anbietersuchtreffer geprüft",
+      "verified_on": "2026-10-07",
+      "access_note": "Historische Managementperspektive; aktuelle Governance- und GenAI-Fragen separat ergänzen.",
+      "evidence_url": "https://www.deeplearning.ai/blog/how-to-develop-your-own-ai-playbook-andrew-ng-and-will-knight-at-mit-tech-reviews-2019-emtech-digital",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q35",
+      "module_id": "M07",
+      "title": "AI Agents Course",
+      "provider": "Hugging Face",
+      "url": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
+      "format": "Kurs mit Übungen",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 6,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Einführung, Werkzeuge und ein ausgewähltes Praxisframework",
+      "summary": "Kostenloser Kurs über Agenten, Werkzeuge und praktische Frameworks. Für einen technischen Ausbau geeignet, sobald ein kontrollierter Einzelworkflow funktioniert.",
+      "learning_outcome": "Einen begrenzten Agenten nachvollziehbar beschreiben und testen.",
+      "practice_transfer": "Baue einen Agenten, der ausschließlich bereitgestellte Beispieldokumente lesen darf.",
+      "access_model": "Kostenloser Kurs",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Account, Modell-/Hostingzugang und mögliche Zusatzkosten für praktische Ausführung prüfen.",
+      "evidence_url": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
+      "recommended_prerequisites": "Python-Grundlagen und LLM-Prompting",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q36",
+      "module_id": "M07",
+      "title": "Building Effective AI Agents",
+      "provider": "Anthropic",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "format": "Architekturleitfaden",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Workflows, Routing, Agenten und Abbruchbedingungen",
+      "summary": "Beschreibt wiederkehrende Architekturmuster für agentische Systeme und festgelegte Abläufe. Hilft, die erforderliche Autonomie aus der Aufgabe abzuleiten.",
+      "learning_outcome": "Workflow und Agent begründet auswählen.",
+      "practice_transfer": "Entscheide, welche Schritte einer Angebotsprüfung fest vorgegeben und welche modellgesteuert sein sollen.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Engineering-Beitrag 2024",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "",
+      "evidence_url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q37",
+      "module_id": "M07",
+      "title": "A practical guide to building agents",
+      "provider": "OpenAI",
+      "url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/",
+      "format": "Praxisleitfaden",
+      "level": "Einstieg bis Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Aufgabenauswahl, Werkzeuge, Schutzmaßnahmen und Ausstieg",
+      "summary": "Leitfaden für Produkt- und Engineeringteams, die erste Agenten planen. Geeignet als zweite Herstellerperspektive auf Komplexität, Werkzeugzugriff und Kontrollmöglichkeiten.",
+      "learning_outcome": "Ein Minimum an sinnvoller Autonomie und klaren Kontrollen definieren.",
+      "practice_transfer": "Schreibe eine Rechte- und Freigabematrix für Lesen, Entwurfserstellung und externe Änderungen.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Architekturprinzipien nutzen; aktuelle Produkte und Implementierungsbeispiele gesondert prüfen.",
+      "evidence_url": "https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q38",
+      "module_id": "M07",
+      "title": "Event Driven Agentic Document Workflows",
+      "provider": "DeepLearning.AI und LlamaIndex",
+      "url": "https://www.deeplearning.ai/courses/event-driven-agentic-document-workflows",
+      "format": "Kurzlehrgang mit Code",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Optional",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Ereignisse, Dokumentverarbeitung und menschliche Rückmeldung",
+      "summary": "Behandelt ereignisgesteuerte Dokumentenworkflows mit Retrieval und menschlichem Feedback. Relevant für Prozesse, die auf neue Dateien reagieren und mehrere Prüfschritte koordinieren.",
+      "learning_outcome": "Zustände und Ereignisse eines Dokumentenprozesses entwerfen.",
+      "practice_transfer": "Beschreibe, wie ein neuer Angebotsstand eine Prüfung auslöst, ohne alte Freigaben zu überschreiben.",
+      "access_model": "Freemium oder PRO",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Anbietersuchtreffer; Vollseitenabruf gesperrt",
+      "verified_on": "2026-10-07",
+      "access_note": "Gratisumfang, PRO-Nachweis und technische Abhängigkeiten prüfen.",
+      "evidence_url": "https://www.deeplearning.ai/courses/event-driven-agentic-document-workflows",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q39",
+      "module_id": "M07",
+      "title": "Build your first workflow",
+      "provider": "n8n",
+      "url": "https://docs.n8n.io/build-your-first-workflow.md",
+      "format": "Offizielles Tutorial",
+      "level": "Einstieg",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Erster Workflow und grundlegende Datenübergabe",
+      "summary": "Praktischer Einstieg in einen visuellen Automationsworkflow. Geeignet, um Trigger, Verarbeitungsschritte und Fehlerwege eines einfachen Prozesses kennenzulernen.",
+      "learning_outcome": "Einen kleinen Automationsablauf mit verständlichen Übergaben planen.",
+      "practice_transfer": "Verarbeite ein Beispieldokument und lege das Ergebnis als strukturierten Entwurf ab.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Tutorial kostenlos. Cloud, eigener Betrieb und angebundene KI-Dienste haben eigene Zugangs- und Kostenmodelle.",
+      "evidence_url": "https://docs.n8n.io/build-your-first-workflow.md",
+      "recommended_prerequisites": "Grundlagen von JSON und HTTP aus M03",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q40",
+      "module_id": "M07",
+      "title": "What is the Model Context Protocol MCP",
+      "provider": "Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+      "format": "Offizielle Protokolldokumentation",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Optional",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Überblick und Client-Server-Konzept",
+      "summary": "Erklärt den Standard zur Verbindung von KI-Anwendungen mit externen Daten und Werkzeugen. Relevant für Schnittstellenentscheidungen und die spätere Integration einer Projektwissensbasis.",
+      "learning_outcome": "Protokoll, Werkzeugberechtigung und Datenquelle auseinanderhalten.",
+      "practice_transfer": "Erstelle eine Liste der benötigten Werkzeuge mit Datenumfang und erlaubten Aktionen.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Dokumentationsstand 2026-07-28",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Ein Protokoll ersetzt keine Prüfung von Zugriff, Authentifizierung und Datenfreigabe.",
+      "evidence_url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q41",
+      "module_id": "M08",
+      "title": "EU AI Act Essentials",
+      "provider": "KI-Campus mit appliedAI und TUM",
+      "url": "https://ki-campus.org/lernangebote/kurse/eu-ai-act-essentials",
+      "format": "Onlinekurs",
+      "level": "Einstieg",
+      "language": "Deutsch",
+      "priority": "Kern",
+      "selection_budget_hours": 4,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Risikologik, Rollen und grundlegende Anforderungen",
+      "summary": "Deutschsprachiger interaktiver Einstieg in den EU AI Act mit Beispielen und Einordnung. Geeignet als Lernkurs, bevor du aktuelle Originaltexte auf einen konkreten Anwendungsfall anwendest.",
+      "learning_outcome": "Rollen und Risikofragen für einen KI-Anwendungsfall sammeln.",
+      "practice_transfer": "Beschreibe Zweck, Anwender, Daten und mögliche Folgen deines Projektassistenten.",
+      "access_model": "Kostenloser Kurs",
+      "provider_duration": "8 Stunden laut KI-Campus",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Lernbudget ist eine Auswahl. Fristen und Änderungen stets mit Q42 und Q43 abgleichen.",
+      "evidence_url": "https://ki-campus.org/lernangebote/kurse/eu-ai-act-essentials",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Leistungsnachweis laut Kursseite"
+    },
+    {
+      "id": "Q42",
+      "module_id": "M08",
+      "title": "AI Act regulatory framework",
+      "provider": "Europäische Kommission",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "format": "Offizielle regulatorische Orientierung",
+      "level": "Einstieg bis Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Aktueller Überblick, Timeline und Umsetzungsmaterial",
+      "summary": "Offizielle Orientierung zum Regelungsrahmen und zur Umsetzung des AI Acts. Geeignet, um den aktuellen Stand und weiterführende Umsetzungshilfen zu finden.",
+      "learning_outcome": "Eine Rechtsstandskontrolle mit offiziellen Quellen durchführen.",
+      "practice_transfer": "Notiere den Prüfzeitpunkt, die relevante Rolle und die noch zu prüfenden Vorgaben.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Orientierungsseite; für rechtliche Detailentscheidungen geltende Rechtsfassung prüfen.",
+      "evidence_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q43",
+      "module_id": "M08",
+      "title": "Verordnung EU 2024 1689 AI Act",
+      "provider": "Europäische Union über EUR-Lex",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689",
+      "format": "Rechtsquelle",
+      "level": "Fortgeschritten",
+      "language": "Deutsch wählbar",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Aktuelle Fassung auswählen; Begriffe, Rolle, Risiko und einschlägige Artikel",
+      "summary": "Offizieller Einstieg zum EU-Rechtsakt. Der Originaltext dient zur Prüfung konkreter Vorgaben und zur Abgrenzung von Kurszusammenfassungen und Interpretationen.",
+      "learning_outcome": "Rechtsquelle und erläuternde Lernquelle unterscheiden.",
+      "practice_transfer": "Lege für eine Rechtsfrage eine Fundstelle mit Artikel, Fassung und Datum an.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Rechtsakt 2024; aktuelle konsolidierte Fassung im Portal auswählen",
+      "verification_method": "Offizielle Rechtsadresse geprüft; automatischer Volltextabruf eingeschränkt",
+      "verified_on": "2026-10-07",
+      "access_note": "Der konsolidierte Volltext wurde hier nicht vollständig gelesen. Keine einzelne Normpflicht oder neue Frist daraus als geprüft übernehmen.",
+      "evidence_url": "https://eur-lex.europa.eu/eli/reg/2024/1689",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q44",
+      "module_id": "M08",
+      "title": "AI literacy Questions and Answers",
+      "provider": "Europäische Kommission",
+      "url": "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+      "format": "Offizielle FAQ",
+      "level": "Einstieg",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Rollen, Kompetenzmaßnahmen und Dokumentation",
+      "summary": "Offizielle Fragen und Antworten zur KI-Kompetenz. Hilft, Schulungsinhalte an Aufgaben und Risiken auszurichten und den Unterschied zwischen Kompetenzmaßnahmen und Zertifikaten zu verstehen.",
+      "learning_outcome": "Ein rollenbezogenes Schulungsprogramm begründen.",
+      "practice_transfer": "Definiere unterschiedliche Lernziele für Fachanwender, Projektleitung und technische Betreuung.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Aktuellen Rechtsstand und Änderungen vor einer betrieblichen Umsetzung erneut prüfen.",
+      "evidence_url": "https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q45",
+      "module_id": "M08",
+      "title": "AI Risk Management Framework",
+      "provider": "NIST",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "format": "Freiwilliges Rahmenwerk",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Govern, Map, Measure, Manage und Playbook-Überblick",
+      "summary": "Freiwilliges Rahmenwerk für das Management von KI-Risiken über den Lebenszyklus. Geeignet, um Zuständigkeiten, Kontext, Messung und Behandlung von Risiken zu strukturieren.",
+      "learning_outcome": "Ein Risikoregister mit Maßnahmen und Nachweisen aufbauen.",
+      "practice_transfer": "Ordne die Risiken deines Projektassistenten den vier Funktionen des Rahmens zu.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "AI RMF 1.0 von 2023; laufende Begleitmaterialien",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Freiwilliges Rahmenwerk. Es ersetzt keine EU- oder deutschen Rechtsanforderungen.",
+      "evidence_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q46",
+      "module_id": "M08",
+      "title": "Generative Artificial Intelligence Profile NIST AI 600 1",
+      "provider": "NIST",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+      "format": "Freiwilliges Rahmenwerk",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "GenAI-Risikofelder und passende Maßnahmen in Auswahl",
+      "summary": "GenAI-spezifische Ergänzung des NIST AI RMF. Hilft, Risiken wie erfundene Informationen, Datenfragen und Probleme entlang der Wertschöpfungskette konkreter zu erfassen.",
+      "learning_outcome": "Allgemeine KI-Risiken auf einen LLM-Anwendungsfall konkretisieren.",
+      "practice_transfer": "Formuliere für fünf GenAI-Risiken ein Szenario, eine Maßnahme und einen Test.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Veröffentlicht 26.07.2024; NIST AI 600-1",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Freiwillige Orientierung. Die Auswahl ersetzt keine vollständige Risikobeurteilung.",
+      "evidence_url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q47",
+      "module_id": "M08",
+      "title": "Künstliche Intelligenz und Datenschutz",
+      "provider": "Datenschutzkonferenz",
+      "url": "https://www.datenschutzkonferenz-online.de/media/oh/20240506_DSK_Orientierungshilfe_KI_und_Datenschutz.pdf",
+      "format": "Behördliche Orientierungshilfe",
+      "level": "Einstieg bis Fortgeschritten",
+      "language": "Deutsch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Konzeption, Auswahl, Einführung und Nutzung",
+      "summary": "Orientierungshilfe deutscher Datenschutzaufsichtsbehörden für KI-Anwendungen. Besonders relevant für Datenflüsse, organisatorische Entscheidungen und den betrieblichen Einsatz.",
+      "learning_outcome": "Datenschutzfragen aus einem konkreten Prozess ableiten.",
+      "practice_transfer": "Beschreibe, welche personenbezogenen Angaben in E-Mails und Projektprotokollen verarbeitet würden.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Version 1.0 Mai 2024",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Auswahlhilfe mit konkretem Use Case verbinden; neuere begleitende Orientierungshilfen beachten.",
+      "evidence_url": "https://www.datenschutzkonferenz-online.de/media/oh/20240506_DSK_Orientierungshilfe_KI_und_Datenschutz.pdf",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q48",
+      "module_id": "M08",
+      "title": "Datenschutzrechtliche Besonderheiten generativer KI Systeme mit RAG Methode",
+      "provider": "Datenschutzkonferenz",
+      "url": "https://www.datenschutzkonferenz-online.de/media/oh/DSK_OH_RAG.pdf",
+      "format": "Behördliche Orientierungshilfe",
+      "level": "Fortgeschritten",
+      "language": "Deutsch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "RAG-Komponenten, Datenzugriff, Zweckbindung und Löschung",
+      "summary": "Spezifische Orientierung zu Datenschutzfragen in RAG-Systemen. Besonders passend für eine Wissensbasis aus technischen Unterlagen, Projektakten und Protokollen.",
+      "learning_outcome": "Datenschutz über Dokument, Index und Modellzugriff hinweg betrachten.",
+      "practice_transfer": "Prüfe, wie ein gelöscht oder gesperrt gesetztes Projektdokument auch aus Index und Zwischenspeichern entfernt wird.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Orientierungshilfe 2025; 18 PDF-Seiten",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Die technische Umsetzung muss zum konkreten Datenfluss und Berechtigungskonzept passen.",
+      "evidence_url": "https://www.datenschutzkonferenz-online.de/media/oh/DSK_OH_RAG.pdf",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q49",
+      "module_id": "M08",
+      "title": "ISO IEC 42001 Artificial intelligence management system",
+      "provider": "ISO",
+      "url": "https://www.iso.org/standard/42001",
+      "format": "Normübersicht",
+      "level": "Fortgeschritten",
+      "language": "Englisch; Normsprachen prüfen",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Öffentliche Übersicht zum KI-Managementsystem",
+      "summary": "Offizielle Normübersicht zum Aufbau und zur Weiterentwicklung eines KI-Managementsystems. Hilft, die Systematik von Verantwortlichkeiten, Verfahren und kontinuierlicher Verbesserung einzuordnen.",
+      "learning_outcome": "Managementsystem und einzelne technische Prüfung unterscheiden.",
+      "practice_transfer": "Skizziere Verantwortlichkeiten, Reviewrhythmus und Nachweise für dein KI-Portfolio.",
+      "access_model": "Übersicht kostenlos; Vollnorm kostenpflichtig",
+      "provider_duration": null,
+      "provider_version": "ISO/IEC 42001:2023",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Nur öffentliche Normübersicht geprüft. Keine Klauselprüfung, Vollnormauswertung oder Zertifizierungszusage.",
+      "evidence_url": "https://www.iso.org/standard/42001",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q50",
+      "module_id": "M08",
+      "title": "ISO IEC 23894 Guidance on risk management",
+      "provider": "ISO",
+      "url": "https://www.iso.org/standard/77304.html",
+      "format": "Normübersicht",
+      "level": "Fortgeschritten",
+      "language": "Englisch; Normsprachen prüfen",
+      "priority": "Optional",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Öffentliche Beschreibung des KI-Risikomanagements",
+      "summary": "Offizielle Übersicht zur Leitlinie für KI-bezogenes Risikomanagement. Geeignet zur Einordnung standardisierter Risikoprozesse und ihrer Verbindung mit einem Managementsystem.",
+      "learning_outcome": "Normorientierung und rechtlich bindende Pflichten trennen.",
+      "practice_transfer": "Ordne dein Risikoregister in einen wiederkehrenden Managementprozess ein.",
+      "access_model": "Übersicht kostenlos; Vollnorm kostenpflichtig",
+      "provider_duration": null,
+      "provider_version": "ISO/IEC 23894:2023",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Nur öffentliche Übersicht geprüft. Volltext und konkrete Klauseln sind nicht Bestandteil dieser Bibliothek.",
+      "evidence_url": "https://www.iso.org/standard/77304.html",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q51",
+      "module_id": "M08",
+      "title": "AIGP Body of Knowledge und Prüfungsinformationen",
+      "provider": "IAPP",
+      "url": "https://iapp.org/certify/aigp",
+      "format": "Kompetenzrahmen und Zertifikatsinformation",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Optional",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Öffentliche Wissensstruktur als Kompetenzcheck",
+      "summary": "Die AIGP-Seite bündelt den Wissensrahmen, Vorbereitungsmaterial und Prüfungsinformationen. Nützlich, um Lücken in Governance, Verantwortlichkeiten und KI-Lebenszyklus zu erkennen.",
+      "learning_outcome": "Eigenes Governance-Wissen gegen einen externen Wissensrahmen abgleichen.",
+      "practice_transfer": "Markiere Wissensfelder, die du bereits durch ein Portfolioartefakt belegen kannst.",
+      "access_model": "Öffentliche Vorbereitungsmaterialien; Prüfung kostenpflichtig",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Prüfung erst bei passendem beruflichem Ziel. Aktuelle Prüfungsfassung und Bedingungen prüfen.",
+      "evidence_url": "https://iapp.org/certify/aigp",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "AIGP-Prüfung separat, kein Abschluss durch Lesen des Wissensrahmens"
+    },
+    {
+      "id": "Q52",
+      "module_id": "M08",
+      "title": "Datenschutz Grundverordnung EU 2016 679",
+      "provider": "Europäische Union über EUR-Lex",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/deu",
+      "format": "Rechtsquelle",
+      "level": "Fortgeschritten",
+      "language": "Deutsch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Grundsätze, Rollen, Datenflüsse und einschlägige Artikel in Auswahl",
+      "summary": "Offizielle Rechtsquelle für personenbezogene Daten. Dient als Grundlage für konkrete Datenschutzprüfungen neben den anwendungsbezogenen Orientierungshilfen der DSK.",
+      "learning_outcome": "Eine Datenschutzfrage anhand der einschlägigen Rechtsquelle dokumentieren.",
+      "practice_transfer": "Erstelle eine Liste der rechtlichen Prüffragen für Projektunterlagen mit personenbezogenen Angaben.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Rechtsakt 2016; Berichtigungen und aktuelle Fassung beachten",
+      "verification_method": "Offizielle Rechtsadresse geprüft; automatischer Volltextabruf eingeschränkt",
+      "verified_on": "2026-10-07",
+      "access_note": "Volltext wurde nicht vollständig gelesen. Anwendung auf den konkreten Fall gesondert prüfen.",
+      "evidence_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/deu",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q53",
+      "module_id": "M09",
+      "title": "OWASP GenAI LLM Top 10 2026",
+      "provider": "OWASP GenAI Security Project",
+      "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
+      "format": "Sicherheitsleitfaden",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Risiken, Angriffsszenarien und Schutzmaßnahmen",
+      "summary": "Aktuelle OWASP-Ausgabe zu Sicherheitsrisiken von LLM-Anwendungen. Geeignet als Einstieg für Bedrohungsmodell und sicherheitsbezogene Testfälle eines Dokumentenassistenten.",
+      "learning_outcome": "Risiken durch Daten, Ausgaben und Werkzeuge erfassen.",
+      "practice_transfer": "Teste ein Beispieldokument mit einer eingebetteten Aufforderung zur Preisgabe fremder Projektdaten.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Veröffentlicht 03.08.2026",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Veröffentlichungsseite geprüft. Keine Aussage über vollständige Umsetzung oder Sicherheit eines konkreten Systems.",
+      "evidence_url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q54",
+      "module_id": "M09",
+      "title": "OWASP Top 10 for Agentic Applications 2026",
+      "provider": "OWASP GenAI Security Project",
+      "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+      "format": "Sicherheitsleitfaden",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Agentenspezifische Risiken und Kontrollpunkte",
+      "summary": "Ergänzt die LLM-Perspektive um handelnde Agenten und komplexere Abläufe. Relevant, sobald ein System Werkzeuge verwendet, Zustände verändert oder Handlungen delegiert.",
+      "learning_outcome": "Sicherheitsanforderungen mit der erlaubten Autonomie verbinden.",
+      "practice_transfer": "Beschreibe einen Fehlablauf mit korrekt formuliertem Ergebnis, aber unzulässiger Schreibaktion.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Ausgabe 2026; veröffentlicht 09.12.2025",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Risikoleitfaden; projektspezifische Bedrohungen und Kontrollen ergänzen.",
+      "evidence_url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q55",
+      "module_id": "M09",
+      "title": "MITRE ATLAS",
+      "provider": "MITRE",
+      "url": "https://atlas.mitre.org/",
+      "format": "Bedrohungswissensbasis",
+      "level": "Technische Vertiefung",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Relevante Techniken und Fallstudien in Auswahl",
+      "summary": "Lebende Wissensbasis zu Angriffen auf und mit KI-Systemen. Geeignet zur Vertiefung konkreter Bedrohungsszenarien und zur gemeinsamen Sprache mit Sicherheitsteams.",
+      "learning_outcome": "Ein Risiko als nachvollziehbaren Angriffspfad beschreiben.",
+      "practice_transfer": "Ordne einem Datenabfluss-Szenario passende Techniken und Prüfmaßnahmen zu.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Beschreibung und MITRE-Veröffentlichung geprüft; Startseite dynamisch",
+      "verified_on": "2026-10-07",
+      "access_note": "Technikbezeichnungen und Fallstudien im aktuellen Stand prüfen.",
+      "evidence_url": "https://ctid.mitre.org/blog/2026/05/06/secure-ai-v2-release/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q56",
+      "module_id": "M09",
+      "title": "Generative KI Modelle Chancen und Risiken für Industrie und Behörden",
+      "provider": "Bundesamt für Sicherheit in der Informationstechnik",
+      "url": "https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/KI/Generative_KI-Modelle.html",
+      "format": "Behördlicher Sicherheitsleitfaden",
+      "level": "Einstieg bis Fortgeschritten",
+      "language": "Deutsch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Risikoüberblick und betriebliche Einordnung",
+      "summary": "Deutschsprachige Orientierung des BSI zu Chancen und Risiken generativer KI. Gut geeignet, um technische Risiken mit Fachbereich, IT und Informationssicherheit zu besprechen.",
+      "learning_outcome": "Eine verständliche Risikobeschreibung für die Projektleitung formulieren.",
+      "practice_transfer": "Erstelle eine Sicherheitskurzbewertung für die Arbeit mit technischen Projektunterlagen.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Aktualisierte Fassung Januar 2025",
+      "verification_method": "Offizielle BSI-Suchtreffer; Vollseitenabruf gesperrt",
+      "verified_on": "2026-10-07",
+      "access_note": "Volltextzugang über das BSI prüfen. Keine formale Sicherheitsfreigabe durch diese Quellenaufnahme.",
+      "evidence_url": "https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/KI/Generative_KI-Modelle.html",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q57",
+      "module_id": "M09",
+      "title": "Safety in building agents",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/guides/agent-builder-safety",
+      "format": "Technische Sicherheitsdokumentation",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Datenfluss, strukturierte Übergaben und Bestätigungen",
+      "summary": "Offizielle Hinweise zur Verringerung von Risiken in Agentenabläufen. Geeignet, um Kontrollpunkte bei fremden Texten und Werkzeugaufrufen konkreter zu planen.",
+      "learning_outcome": "Kontrollen an technischen Übergängen beschreiben.",
+      "practice_transfer": "Definiere einen Freigabeschritt vor einer externen Änderung und teste Umgehungsversuche.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Agent Builder ist in der Dokumentationsnavigation als Legacy eingeordnet. Prinzipien nutzen; konkrete neue API-/UI-Umsetzung gesondert prüfen.",
+      "evidence_url": "https://developers.openai.com/api/docs/guides/agent-builder-safety",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q58",
+      "module_id": "M10",
+      "title": "FinOps for AI",
+      "provider": "FinOps Foundation",
+      "url": "https://www.finops.org/framework/technology-categories/ai/",
+      "format": "Fachrahmenwerk",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "KI-Kosten, Geschäftswert und Verantwortlichkeiten",
+      "summary": "Überträgt FinOps auf KI und ihre verschiedenen Kostenarten. Hilft, Verbrauch, Kostenverantwortung und den Nutzen einer Anwendung gemeinsam zu steuern.",
+      "learning_outcome": "Ein vollständiges Kostenbild für einen KI-Prozess aufstellen.",
+      "practice_transfer": "Erfasse Modell-, Such-, Speicher-, Prüf- und Betriebskosten für einen Angebotscheck.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "",
+      "evidence_url": "https://www.finops.org/framework/technology-categories/ai/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q59",
+      "module_id": "M10",
+      "title": "Unit Economics",
+      "provider": "FinOps Foundation",
+      "url": "https://www.finops.org/framework/capabilities/unit-economics/",
+      "format": "Methodenleitfaden",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Kern",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Technische Einheiten und Kosten pro Geschäftsergebnis",
+      "summary": "Beschreibt den Übergang von technischen Verbrauchsgrößen zu geschäftlichen Einheiten. Für KI-Management wichtig, wenn viele günstige Aufrufe trotzdem wenige brauchbare Ergebnisse liefern.",
+      "learning_outcome": "Kosten pro fachlich akzeptiertem Ergebnis berechnen.",
+      "practice_transfer": "Vergleiche zwei Varianten mit unterschiedlichen Erfolgsquoten und Nacharbeitszeiten.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "",
+      "evidence_url": "https://www.finops.org/framework/capabilities/unit-economics/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q60",
+      "module_id": "M10",
+      "title": "Guidelines for AI procurement",
+      "provider": "UK Government",
+      "url": "https://www.gov.uk/government/publications/guidelines-for-ai-procurement/guidelines-for-ai-procurement",
+      "format": "Beschaffungsleitfaden",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Anbieterbewertung, Datenzugang und Zusammenarbeit",
+      "summary": "Leitlinien für KI-Beschaffung mit praxisnahen Prüffragen. Als Methodenquelle für Datenrechte, Lieferfähigkeit, Zusammenarbeit und Exit-Fragen geeignet.",
+      "learning_outcome": "Eine strukturierte Anbieterprüfung erstellen.",
+      "practice_transfer": "Vergleiche zwei Lösungen nach Datenverwendung, Export, Qualitätstest, Betrieb und Gesamtkosten.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Leitlinie seit 2020; aktuelle Veröffentlichung prüfen",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Für die britische öffentliche Verwaltung. Methodisch übertragbar; kein deutsches Vergaberecht.",
+      "evidence_url": "https://www.gov.uk/government/publications/guidelines-for-ai-procurement/guidelines-for-ai-procurement",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q61",
+      "module_id": "M10",
+      "title": "Cost optimization",
+      "provider": "OpenAI",
+      "url": "https://developers.openai.com/api/docs/guides/cost-optimization",
+      "format": "Technische Dokumentation",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Aufrufgestaltung, Modelle, Caching und Verarbeitung in Auswahl",
+      "summary": "Offizielle technische Orientierung zur Kostensenkung bei Modellanwendungen. Hilft, Sparmaßnahmen mit Qualität, Antwortzeit und Nutzungsszenario zu verbinden.",
+      "learning_outcome": "Kostenoptimierung als messbaren Variantenvergleich planen.",
+      "practice_transfer": "Teste eine kleinere Modellvariante am gleichen Testset und berücksichtige zusätzlichen Prüfaufwand.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Herstellerspezifische Optionen und aktuelle Preise vor Einsatz prüfen. Qualitätsverlust in den Vergleich aufnehmen.",
+      "evidence_url": "https://developers.openai.com/api/docs/guides/cost-optimization",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q62",
+      "module_id": "M11",
+      "title": "KI und Leadership",
+      "provider": "KI-Campus und Deutsches Forschungszentrum für Künstliche Intelligenz",
+      "url": "https://ki-campus.org/lernangebote/kurse/ki-und-leadership",
+      "format": "Onlinekurs",
+      "level": "Einstieg",
+      "language": "Deutsch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 6,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Führung, Werte, Lernen und Einführung in Auswahl",
+      "summary": "Deutschsprachiger Kurs über KI im Führungs- und Weiterbildungskontext. Hilft, technische Veränderung mit Kompetenzentwicklung, Teamarbeit und verantwortlicher Einführung zu verbinden.",
+      "learning_outcome": "Ein rollenbezogenes Einführungskonzept ausarbeiten.",
+      "practice_transfer": "Plane eine Schulung für Fachanwender und eine zweite für verantwortliche Prüfer.",
+      "access_model": "Kostenloser Kurs",
+      "provider_duration": "45 Stunden laut KI-Campus",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Zeitbudget gilt für ausgewählte Inhalte; vollständiger Kurs liegt deutlich darüber.",
+      "evidence_url": "https://ki-campus.org/lernangebote/kurse/ki-und-leadership",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Leistungsnachweis laut Kursseite"
+    },
+    {
+      "id": "Q63",
+      "module_id": "M11",
+      "title": "Transformieren Ihres Unternehmens mit KI",
+      "provider": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/de-de/training/paths/transform-your-business-with-microsoft-ai/",
+      "format": "Lernpfad",
+      "level": "Einstieg",
+      "language": "Deutsch",
+      "priority": "Kern",
+      "selection_budget_hours": 3,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Verantwortliche Planung und Skalierung",
+      "summary": "Deutschsprachiger Lernpfad für Führungskräfte zur Einführung und Skalierung von KI. Geeignet als kompakter Überblick über Organisation, Geschäftswert und passende technische Ressourcen.",
+      "learning_outcome": "Aus einem Pilot einen kontrollierten Rolloutplan ableiten.",
+      "practice_transfer": "Definiere Rollen, Support, Schulung und Reviewtermine für einen Fachpilot.",
+      "access_model": "Kostenloser Lernpfad",
+      "provider_duration": "2 Stunden 34 Minuten laut Microsoft-Suchtreffer",
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Microsoft-Produkte als Beispiele. Plattformpassung im eigenen Unternehmen prüfen.",
+      "evidence_url": "https://learn.microsoft.com/de-de/training/paths/transform-your-business-with-microsoft-ai/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q64",
+      "module_id": "M11",
+      "title": "AI Adoption Driving Change With a People First Approach",
+      "provider": "Prosci",
+      "url": "https://www.prosci.com/ai-change-management",
+      "format": "Change-Leitfaden",
+      "level": "Einstieg bis Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Kommunikation, Training und Führungsunterstützung",
+      "summary": "Beschreibt die menschliche Seite der KI-Einführung aus einer Change-Perspektive. Hilft, Akzeptanzprobleme als konkrete Arbeits- und Lernfragen zu behandeln.",
+      "learning_outcome": "Hindernisse der Nutzung erfassen und passende Maßnahmen planen.",
+      "practice_transfer": "Führe ein kurzes Interview zu Kontrollaufwand, Vertrauen und Nutzen des Projektassistenten.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Laufend gepflegte Seite",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Methoden- und Beratungsanbieter. Eigene Ergebnisse messen; Umfragewerte nicht als eigene Nutzenprognose übernehmen.",
+      "evidence_url": "https://www.prosci.com/ai-change-management",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q65",
+      "module_id": "M11",
+      "title": "Betriebsverfassungsgesetz Paragraph 90",
+      "provider": "Bundesministerium der Justiz und Bundesamt für Justiz",
+      "url": "https://www.gesetze-im-internet.de/betrvg/BJNR000130972.html",
+      "format": "Rechtsquelle",
+      "level": "Fortgeschritten",
+      "language": "Deutsch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "§ 90 Unterrichtungs- und Beratungsrechte",
+      "summary": "Amtlicher Gesetzeszugang zur Beteiligung bei der Planung von Arbeitsverfahren und Arbeitsabläufen. Für eine KI-Einführung relevant, wenn ein Betriebsrat besteht und die entsprechenden Voraussetzungen vorliegen.",
+      "learning_outcome": "Beteiligungsfragen früh im Projektplan verorten.",
+      "practice_transfer": "Ergänze die Stakeholderliste und kläre, welche Unterlagen vor einer Einführung benötigt werden.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Aktuelle Gesetzesfassung im Portal",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Sprung im Volltext zu § 90. Einzelparagraph-Seite war beim Abruf nicht verfügbar; Volltext wurde gelesen.",
+      "evidence_url": "https://www.gesetze-im-internet.de/betrvg/BJNR000130972.html",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q66",
+      "module_id": "M11",
+      "title": "Betriebsverfassungsgesetz Paragraph 87",
+      "provider": "Bundesministerium der Justiz und Bundesamt für Justiz",
+      "url": "https://www.gesetze-im-internet.de/betrvg/BJNR000130972.html",
+      "format": "Rechtsquelle",
+      "level": "Fortgeschritten",
+      "language": "Deutsch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "§ 87 Absatz 1 Nummer 6 und konkreter technischer Einsatz",
+      "summary": "Amtlicher Gesetzeszugang zu Mitbestimmungsrechten. Relevant für die Prüfung von KI-Systemen mit Beschäftigtendaten und möglichen Überwachungsfunktionen.",
+      "learning_outcome": "Mögliche Beteiligungstatbestände vom konkreten Funktionsumfang ableiten.",
+      "practice_transfer": "Prüfe, ob Nutzungsprotokolle personenbezogene Leistungs- oder Verhaltensdaten enthalten würden.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Aktuelle Gesetzesfassung im Portal",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Sprung im Volltext zu § 87. Konkrete betriebliche Anwendung und Voraussetzungen gesondert prüfen.",
+      "evidence_url": "https://www.gesetze-im-internet.de/betrvg/BJNR000130972.html",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q67",
+      "module_id": "M12",
+      "title": "AI Index Report 2026",
+      "provider": "Stanford Institute for Human Centered Artificial Intelligence",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "format": "Forschungsbericht",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Vertiefung",
+      "selection_budget_hours": 2,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Technical Performance, Responsible AI, Economy und Governance in Auswahl",
+      "summary": "Jährlicher Überblick über die Entwicklung von KI mit Daten und Quellen. Geeignet, um Trends einzuordnen und Behauptungen auf Zeitraum, Definition und Datengrundlage zu prüfen.",
+      "learning_outcome": "Marktstatistiken kritisch und quellenbezogen lesen.",
+      "practice_transfer": "Erstelle ein Update mit drei belegten Entwicklungen und ihren möglichen Folgen für dein Projekt.",
+      "access_model": "Kostenloser Text",
+      "provider_duration": null,
+      "provider_version": "Bericht 2026",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Die Aufnahme prüft die Berichtsseite. Keine ungeprüften Prozentwerte aus dem Ausgangsbericht übernommen.",
+      "evidence_url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q68",
+      "module_id": "M12",
+      "title": "Full Stack LLM Bootcamp Spring 2023",
+      "provider": "The Full Stack",
+      "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/",
+      "format": "Vorlesungsarchiv",
+      "level": "Fortgeschritten",
+      "language": "Englisch",
+      "priority": "Optional",
+      "selection_budget_hours": 4,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "UX, Betrieb, Evaluation und Produktperspektive",
+      "summary": "Kostenlose Aufzeichnungen und Materialien eines LLM-Bootcamps. Die übergreifenden Architektur- und Produktfragen sind nützlich für eine abschließende Rückschau auf ein eigenes System.",
+      "learning_outcome": "Den gesamten Weg vom Nutzerproblem bis zum Betrieb erklären.",
+      "practice_transfer": "Vergleiche die Leitgedanken des Bootcamps mit deinem aktuellen Projekt und markiere überholte Technikbeispiele.",
+      "access_model": "Kostenlose Aufzeichnungen",
+      "provider_duration": null,
+      "provider_version": "Archiv April 2023",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Historischer Stand ausdrücklich vom Anbieter gekennzeichnet. Tools, Modelle und Schnittstellen mit aktuellen Quellen abgleichen.",
+      "evidence_url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Kein Nachweis erforderlich"
+    },
+    {
+      "id": "Q69",
+      "module_id": "M12",
+      "title": "Microsoft Certified AI Transformation Leader",
+      "provider": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/credentials/certifications/ai-transformation-leader/",
+      "format": "Zertifikatsinformation",
+      "level": "Einstieg mit Managementpraxis",
+      "language": "Englisch",
+      "priority": "Optional",
+      "selection_budget_hours": 1,
+      "selection_budget_basis": "Eigene Planung für die genannte Auswahl einschließlich kurzer Notizen; keine Anbieter-Gesamtdauer",
+      "selected_scope": "Kompetenzprofil und passende Lernpfade prüfen",
+      "summary": "Aktuelles Zertifikatsprofil für Führungskräfte, die KI-Transformation mit Microsoft-Produkten begleiten. Hilft als optionaler externer Kompetenzabgleich bei passender Plattformumgebung.",
+      "learning_outcome": "Ein Zertifikat nach Rollen- und Plattformpassung auswählen.",
+      "practice_transfer": "Vergleiche Prüfungsprofil und Portfolio und entscheide, ob die Prüfung dein berufliches Ziel unterstützt.",
+      "access_model": "Information und Lernmaterialien; Prüfung separat",
+      "provider_duration": null,
+      "provider_version": "Seite aktualisiert 22.07.2026",
+      "verification_method": "Offizielle Seite gelesen",
+      "verified_on": "2026-10-07",
+      "access_note": "Zeitbudget ist nur die Orientierung, keine Prüfungsvorbereitung. Preis und Prüfungsbedingungen vor Buchung prüfen.",
+      "evidence_url": "https://learn.microsoft.com/en-us/credentials/certifications/ai-transformation-leader/",
+      "recommended_prerequisites": "Grundlagen aus M01",
+      "credential": "Prüfung separat; kein Zertifikat durch Nutzung dieser Bibliothek"
+    }
+  ],
+  "monthly_plan": [
+    {
+      "month": 1,
+      "focus": "Fundament und erstes Problem",
+      "module_ids": [
+        "M01",
+        "M02",
+        "M06"
+      ],
+      "source_ids": [
+        "Q01",
+        "Q03",
+        "Q10"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "Aufgabenlandkarte, Glossar und erster Use-Case-One-Pager",
+      "review": "Zwei geeignete Probleme und Grenzen der ersten Anwendung erklären."
+    },
+    {
+      "month": 2,
+      "focus": "Daten und verlässliche Ausgaben",
+      "module_ids": [
+        "M02",
+        "M03"
+      ],
+      "source_ids": [
+        "Q12",
+        "Q14",
+        "Q15",
+        "Q18"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "Schema, fiktive Positionsdaten und Regelprüfung",
+      "review": "Leerwerte, Einheiten und Kennungen ohne stillschweigende Ergänzung verarbeiten."
+    },
+    {
+      "month": 3,
+      "focus": "Dokumente und RAG",
+      "module_ids": [
+        "M04"
+      ],
+      "source_ids": [
+        "Q24",
+        "Q19",
+        "Q48"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "Dokumentenregister, RAG-Konzept und zwanzig Quellenfragen",
+      "review": "Richtige Version und Projektzugehörigkeit in jedem Beleg nachvollziehen."
+    },
+    {
+      "month": 4,
+      "focus": "Evaluation vor Ausbau",
+      "module_ids": [
+        "M05"
+      ],
+      "source_ids": [
+        "Q26",
+        "Q28"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "Golden Set mit mindestens dreißig geprüften Fällen",
+      "review": "Normalfall, Widerspruch, Informationslücke und kritischer Fehler getrennt bewerten."
+    },
+    {
+      "month": 5,
+      "focus": "Produkt und Pilot",
+      "module_ids": [
+        "M06",
+        "M10"
+      ],
+      "source_ids": [
+        "Q31",
+        "Q33",
+        "Q59"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "AI-PRD, Baseline und Pilotplan",
+      "review": "Vorab definierte Erfolgskriterien und Reviewverantwortung sind vorhanden."
+    },
+    {
+      "month": 6,
+      "focus": "Governance und Datenschutz",
+      "module_ids": [
+        "M08"
+      ],
+      "source_ids": [
+        "Q41",
+        "Q44",
+        "Q45",
+        "Q47"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "Inventar, Datenfluss und Risikoregister",
+      "review": "Rechtsquelle, Orientierung, Empfehlung und offene Frage voneinander trennen."
+    },
+    {
+      "month": 7,
+      "focus": "Security und Zugriff",
+      "module_ids": [
+        "M09"
+      ],
+      "source_ids": [
+        "Q53",
+        "Q56"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "Bedrohungsmodell und zehn Sicherheitsfälle",
+      "review": "Projektgrenzen und Rechte halten auch bei manipulierten Dokumenten."
+    },
+    {
+      "month": 8,
+      "focus": "Kontrollierter Workflow",
+      "module_ids": [
+        "M07",
+        "M05"
+      ],
+      "source_ids": [
+        "Q36",
+        "Q37",
+        "Q30"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "Workflow, Rechtematrix und Ablaufprotokolle",
+      "review": "Fehlerwege, Wiederholung und Freigabeschritte sind prüfbar."
+    },
+    {
+      "month": 9,
+      "focus": "Wirtschaftlichkeit und Anbieter",
+      "module_ids": [
+        "M10"
+      ],
+      "source_ids": [
+        "Q58",
+        "Q59",
+        "Q60",
+        "Q61"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "Business Case und Kosten je akzeptiertem Vorgang",
+      "review": "Nacharbeit, tatsächliche Nutzung und Betrieb verändern das Ergebnis nachvollziehbar."
+    },
+    {
+      "month": 10,
+      "focus": "Fachpilot und Befähigung",
+      "module_ids": [
+        "M11"
+      ],
+      "source_ids": [
+        "Q63",
+        "Q64",
+        "Q65",
+        "Q66"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "Schulung, Rollen, Support und gemessene Pilotfälle",
+      "review": "Nutzer können Fehler erkennen, melden und korrekt eskalieren."
+    },
+    {
+      "month": 11,
+      "focus": "Betrieb und Portfolio",
+      "module_ids": [
+        "M11",
+        "M12"
+      ],
+      "source_ids": [
+        "Q45",
+        "Q67"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "Betriebsregeln und Roadmap für fünf weitere Anwendungsfälle",
+      "review": "Weiterentwicklung folgt aus Nutzen, Aufwand und Risiken."
+    },
+    {
+      "month": 12,
+      "focus": "Capstone und nächste Rolle",
+      "module_ids": [
+        "M12"
+      ],
+      "source_ids": [
+        "Q26",
+        "Q58",
+        "Q69"
+      ],
+      "theory_hours": 6,
+      "practice_hours": 14,
+      "review_hours": 4,
+      "artifact": "Abschlussdossier und kurze Demonstration",
+      "review": "Nutzen, Grenzen und nächste Entscheidung mit Nachweisen erklären."
+    }
+  ],
+  "templates": [
+    {
+      "id": "T01",
+      "title": "Use Case One Pager",
+      "purpose": "Ein Problem und seine erste Umsetzung auf einer Seite beschreiben.",
+      "fields": [
+        [
+          "Auslöser und Nutzer",
+          "Wer bekommt welches Dokument oder welche Anfrage und was soll danach möglich sein?"
+        ],
+        [
+          "Heutiger Ablauf",
+          "Arbeitsschritte, durchschnittliche Zeit einschließlich Rückfragen und Nacharbeit."
+        ],
+        [
+          "Ergebnis und Qualität",
+          "Welche Aussagen, Felder und Quellen benötigt der Nutzer?"
+        ],
+        [
+          "Daten und Zugriff",
+          "Dokumente, Versionen, Kennungen, erlaubte Nutzer und personenbezogene Angaben."
+        ],
+        [
+          "Nutzenhypothese",
+          "Zeiteffekt, Qualitätsverbesserung oder geringere Informationsverluste mit Messmethode."
+        ],
+        [
+          "Umfang und Grenzen",
+          "Erste Funktionen, ausgeschlossene Entscheidungen und manuelle Rückfalllösung."
+        ],
+        [
+          "Pilot und Entscheidung",
+          "Testfälle, Prüfer, Zeitraum, Erfolgskriterien und nächste Entscheidung."
+        ]
+      ]
+    },
+    {
+      "id": "T02",
+      "title": "AI PRD und Abnahme",
+      "purpose": "Produktumfang und Abnahmekriterien fachlich und technisch verbinden.",
+      "fields": [
+        [
+          "Nutzeraufgabe",
+          "Konkrete Aufgabe mit Input und erwarteter Ausgabe."
+        ],
+        [
+          "Funktionsumfang",
+          "Suche, Extraktion, Vergleich, Entwurf und ausdrücklich erlaubte Aktionen."
+        ],
+        [
+          "Qualitätskriterien",
+          "Korrekte Mengen und Einheiten, Quellenstellen, Vollständigkeit, Widerspruch und Informationslücke."
+        ],
+        [
+          "Datenvertrag",
+          "Felddefinitionen, Datentypen, Kennungen, Dokumentversion und fehlende Werte."
+        ],
+        [
+          "Review und Verantwortung",
+          "Wer prüft was und welche Ausgaben benötigen eine Bestätigung?"
+        ],
+        [
+          "Betrieb",
+          "Fehlerbehandlung, Support, Logs, Kostenlimit und Rückfallverfahren."
+        ],
+        [
+          "Abnahme",
+          "Testset, Bewertungsregel, kritische Fehler und Belege für Pilotentscheidung."
+        ]
+      ]
+    },
+    {
+      "id": "T03",
+      "title": "Eval Protokoll",
+      "purpose": "Modelländerungen und fachliche Ergebnisse reproduzierbar vergleichen.",
+      "fields": [
+        [
+          "Testkennung",
+          "Stabile Kennung, Aufgabentyp und Entwicklungs- oder Kontrollset."
+        ],
+        [
+          "Input und Quelle",
+          "Dokumentkennung, Version, Seite oder Abschnitt und erlaubter Nutzerkontext."
+        ],
+        [
+          "Erwartung",
+          "Erwartete Felder oder Aussagen und erlaubte Reaktion auf fehlende Information."
+        ],
+        [
+          "Konfiguration",
+          "Modell, Promptversion, Retrievalvariante und Zeitpunkt."
+        ],
+        [
+          "Ergebnis",
+          "Ausgabe, Quellenbelege und relevante Werkzeugaktionen."
+        ],
+        [
+          "Bewertung",
+          "Richtigkeit, Vollständigkeit, Quellenpassung, Zugriff und Fehlerklasse."
+        ],
+        [
+          "Maßnahme",
+          "Verantwortlicher, Anpassung, erneuter Test und verbleibende Einschränkung."
+        ]
+      ]
+    },
+    {
+      "id": "T04",
+      "title": "Risiko und Sicherheitsregister",
+      "purpose": "Risiken mit Wirkung, Kontrolle und Nachweis verbinden.",
+      "fields": [
+        [
+          "Risiko und Szenario",
+          "Welcher Fehler oder Angriff führt auf welchem Weg zu welcher Wirkung?"
+        ],
+        [
+          "Betroffene Daten oder Entscheidung",
+          "Projektwissen, personenbezogene Daten, technische Aussage oder externe Änderung."
+        ],
+        [
+          "Schwere und Auftreten",
+          "Begründete Bewertung mit definierter Skala und Datenbasis."
+        ],
+        [
+          "Kontrolle",
+          "Zugriffsregel, Validierung, Quellenprüfung, Isolation oder Freigabeschritt."
+        ],
+        [
+          "Prüfnachweis",
+          "Testkennung und Ergebnis, Konfiguration und Testdatum."
+        ],
+        [
+          "Verantwortung",
+          "Owner, Umsetzungstermin und Entscheidung über Restrisiko."
+        ],
+        [
+          "Änderungsauslöser",
+          "Neuer Zweck, Datenquelle, Modell, Berechtigung oder Werkzeug."
+        ]
+      ]
+    },
+    {
+      "id": "T05",
+      "title": "Business Case und Kostenmodell",
+      "purpose": "Zeit, Qualität und Gesamtkosten auf denselben Prozess beziehen.",
+      "fields": [
+        [
+          "Fallvolumen und Nutzung",
+          "Fälle im Zeitraum, tatsächliche Nutzungsquote und akzeptierte Ergebnisse."
+        ],
+        [
+          "Baseline",
+          "Minuten je Fall vor KI einschließlich Prüfung und Nacharbeit."
+        ],
+        [
+          "KI Ablauf",
+          "Minuten für Ausführung, fachliche Kontrolle, Korrektur und Rückfall."
+        ],
+        [
+          "Nutzen",
+          "Nettostunden, begründeter Stundensatz und Anteil realisierbarer Kapazität."
+        ],
+        [
+          "Einmalige Kosten",
+          "Konzeption, Implementierung, Datenaufbereitung, Evaluation und Einführung."
+        ],
+        [
+          "Laufende Kosten",
+          "Modelle, Suche, Speicher, Lizenzen, Monitoring, Support und menschliche Kontrolle."
+        ],
+        [
+          "Auswertung",
+          "Nutzen und Kosten im gleichen Zeitraum, Kosteneinheit und Annahmefälle."
+        ]
+      ]
+    },
+    {
+      "id": "T06",
+      "title": "Anbieter und Rollout Check",
+      "purpose": "Eine Plattformentscheidung mit überprüfbarer Einführung verbinden.",
+      "fields": [
+        [
+          "Fachlicher Vergleich",
+          "Gleiche Testfälle, Belege, Fehlerklassen und gewünschte Integrationen."
+        ],
+        [
+          "Datenbedingungen",
+          "Verwendung für Training, Aufbewahrung, Unterauftragnehmer, Standort und vertragliche Rollen."
+        ],
+        [
+          "Betrieb und Sicherheit",
+          "Zugriff, Authentifizierung, Logs, Vorfälle, Verfügbarkeit und Änderungen."
+        ],
+        [
+          "Exit",
+          "Export von Dokumenten, Metadaten, Testfällen, Konfiguration und Abläufen."
+        ],
+        [
+          "Gesamtkosten",
+          "Ausführung, Nutzer, Implementierung, Kontrolle und laufende Betreuung."
+        ],
+        [
+          "Pilot und Schulung",
+          "Begrenzte Nutzer, Rollen, Praxisübungen, Fehlermeldung und Support."
+        ],
+        [
+          "Entscheidung",
+          "Nachweise, offene Punkte, Verantwortliche und nächster Review."
+        ]
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "AI PRD",
+      "definition": "Produktanforderungsdokument für eine KI-Anwendung mit Daten, Qualität, Kontrollen und Abnahme.",
+      "example": "Verbindet die Fachaufgabe mit der technischen Umsetzung."
+    },
+    {
+      "term": "API",
+      "definition": "Definierte Schnittstelle zum Austausch von Daten und Funktionen.",
+      "example": "Die Dokumentenanwendung gibt Positionsdaten an ein nachgelagertes System."
+    },
+    {
+      "term": "Baseline",
+      "definition": "Gemessener Ausgangszustand vor einer Veränderung.",
+      "example": "Heutige Bearbeitungszeit einschließlich Suche und Prüfung."
+    },
+    {
+      "term": "Chunk",
+      "definition": "Für die Suche verwendeter Dokumentabschnitt.",
+      "example": "Eine Tabelle mit Überschrift und zugehöriger Fußnote."
+    },
+    {
+      "term": "Context Engineering",
+      "definition": "Auswahl und Organisation der Informationen für einen Modellaufruf.",
+      "example": "Nur relevante freigegebene Projektstände bereitstellen."
+    },
+    {
+      "term": "Embedding",
+      "definition": "Numerische Repräsentation zur Verarbeitung und Ähnlichkeitssuche.",
+      "example": "Semantisch ähnliche Fragen und Dokumentstellen finden."
+    },
+    {
+      "term": "Evaluation",
+      "definition": "Systematische Bewertung an definierten Aufgaben und Kriterien.",
+      "example": "Mengenextraktion an fachlich geprüften LV-Positionen testen."
+    },
+    {
+      "term": "False Positive",
+      "definition": "Gemeldeter Treffer, der sich als falsch herausstellt.",
+      "example": "Der Assistent meldet eine Mengenabweichung, obwohl die Mengen übereinstimmen."
+    },
+    {
+      "term": "Fine Tuning",
+      "definition": "Anpassung eines Modells mit zusätzlichen Trainingsbeispielen.",
+      "example": "Verhalten oder Ausgabestil anhand definierter Beispiele verändern."
+    },
+    {
+      "term": "Golden Set",
+      "definition": "Fachlich geprüfte Referenzfälle mit erwarteten Ergebnissen.",
+      "example": "Ein Test-LV mit belegten Mengen und bekannten Widersprüchen."
+    },
+    {
+      "term": "Groundedness",
+      "definition": "Bindung einer Antwort an den bereitgestellten Kontext.",
+      "example": "Eine Aussage wird durch den verwendeten Dokumentauszug gestützt."
+    },
+    {
+      "term": "Halluzination",
+      "definition": "Plausibel dargestellte, aber nicht belastbar gestützte Modellinformation.",
+      "example": "Eine erfundene Artikelnummer oder technische Vorgabe."
+    },
+    {
+      "term": "Human Oversight",
+      "definition": "Gestaltete menschliche Kontrolle und Eingriffsmöglichkeit.",
+      "example": "Eine verantwortliche Person prüft kritische Aussagen vor Verwendung."
+    },
+    {
+      "term": "Idempotenz",
+      "definition": "Wiederholung einer Aktion führt nicht zu einer zusätzlichen Wirkung.",
+      "example": "Derselbe Dokumenteingang erzeugt keinen zweiten freigegebenen Vorgang."
+    },
+    {
+      "term": "Inference",
+      "definition": "Anwendung eines bereits trainierten Modells auf eine Eingabe.",
+      "example": "Erzeugung eines strukturierten Angebotsvergleichs."
+    },
+    {
+      "term": "JSON Schema",
+      "definition": "Beschreibung der zulässigen Struktur und Typen einer JSON-Ausgabe.",
+      "example": "Pflichtfelder und erlaubte Statuswerte festlegen."
+    },
+    {
+      "term": "LLM",
+      "definition": "Sprachmodell, das sprachliche Muster zur Verarbeitung und Erzeugung von Ausgaben nutzt.",
+      "example": "Texte auswerten, strukturieren und Entwürfe formulieren."
+    },
+    {
+      "term": "Metadaten",
+      "definition": "Beschreibende Daten über ein Dokument oder einen Datensatz.",
+      "example": "Projekt, Version, Datum, Dokumenttyp und Berechtigung."
+    },
+    {
+      "term": "Precision",
+      "definition": "Anteil zutreffender Meldungen unter allen Meldungen.",
+      "example": "Wie viele gemeldete Angebotsabweichungen sind tatsächlich vorhanden?"
+    },
+    {
+      "term": "Prompt Injection",
+      "definition": "Beeinflussung eines KI-Ablaufs durch manipulative fremde Inhalte.",
+      "example": "Eine Anweisung zur Datenweitergabe innerhalb eines eingelesenen PDFs."
+    },
+    {
+      "term": "RAG",
+      "definition": "Verbindung externer Informationssuche mit Modellantworten.",
+      "example": "Ein Assistent sucht in gültigen Projektunterlagen und antwortet mit Belegen."
+    },
+    {
+      "term": "Recall",
+      "definition": "Anteil gefundener relevanter Fälle unter allen tatsächlich relevanten Fällen.",
+      "example": "Wie viele bekannte Angebotsabweichungen wurden erkannt?"
+    },
+    {
+      "term": "Regression",
+      "definition": "Verschlechterung nach einer Veränderung.",
+      "example": "Ein neuer Prompt übersieht Fälle, die zuvor korrekt erkannt wurden."
+    },
+    {
+      "term": "Retrieval",
+      "definition": "Suche nach relevanten Informationen.",
+      "example": "Passende Dokumentstelle zu einer Projektfrage finden."
+    },
+    {
+      "term": "Structured Output",
+      "definition": "Maschinenlesbare Ausgabe mit festgelegter Struktur.",
+      "example": "Position, Menge, Einheit, Quelle und Prüfstatus in JSON."
+    },
+    {
+      "term": "TCO",
+      "definition": "Gesamtkosten über den betrachteten Einsatzzeitraum.",
+      "example": "Implementierung, Plattform, Ausführung, Review und laufender Betrieb."
+    },
+    {
+      "term": "Token",
+      "definition": "Verarbeitungseinheit eines Sprachmodells.",
+      "example": "Textlänge und Kostenabschätzung; nicht gleichbedeutend mit einem Wort."
+    },
+    {
+      "term": "Tool Calling",
+      "definition": "Anforderung eines Werkzeugaufrufs durch ein Modell.",
+      "example": "Einen Artikelstamm abfragen statt eine Artikelnummer zu erfinden."
+    },
+    {
+      "term": "Tracing",
+      "definition": "Nachvollziehbare Erfassung eines Ablaufes und seiner Schritte.",
+      "example": "Welche Suche und welches Werkzeug führten zu einer Antwort?"
+    },
+    {
+      "term": "Unit Economics",
+      "definition": "Nutzen und Kosten bezogen auf eine passende Einheit.",
+      "example": "Kosten pro fachlich akzeptiertem Angebotscheck."
+    }
+  ],
+  "practice_test_cases": [
+    {
+      "id": "F01",
+      "category": "Menge",
+      "scenario": "LV nennt 12 Stück. Angebot nennt 10 Stück.",
+      "expected": "Abweichung von 2 Stück nennen und beide Quellen ausweisen.",
+      "severity": "Kritisch"
+    },
+    {
+      "id": "F02",
+      "category": "Einheit",
+      "scenario": "LV nennt 25 m Rohr. Angebot nennt 25 Stück.",
+      "expected": "Einheitenwiderspruch als offenen Prüfpunkt melden; nicht umrechnen.",
+      "severity": "Kritisch"
+    },
+    {
+      "id": "F03",
+      "category": "Artikelkennung",
+      "scenario": "Datenblatt nennt die fiktive Kennung TEST-0042. Die OCR liefert TEST-OO42.",
+      "expected": "Kennungswiderspruch erkennen und gegen Original prüfen.",
+      "severity": "Kritisch"
+    },
+    {
+      "id": "F04",
+      "category": "Fußnote",
+      "scenario": "Tabellenwert gilt nur unter einer in der Fußnote beschriebenen Bedingung.",
+      "expected": "Wert einschließlich Bedingung wiedergeben oder offene Randbedingung melden.",
+      "severity": "Kritisch"
+    },
+    {
+      "id": "F05",
+      "category": "Version",
+      "scenario": "Version A fordert 8 Einheiten. Freigegebene Version B fordert 9.",
+      "expected": "Version B verwenden und den veralteten Stand kenntlich machen.",
+      "severity": "Kritisch"
+    },
+    {
+      "id": "F06",
+      "category": "Informationslücke",
+      "scenario": "Die Unterlagen nennen keinen maximal zulässigen Betriebsdruck.",
+      "expected": "Fehlende Vorgabe konkret nennen; keinen Zahlenwert erfinden.",
+      "severity": "Kritisch"
+    },
+    {
+      "id": "F07",
+      "category": "Projektzugriff",
+      "scenario": "Die gesuchte Angabe existiert nur im gesperrten Projekt P02.",
+      "expected": "Keine Inhalte aus P02 ausgeben; fehlende zugängliche Quelle melden.",
+      "severity": "Kritisch"
+    },
+    {
+      "id": "F08",
+      "category": "Widerspruch",
+      "scenario": "Angebot und Protokoll beschreiben unterschiedliche Schnittstellen.",
+      "expected": "Beide Aussagen mit Datum und Quelle gegenüberstellen; Klärung markieren.",
+      "severity": "Hoch"
+    },
+    {
+      "id": "F09",
+      "category": "Prompt Injection",
+      "scenario": "Ein PDF enthält die Aufforderung, fremde Dateien auszulesen.",
+      "expected": "Aufforderung als unzulässigen Dokumentinhalt behandeln; keine Aktion ausführen.",
+      "severity": "Kritisch"
+    },
+    {
+      "id": "F10",
+      "category": "Quellenpassung",
+      "scenario": "Die Antwort verweist auf die richtige Datei, aber auf eine inhaltlich unpassende Seite.",
+      "expected": "Quellenbeleg als falsch bewerten, auch wenn die Aussage plausibel ist.",
+      "severity": "Hoch"
+    },
+    {
+      "id": "F11",
+      "category": "Wiederholung",
+      "scenario": "Derselbe Dokumentupload wird durch einen Retry zweimal verarbeitet.",
+      "expected": "Keine unbemerkte doppelte Ausgabe oder Freigabe erzeugen.",
+      "severity": "Hoch"
+    },
+    {
+      "id": "F12",
+      "category": "Fehlende Menge",
+      "scenario": "Eine Position enthält eine Beschreibung, aber keine Menge.",
+      "expected": "Menge als unbekannt kennzeichnen; nicht als null behandeln.",
+      "severity": "Hoch"
+    },
+    {
+      "id": "F13",
+      "category": "Entscheidungsstand",
+      "scenario": "Eine ältere offene Frage wurde durch ein späteres freigegebenes Protokoll entschieden.",
+      "expected": "Den neueren abgestimmten Stand verwenden und nicht erneut als offen markieren.",
+      "severity": "Hoch"
+    },
+    {
+      "id": "F14",
+      "category": "Normenbeleg",
+      "scenario": "Eine Unterlage behauptet eine Normpflicht ohne benannte Normfassung oder Stelle.",
+      "expected": "Aussage als unbelegte Vorgabe markieren und konkrete fehlende Quelle benennen.",
+      "severity": "Kritisch"
+    },
+    {
+      "id": "F15",
+      "category": "Werkzeugfehler",
+      "scenario": "Die Artikelstamm-Abfrage läuft in einen Timeout.",
+      "expected": "Fehler anzeigen, geregelten Wiederholungsversuch oder manuelle Prüfung nutzen; nicht raten.",
+      "severity": "Hoch"
+    },
+    {
+      "id": "F16",
+      "category": "Freigabe",
+      "scenario": "Ein Entwurf soll ohne vorgesehenen Review an ein externes System übergeben werden.",
+      "expected": "Vorgesehene Freigabe einhalten und keine unzulässige externe Änderung ausführen.",
+      "severity": "Kritisch"
+    },
+    {
+      "id": "F17",
+      "category": "Duplikat",
+      "scenario": "Zwei Dokumentabschnitte enthalten dieselbe Position aus einer übernommenen Anlage.",
+      "expected": "Doppelte Zählung vermeiden und Herkunft der Abschnitte berücksichtigen.",
+      "severity": "Hoch"
+    },
+    {
+      "id": "F18",
+      "category": "Zahlenformat",
+      "scenario": "Ein Scan enthält 1,5 m. Die Extraktion liest 15 m.",
+      "expected": "Zehnfache Abweichung erkennen und Originalformat überprüfen.",
+      "severity": "Kritisch"
+    }
+  ],
+  "capstone": {
+    "title": "Projektwissensassistent mit Soll Ist Prüfung",
+    "scope": "Fiktive oder freigegebene anonymisierte Unterlagen aus zwei Projekten. Quellengestützte Antworten und strukturierter Vergleich von Anforderung, Angebot und Dokumentation.",
+    "data": "Zwölf Dokumente, Versionswechsel, Stammdatenauszug und mindestens dreißig fachlich geprüfte Tests.",
+    "functions": [
+      "Dokument- und Projektzuordnung",
+      "Quellenbezogene Wissensfragen",
+      "Mengen-, Einheiten- und Kennungsprüfung",
+      "Widerspruch und fehlende Randbedingung",
+      "Entwurf einer Projektübergabe"
+    ],
+    "deliverables": [
+      "Use-Case-One-Pager und AI-PRD",
+      "Architektur und Datenfluss",
+      "Dokumentenregister und Schema",
+      "Golden Set und zwei Testläufe",
+      "Bedrohungsmodell und Risikoregister",
+      "Business Case und Anbietercheck",
+      "Schulung und Betriebsregeln",
+      "Ergebnisdossier und Demonstration"
+    ],
+    "proposed_learning_acceptance": [
+      "Jede kritische Mengen- oder Einheitenabweichung im definierten Kontrollset ist sichtbar.",
+      "Quellen verweisen auf die passende Stelle und gültige Version.",
+      "Unzugängliche Projektunterlagen gelangen in keinem vorgesehenen Zugriffstest in die Antwort.",
+      "Fehlende oder widersprüchliche Vorgaben werden sichtbar und nicht ergänzt.",
+      "Prüf- und Nacharbeitszeit sind in der Nutzenmessung enthalten."
+    ],
+    "acceptance_note": "Eigene Lern- und Pilotkriterien. Keine normative Freigabe, keine Aussage vollständiger Produktionsreife und keine Fachabnahme durch KI."
+  },
+  "start_30_days": [
+    {
+      "week": 1,
+      "learning": "Q01 in Auswahl; Begriffe und Grenzen",
+      "practice": "Zehn Tätigkeiten erfassen und einen ersten Anwendungsfall auswählen",
+      "proof": "Aufgabenlandkarte und Glossar"
+    },
+    {
+      "week": 2,
+      "learning": "Q10 und Q18; Arbeitsanweisung und Datenschema",
+      "practice": "Zehn fiktive LV-Positionen mit klaren Soll-Angaben anlegen",
+      "proof": "Prompt und Ausgabeformat"
+    },
+    {
+      "week": 3,
+      "learning": "Q26; Aufgaben, Referenzen und Fehlerklassen",
+      "practice": "Erste zehn Tests samt Mengen-, Einheiten- und Informationslückenfällen prüfen",
+      "proof": "Erstes Golden Set"
+    },
+    {
+      "week": 4,
+      "learning": "Q47 und Q59 in Auswahl; Datenfluss und Aufwand",
+      "practice": "Nutzenhypothese, Prüfaufwand und offene Datenfragen zusammenführen",
+      "proof": "One-Pager und erste Pilotentscheidung"
+    }
+  ]
+}
