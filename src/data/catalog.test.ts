@@ -2,13 +2,15 @@ import { describe, expect, it } from 'vitest';
 import { validateContentPack } from '../lib/learning';
 import { baseContent, phases } from './catalog';
 import sourceLibrary from './source-library.json';
+import { earlyLearningVisuals } from './visuals-early';
+import { lateLearningVisuals } from './visuals-late';
 
 describe('Ausgelieferter Lernkatalog', () => {
   it('validates the complete current catalog including its original source library', () => {
     const pack = validateContentPack(baseContent);
     expect(pack.schemaVersion).toBe(1);
     // The file schema and the expanded learning-content release have independent versions.
-    expect(pack.version).toBe('2.0.0');
+    expect(pack.version).toBe('2.1.0');
     expect(pack.library?.schema_version).toBe('1.0');
     expect(pack.weeks).toHaveLength(12);
     expect(pack.weeks.flatMap(week => week.lessons)).toHaveLength(36);
@@ -29,6 +31,19 @@ describe('Ausgelieferter Lernkatalog', () => {
       expect(phase?.weeks).toEqual([id]);
       expect(phase?.title).toBe(module.title);
       expect(baseContent.weeks.find(week => week.id === id)?.phase).toBe(id);
+    }
+  });
+
+  it('provides a distinct illustrated learning case for every lesson with no unmatched graphics', () => {
+    const lessons = baseContent.weeks.flatMap(week => week.lessons);
+    const graphics = { ...earlyLearningVisuals, ...lateLearningVisuals };
+    expect(Object.keys(graphics).sort()).toEqual(lessons.map(lesson => lesson.id).sort());
+    expect(new Set(lessons.map(lesson => lesson.learningVisual?.title)).size).toBe(36);
+    expect(new Set(lessons.map(lesson => lesson.learningVisual?.kind)).size).toBeGreaterThanOrEqual(7);
+    for (const lesson of lessons) {
+      expect(lesson.learningVisual, lesson.id).toBeDefined();
+      expect(lesson.learningVisual?.steps.length, lesson.id).toBeGreaterThanOrEqual(3);
+      expect(lesson.learningVisual?.steps.every(step => step.example.trim().length > 0), lesson.id).toBe(true);
     }
   });
 

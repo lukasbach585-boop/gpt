@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import type { ContentPack, Flashcard } from '../types';
+import type { ContentPack, Flashcard, LearningVisual } from '../types';
 import sourceLibrary from '../data/source-library.json';
 import { validateSourceLibrary } from './source-library';
 import {
@@ -44,6 +44,21 @@ function fullPack(): ContentPack {
   });
   pack.library = structuredClone(sourceLibrary);
   return pack;
+}
+
+function graphic(): LearningVisual {
+  return {
+    kind: 'flow',
+    title: 'Vom Original zur überprüften Antwort',
+    caption: 'Jeder Schritt bewahrt den Bezug zum freigegebenen Dokument.',
+    steps: [
+      { title: 'Quelle auswählen', detail: 'Projekt und Dokumentstand bestimmen.', example: 'Freigegebene Zeichnung A, Version 3.', icon: 'document' },
+      { title: 'Angaben entnehmen', detail: 'Menge, Einheit und Originalstelle gemeinsam erfassen.', example: '12 Stück auf Seite 4.', icon: 'search' },
+      { title: 'Ergebnis prüfen', detail: 'Eine zuständige Person bestätigt kritische Angaben.', example: 'Vergleich mit dem Angebotsstand.', icon: 'check' },
+    ],
+    connections: ['gültiger Stand', 'Originalbeleg'],
+    takeaway: 'Ein plausibles Ergebnis benötigt überprüfbare Quellen und passende Kontrollen.',
+  };
 }
 
 function storageMock() {
@@ -358,6 +373,91 @@ describe('Updates und Lernpfad', () => {
     expect(original).toEqual([1, 2, 3, 4, 5]);
     expect([...shuffled].sort()).toEqual(original);
     expect(shuffle([])).toEqual([]);
+  });
+});
+
+describe('Optionale Lerngrafiken', () => {
+  it('exports and imports complete visual data without losing labels or changing old lesson shapes', () => {
+    const pack = validPack();
+    pack.weeks[0].lessons[0].learningVisual = graphic();
+    const imported = validateContentPack(JSON.parse(JSON.stringify(pack)));
+    expect(imported).toEqual(pack);
+    const parsedGraphic = imported.weeks[0].lessons[0].learningVisual!;
+    expect(parsedGraphic).not.toBe(pack.weeks[0].lessons[0].learningVisual);
+    expect(parsedGraphic.steps[0]).not.toBe(pack.weeks[0].lessons[0].learningVisual!.steps[0]);
+    expect(parsedGraphic.connections).not.toBe(pack.weeks[0].lessons[0].learningVisual!.connections);
+    parsedGraphic.steps[0].example = 'Andere Quelle';
+    expect(pack.weeks[0].lessons[0].learningVisual!.steps[0].example).toBe('Freigegebene Zeichnung A, Version 3.');
+    const oldPack = validPack();
+    expect(validateContentPack(oldPack)).toEqual(oldPack);
+    expect(validateContentPack(oldPack).weeks[0].lessons[0]).not.toHaveProperty('learningVisual');
+  });
+
+  it.each<LearningVisual['kind']>(['flow', 'comparison', 'layers', 'document', 'matrix', 'scorecard', 'cycle', 'timeline'])('accepts the %s diagram kind without mandatory connection labels', kind => {
+    const pack = validPack();
+    const visual = graphic();
+    visual.kind = kind;
+    delete visual.connections;
+    pack.weeks[0].lessons[0].learningVisual = visual;
+    const imported = validateContentPack(JSON.parse(JSON.stringify(pack)));
+    expect(imported.weeks[0].lessons[0].learningVisual).toEqual(visual);
+    expect(imported.weeks[0].lessons[0].learningVisual).not.toHaveProperty('connections');
+  });
+
+  it('accepts maximum string and step bounds while rejecting excessive data', () => {
+    const pack = validPack();
+    const visual = graphic();
+    visual.title = 't'.repeat(160);
+    visual.caption = 'c'.repeat(500);
+    visual.takeaway = 't'.repeat(500);
+    visual.steps = Array.from({ length: 6 }, () => ({ title: 't'.repeat(160), detail: 'd'.repeat(600), example: 'e'.repeat(600), icon: 'clock' }));
+    visual.connections = Array.from({ length: 6 }, () => 'c'.repeat(100));
+    pack.weeks[0].lessons[0].learningVisual = visual;
+    expect(validateContentPack(pack).weeks[0].lessons[0].learningVisual).toEqual(visual);
+  });
+
+  it.each([
+    ['unknown kind', (v: LearningVisual) => { (v as unknown as Record<string, unknown>).kind = 'script'; }],
+    ['unknown icon', (v: LearningVisual) => { (v.steps[0] as unknown as Record<string, unknown>).icon = 'script'; }],
+    ['too few steps', (v: LearningVisual) => { v.steps.pop(); }],
+    ['too many steps', (v: LearningVisual) => { v.steps = Array.from({ length: 7 }, () => ({ ...v.steps[0] })); }],
+    ['excessive title', (v: LearningVisual) => { v.title = 'a'.repeat(161); }],
+    ['excessive caption', (v: LearningVisual) => { v.caption = 'a'.repeat(501); }],
+    ['excessive takeaway', (v: LearningVisual) => { v.takeaway = 'a'.repeat(501); }],
+    ['excessive step title', (v: LearningVisual) => { v.steps[0].title = 'a'.repeat(161); }],
+    ['excessive detail', (v: LearningVisual) => { v.steps[0].detail = 'a'.repeat(601); }],
+    ['excessive example', (v: LearningVisual) => { v.steps[0].example = 'a'.repeat(601); }],
+    ['excessive connection label', (v: LearningVisual) => { v.connections = ['a'.repeat(101)]; }],
+    ['too many connections', (v: LearningVisual) => { v.connections = Array(7).fill('Label'); }],
+    ['HTML example', (v: LearningVisual) => { v.steps[0].example = '<img src=x onerror=alert(1)>'; }],
+    ['script connection', (v: LearningVisual) => { v.connections = ['javascript:alert(1)']; }],
+    ['empty detail', (v: LearningVisual) => { v.steps[0].detail = '  '; }],
+    ['unknown graphic property', (v: LearningVisual) => { (v as unknown as Record<string, unknown>).onClick = 'alert(1)'; }],
+    ['unknown step property', (v: LearningVisual) => { (v.steps[0] as unknown as Record<string, unknown>).imageUrl = 'https://example.com'; }],
+    ['missing example', (v: LearningVisual) => { delete (v.steps[0] as unknown as Record<string, unknown>).example; }],
+  ])('rejects %s instead of silently dropping or repairing visual data', (_name, mutate) => {
+    const pack = validPack();
+    const visual = graphic();
+    mutate(visual);
+    pack.weeks[0].lessons[0].learningVisual = visual;
+    expect(() => validateContentPack(pack)).toThrow(/learningVisual/);
+  });
+
+  it('handles safe null-prototype visual objects and rejects polluted properties without invoking getters', () => {
+    const pack = validPack();
+    const visual = graphic();
+    Object.setPrototypeOf(visual, null);
+    Object.setPrototypeOf(visual.steps[0], null);
+    pack.weeks[0].lessons[0].learningVisual = visual;
+    expect(validateContentPack(pack).weeks[0].lessons[0].learningVisual).toEqual(graphic());
+    const getter = vi.fn(() => 'brain');
+    Object.defineProperty(visual.steps[0], 'icon', { get: getter, enumerable: true });
+    expect(() => validateContentPack(pack)).toThrow(/Unsichere/);
+    expect(getter).not.toHaveBeenCalled();
+    const poisoned = validPack();
+    poisoned.weeks[0].lessons[0].learningVisual = JSON.parse(JSON.stringify(graphic()).replace('"kind":"flow"', '"kind":"flow","__proto__":{"polluted":true}'));
+    expect(() => validateContentPack(poisoned)).toThrow(/Unsichere/);
+    expect(({} as Record<string, unknown>).polluted).toBeUndefined();
   });
 });
 

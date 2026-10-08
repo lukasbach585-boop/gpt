@@ -1,0 +1,11 @@
+.lesson-explanation{margin:22px 0 28px;border:1px solid var(--line);border-radius:13px;background:#fff;overflow:hidden}
+.lesson-explanation>summary{display:flex;align-items:center;gap:10px;min-height:52px;padding:15px 20px;cursor:pointer;font-size:13px;font-weight:600;color:var(--green);list-style:none}
+.lesson-explanation>summary::-webkit-details-marker{display:none}
+.lesson-explanation>summary>svg:last-child{margin-left:auto;transition:transform .2s}
+.lesson-explanation[open]>summary>svg:last-child{transform:rotate(90deg)}
+.lesson-explanation .lesson-prose{padding:0 20px 5px}
+.example-block>.lesson-graphic{margin:20px 0;padding:15px;border-color:#e8dfd0;background:#fffdf8}
+.reader-content>.lesson-graphic{margin:24px 0 28px}
+.reader-content .focus-plan{margin:20px 0}
+@media(max-width:640px){.lesson-explanation>summary{padding:13px 15px;font-size:12px}.lesson-explanation .lesson-prose{padding:0 15px 4px}.example-block>.lesson-graphic{padding:12px;margin-inline:-10px}.reader-content>.lesson-graphic{margin-top:20px}}
+@media(prefers-reduced-motion:reduce){.lesson-explanation>summary>svg:last-child{transition:none}}

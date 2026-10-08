@@ -6,7 +6,7 @@ Eine deutschsprachige, responsive Lernapp für KI-Management und AI Power User. 
 
 - 12 Kompetenzmodule mit 36 ausgearbeiteten Lektionen, Unternehmensbeispielen, privaten Anwendungen, Übungen und Erklärfragen.
 - 5 Minuten für eine kompakte Erklärung, 15 Minuten für eine vollständige Lektion, 45 Minuten für Verstehen, Praxis, Erklärung und Modultest.
-- Acht interaktive Diagrammtypen und animierte SVG-Illustrationen. Die Tokenzerlegung ist eine gekennzeichnete didaktische Simulation.
+- Alle 36 Lektionen haben ein eigenes visuelles Lernbeispiel: Abläufe, Vergleiche, Schichten, Dokumentbelege, Entscheidungsmatrizen, Kennzahlen, Kreisläufe und Zeitachsen. Die SVG-Grafiken lassen sich Schritt für Schritt erkunden und auf Wunsch abspielen; sie funktionieren auch offline. In „Erklären“ sind Beschriftungen und Beispiele zunächst verdeckt und lassen sich einzeln aufdecken. Die bestehenden acht Konzeptdiagramme bleiben für ältere Inhaltspakete verfügbar; die Tokenzerlegung ist eine gekennzeichnete didaktische Simulation.
 - 36 Karteikarten mit Active Recall und zeitversetzter Wiederholung. Modul 1 ist von Anfang an aktiv; weitere Karten erscheinen nach der ersten abgeschlossenen Lektion im jeweiligen Modul.
 - 60 Multiple-Choice-Fragen: Modultests mit sofortigem Feedback, Kompetenz- und Monatschecks mit Auswertung, gezielte Wiederholung früherer Fehler und eine ausgewogene Abschlussprüfung mit 36 Fragen aus allen zwölf Modulen und 45 Minuten Zeitlimit. Das interne Lernziel liegt bei 80 %. Es ist kein offizielles Zertifikat.
 - 48 Lernwochen in zwölf Monaten, vier Pufferwochen und 288 geplante Stunden. Der Jahresplan sieht gezielte Quellenauswahl und umfangreiche eigene Praxis vor. Die Kurzlektionen ersetzen nicht sämtliche externen Kurs- und Praxisstunden.
@@ -69,6 +69,8 @@ Die Lernzeit zählt sichtbare Lernbereiche und pausiert bei Hintergrundtabs oder
 Unter **Bibliothek → Inhalte aktuell halten** das komplette App-Inhaltspaket exportieren. Es enthält aufbereitete Lektionen, Aufgaben, Prüfungsfragen sowie den gesamten Quellenkatalog, Jahresplan, Vorlagen und Capstone. Nach fachlicher Überarbeitung Version und Prüfdatum erhöhen, importieren, Vorschau prüfen und übernehmen. Fortschritt bleibt über stabile IDs verknüpft.
 
 Die Original-JSON und XLSX bleiben als Ausgangsdateien abrufbar. Die Original-JSON hat ein anderes Schema als ein vollständiges App-Paket und wird nicht als solches akzeptiert. Updates werden manuell geprüft; die App recherchiert keine neuen Fach- oder Rechtsentwicklungen selbständig. Wenn ein Lerninhalt fachlich wesentlich geändert wird, eine neue Lesson-ID verwenden, damit ein früheres Häkchen keine neu erworbene Kompetenz suggeriert.
+
+Die individuellen Grafiken gehören zum App-Inhaltspaket (optional `learningVisual` je Lektion) und bleiben beim Export und Import erhalten. Das Paketformat bleibt Version 1; ältere Pakete ohne Grafikfelder werden weiterhin angenommen und zeigen die bisherigen Konzeptdiagramme. Schrittbeschriftungen, Beispiele und Beziehungen können im Inhaltspaket aktualisiert werden; die erlaubten Grafikformen und Symbole sind festgelegt. Die Illustration verändert keinen Lernabschluss oder Prüfungsstand.
 
 Ein neues Software-Build erzeugt außerdem eine neue Service-Worker-Version. Eine bereits geöffnete App bietet „App-Update laden“ an, wenn eine neue Version installiert wurde. Fortschritts- und Inhaltsimporte sind davon getrennt.
 

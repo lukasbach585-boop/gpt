@@ -8,7 +8,13 @@ export default defineConfig({
   server: { host: '0.0.0.0' },
   build: {
     rollupOptions: {
-      output: { manualChunks: id => id.includes('node_modules') ? 'vendor' : undefined },
+      output: {
+        manualChunks: id => {
+          if (id.includes('node_modules')) return 'vendor';
+          if (id.includes('/src/data/')) return 'curriculum';
+          return undefined;
+        },
+      },
     },
   },
 });

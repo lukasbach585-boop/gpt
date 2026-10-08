@@ -1,6 +1,8 @@
 import type { ContentPack, Phase } from '../types';
 import { earlyWeeks } from './weeks-early';
 import { lateWeeks } from './weeks-late';
+import { earlyLearningVisuals } from './visuals-early';
+import { lateLearningVisuals } from './visuals-late';
 import sourceLibrary from './source-library.json';
 
 export const phases: Phase[] = [
@@ -18,12 +20,17 @@ export const phases: Phase[] = [
   { id: 12, title: 'Ein überprüfbares Portfolio vorlegen', short: 'Dein Capstone', description: 'Business, Technik, Qualität und Verantwortung verbinden.', weeks: [12], color: 'lilac', icon: 'award' },
 ];
 
+const learningVisuals = { ...earlyLearningVisuals, ...lateLearningVisuals };
+
 export const baseContent: ContentPack = {
   schemaVersion: 1,
-  version: '2.0.0',
+  version: '2.1.0',
   reviewedAt: '2026-10-07',
   title: 'KI-Management · 12 Module, 48 Lernwochen',
-  weeks: [...earlyWeeks, ...lateWeeks],
+  weeks: [...earlyWeeks, ...lateWeeks].map(week => ({
+    ...week,
+    lessons: week.lessons.map(lesson => ({ ...lesson, learningVisual: learningVisuals[lesson.id] })),
+  })),
   library: sourceLibrary,
 };
 

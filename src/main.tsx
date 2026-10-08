@@ -7,6 +7,8 @@ import '@fontsource/dm-sans/latin-600.css';
 import '@fontsource/dm-sans/latin-700.css';
 import './styles.css';
 import './visuals.css';
+import './lesson-reader-graphics.css';
+import './lesson-graphics.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode><App /></React.StrictMode>,

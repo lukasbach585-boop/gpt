@@ -1,4 +1,4 @@
-import type { ContentPack, Flashcard, Lesson, Progress, ReviewState, Week } from '../types';
+import type { ContentPack, Flashcard, LearningVisual, Lesson, Progress, ReviewState, Week } from '../types';
 import { validateSourceLibrary } from './source-library';
 
 export const PROGRESS_STORAGE_KEY = 'ki-kompass-progress-annual-v1';
@@ -6,6 +6,8 @@ const DAY_MINUTES = 1440;
 const FORBIDDEN_KEYS = new Set(['__proto__', 'prototype', 'constructor']);
 const ID = /^[a-zA-Z0-9][a-zA-Z0-9_.:-]{0,99}$/;
 const VISUALS = ['hierarchy', 'tokens', 'workflow', 'rag', 'compare', 'shield', 'loop', 'matrix'];
+const LEARNING_VISUAL_KINDS = ['flow', 'comparison', 'layers', 'document', 'matrix', 'scorecard', 'cycle', 'timeline'];
+const LEARNING_VISUAL_ICONS = ['brain', 'document', 'database', 'search', 'spark', 'shield', 'check', 'person', 'chart', 'target', 'settings', 'clock'];
 
 function fail(path: string, detail: string): never {
   throw new Error(`${path}: ${detail}`);
@@ -291,8 +293,33 @@ function texts(value: unknown, path: string, min = 1, max = 30): string[] {
   return array(value, path, min, max, contentText);
 }
 
+function learningVisual(raw: unknown, path: string): LearningVisual {
+  const hasConnections = !!raw && typeof raw === 'object' && Object.hasOwn(raw, 'connections');
+  const value = object(raw, path, ['kind', 'title', 'caption', 'steps', 'takeaway', ...(hasConnections ? ['connections'] : [])]);
+  if (!LEARNING_VISUAL_KINDS.includes(value.kind as string)) fail(`${path}.kind`, 'Unbekannter Grafiktyp.');
+  const steps = array(value.steps, `${path}.steps`, 3, 6, (rawStep, stepPath) => {
+    const step = object(rawStep, stepPath, ['title', 'detail', 'example', 'icon']);
+    if (!LEARNING_VISUAL_ICONS.includes(step.icon as string)) fail(`${stepPath}.icon`, 'Unbekanntes Grafiksymbol.');
+    return {
+      title: contentText(step.title, `${stepPath}.title`, 160),
+      detail: contentText(step.detail, `${stepPath}.detail`, 600),
+      example: contentText(step.example, `${stepPath}.example`, 600),
+      icon: step.icon as LearningVisual['steps'][number]['icon'],
+    };
+  });
+  return {
+    kind: value.kind as LearningVisual['kind'],
+    title: contentText(value.title, `${path}.title`, 160),
+    caption: contentText(value.caption, `${path}.caption`, 500),
+    steps,
+    takeaway: contentText(value.takeaway, `${path}.takeaway`, 500),
+    ...(hasConnections ? { connections: array(value.connections, `${path}.connections`, 0, 6, (connection, connectionPath) => contentText(connection, connectionPath, 100)) } : {}),
+  };
+}
+
 function lesson(raw: unknown, path: string): Lesson {
-  const value = object(raw, path, ['id', 'title', 'minutes', 'summary', 'concept', 'keyPoints', 'example', 'privateUse', 'exercise', 'reflection', 'visual']);
+  const hasLearningVisual = !!raw && typeof raw === 'object' && Object.hasOwn(raw, 'learningVisual');
+  const value = object(raw, path, ['id', 'title', 'minutes', 'summary', 'concept', 'keyPoints', 'example', 'privateUse', 'exercise', 'reflection', 'visual', ...(hasLearningVisual ? ['learningVisual'] : [])]);
   const example = object(value.example, `${path}.example`, ['title', 'text']);
   if (!VISUALS.includes(value.visual as string)) fail(`${path}.visual`, 'Unbekannte Visualisierung.');
   return {
@@ -300,6 +327,7 @@ function lesson(raw: unknown, path: string): Lesson {
     summary: contentText(value.summary, `${path}.summary`), concept: texts(value.concept, `${path}.concept`), keyPoints: texts(value.keyPoints, `${path}.keyPoints`),
     example: { title: contentText(example.title, `${path}.example.title`, 200), text: contentText(example.text, `${path}.example.text`) },
     privateUse: contentText(value.privateUse, `${path}.privateUse`), exercise: contentText(value.exercise, `${path}.exercise`), reflection: contentText(value.reflection, `${path}.reflection`), visual: value.visual as Lesson['visual'],
+    ...(hasLearningVisual ? { learningVisual: learningVisual(value.learningVisual, `${path}.learningVisual`) } : {}),
   };
 }
 

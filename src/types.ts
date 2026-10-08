@@ -5,6 +5,19 @@ export type Question = {
   correct: number;
   explanation: string;
 };
+export type LearningVisual = {
+  kind: 'flow' | 'comparison' | 'layers' | 'document' | 'matrix' | 'scorecard' | 'cycle' | 'timeline';
+  title: string;
+  caption: string;
+  steps: {
+    title: string;
+    detail: string;
+    example: string;
+    icon: 'brain' | 'document' | 'database' | 'search' | 'spark' | 'shield' | 'check' | 'person' | 'chart' | 'target' | 'settings' | 'clock';
+  }[];
+  connections?: string[];
+  takeaway: string;
+};
 export type Lesson = {
   id: string;
   title: string;
@@ -17,6 +30,7 @@ export type Lesson = {
   exercise: string;
   reflection: string;
   visual: 'hierarchy' | 'tokens' | 'workflow' | 'rag' | 'compare' | 'shield' | 'loop' | 'matrix';
+  learningVisual?: LearningVisual;
 };
 export type Flashcard = { id: string; front: string; back: string; week: number };
 export type Week = {
