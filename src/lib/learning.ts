@@ -1,4 +1,4 @@
-import type { ContentPack, Flashcard, LearningVisual, Lesson, Progress, ReviewState, Week } from '../types';
+import type { ContentPack, ExplanationSection, Flashcard, LearningVisual, Lesson, Progress, ReviewState, Week } from '../types';
 import { validateSourceLibrary } from './source-library';
 
 export const PROGRESS_STORAGE_KEY = 'ki-kompass-progress-annual-v1';
@@ -8,6 +8,7 @@ const ID = /^[a-zA-Z0-9][a-zA-Z0-9_.:-]{0,99}$/;
 const VISUALS = ['hierarchy', 'tokens', 'workflow', 'rag', 'compare', 'shield', 'loop', 'matrix'];
 const LEARNING_VISUAL_KINDS = ['flow', 'comparison', 'layers', 'document', 'matrix', 'scorecard', 'cycle', 'timeline'];
 const LEARNING_VISUAL_ICONS = ['brain', 'document', 'database', 'search', 'spark', 'shield', 'check', 'person', 'chart', 'target', 'settings', 'clock'];
+const EXPLANATION_VISUAL_KINDS = ['flow', 'comparison', 'equation', 'hierarchy'];
 
 function fail(path: string, detail: string): never {
   throw new Error(`${path}: ${detail}`);
@@ -317,9 +318,35 @@ function learningVisual(raw: unknown, path: string): LearningVisual {
   };
 }
 
+function explanationSection(raw: unknown, path: string): ExplanationSection {
+  const hasBullets = !!raw && typeof raw === 'object' && Object.hasOwn(raw, 'bullets');
+  const hasVisual = !!raw && typeof raw === 'object' && Object.hasOwn(raw, 'visual');
+  const value = object(raw, path, ['title', 'paragraphs', 'emphasis', ...(hasBullets ? ['bullets'] : []), ...(hasVisual ? ['visual'] : [])]);
+  let visual: ExplanationSection['visual'];
+  if (hasVisual) {
+    const source = object(value.visual, `${path}.visual`, ['kind', 'items']);
+    if (!EXPLANATION_VISUAL_KINDS.includes(source.kind as string)) fail(`${path}.visual.kind`, 'Unbekannte Darstellung im Erklärungstext.');
+    visual = {
+      kind: source.kind as NonNullable<ExplanationSection['visual']>['kind'],
+      items: array(source.items, `${path}.visual.items`, 2, 5, (rawItem, itemPath) => {
+        const item = object(rawItem, itemPath, ['label', 'text']);
+        return { label: contentText(item.label, `${itemPath}.label`, 80), text: contentText(item.text, `${itemPath}.text`, 220) };
+      }),
+    };
+  }
+  return {
+    title: contentText(value.title, `${path}.title`, 160),
+    paragraphs: array(value.paragraphs, `${path}.paragraphs`, 1, 3, (paragraph, paragraphPath) => contentText(paragraph, paragraphPath, 700)),
+    emphasis: array(value.emphasis, `${path}.emphasis`, 1, 12, (term, termPath) => contentText(term, termPath, 100)),
+    ...(hasBullets ? { bullets: array(value.bullets, `${path}.bullets`, 0, 6, (bullet, bulletPath) => contentText(bullet, bulletPath, 400)) } : {}),
+    ...(visual ? { visual } : {}),
+  };
+}
+
 function lesson(raw: unknown, path: string): Lesson {
   const hasLearningVisual = !!raw && typeof raw === 'object' && Object.hasOwn(raw, 'learningVisual');
-  const value = object(raw, path, ['id', 'title', 'minutes', 'summary', 'concept', 'keyPoints', 'example', 'privateUse', 'exercise', 'reflection', 'visual', ...(hasLearningVisual ? ['learningVisual'] : [])]);
+  const hasExplanationSections = !!raw && typeof raw === 'object' && Object.hasOwn(raw, 'explanationSections');
+  const value = object(raw, path, ['id', 'title', 'minutes', 'summary', 'concept', 'keyPoints', 'example', 'privateUse', 'exercise', 'reflection', 'visual', ...(hasLearningVisual ? ['learningVisual'] : []), ...(hasExplanationSections ? ['explanationSections'] : [])]);
   const example = object(value.example, `${path}.example`, ['title', 'text']);
   if (!VISUALS.includes(value.visual as string)) fail(`${path}.visual`, 'Unbekannte Visualisierung.');
   return {
@@ -328,6 +355,7 @@ function lesson(raw: unknown, path: string): Lesson {
     example: { title: contentText(example.title, `${path}.example.title`, 200), text: contentText(example.text, `${path}.example.text`) },
     privateUse: contentText(value.privateUse, `${path}.privateUse`), exercise: contentText(value.exercise, `${path}.exercise`), reflection: contentText(value.reflection, `${path}.reflection`), visual: value.visual as Lesson['visual'],
     ...(hasLearningVisual ? { learningVisual: learningVisual(value.learningVisual, `${path}.learningVisual`) } : {}),
+    ...(hasExplanationSections ? { explanationSections: array(value.explanationSections, `${path}.explanationSections`, 2, 5, explanationSection) } : {}),
   };
 }
 

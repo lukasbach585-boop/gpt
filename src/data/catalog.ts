@@ -3,6 +3,8 @@ import { earlyWeeks } from './weeks-early';
 import { lateWeeks } from './weeks-late';
 import { earlyLearningVisuals } from './visuals-early';
 import { lateLearningVisuals } from './visuals-late';
+import { earlyExplanationSections } from './explanations-early';
+import { lateExplanationSections } from './explanations-late';
 import sourceLibrary from './source-library.json';
 
 export const phases: Phase[] = [
@@ -21,15 +23,16 @@ export const phases: Phase[] = [
 ];
 
 const learningVisuals = { ...earlyLearningVisuals, ...lateLearningVisuals };
+const explanationSections = { ...earlyExplanationSections, ...lateExplanationSections };
 
 export const baseContent: ContentPack = {
   schemaVersion: 1,
-  version: '2.1.0',
+  version: '2.2.0',
   reviewedAt: '2026-10-07',
   title: 'KI-Management · 12 Module, 48 Lernwochen',
   weeks: [...earlyWeeks, ...lateWeeks].map(week => ({
     ...week,
-    lessons: week.lessons.map(lesson => ({ ...lesson, learningVisual: learningVisuals[lesson.id] })),
+    lessons: week.lessons.map(lesson => ({ ...lesson, learningVisual: learningVisuals[lesson.id], explanationSections: explanationSections[lesson.id] })),
   })),
   library: sourceLibrary,
 };

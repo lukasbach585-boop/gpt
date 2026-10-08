@@ -18,6 +18,16 @@ export type LearningVisual = {
   connections?: string[];
   takeaway: string;
 };
+export type ExplanationSection = {
+  title: string;
+  paragraphs: string[];
+  emphasis: string[];
+  bullets?: string[];
+  visual?: {
+    kind: 'flow' | 'comparison' | 'equation' | 'hierarchy';
+    items: { label: string; text: string }[];
+  };
+};
 export type Lesson = {
   id: string;
   title: string;
@@ -31,6 +41,7 @@ export type Lesson = {
   reflection: string;
   visual: 'hierarchy' | 'tokens' | 'workflow' | 'rag' | 'compare' | 'shield' | 'loop' | 'matrix';
   learningVisual?: LearningVisual;
+  explanationSections?: ExplanationSection[];
 };
 export type Flashcard = { id: string; front: string; back: string; week: number };
 export type Week = {

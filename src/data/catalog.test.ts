@@ -4,13 +4,15 @@ import { baseContent, phases } from './catalog';
 import sourceLibrary from './source-library.json';
 import { earlyLearningVisuals } from './visuals-early';
 import { lateLearningVisuals } from './visuals-late';
+import { earlyExplanationSections } from './explanations-early';
+import { lateExplanationSections } from './explanations-late';
 
 describe('Ausgelieferter Lernkatalog', () => {
   it('validates the complete current catalog including its original source library', () => {
     const pack = validateContentPack(baseContent);
     expect(pack.schemaVersion).toBe(1);
     // The file schema and the expanded learning-content release have independent versions.
-    expect(pack.version).toBe('2.1.0');
+    expect(pack.version).toBe('2.2.0');
     expect(pack.library?.schema_version).toBe('1.0');
     expect(pack.weeks).toHaveLength(12);
     expect(pack.weeks.flatMap(week => week.lessons)).toHaveLength(36);
@@ -44,6 +46,23 @@ describe('Ausgelieferter Lernkatalog', () => {
       expect(lesson.learningVisual, lesson.id).toBeDefined();
       expect(lesson.learningVisual?.steps.length, lesson.id).toBeGreaterThanOrEqual(3);
       expect(lesson.learningVisual?.steps.every(step => step.example.trim().length > 0), lesson.id).toBe(true);
+    }
+  });
+
+  it('gives every lesson readable sections, relevant emphasis and an inline explanation diagram', () => {
+    const lessons = baseContent.weeks.flatMap(week => week.lessons);
+    const explanations = { ...earlyExplanationSections, ...lateExplanationSections };
+    expect(Object.keys(explanations).sort()).toEqual(lessons.map(lesson => lesson.id).sort());
+    for (const lesson of lessons) {
+      const sections = lesson.explanationSections!;
+      expect(sections.length, lesson.id).toBeGreaterThanOrEqual(2);
+      expect(sections.length, lesson.id).toBeLessThanOrEqual(5);
+      expect(sections.some(section => section.visual), lesson.id).toBe(true);
+      for (const section of sections) {
+        const text = [...section.paragraphs, ...(section.bullets || [])].join(' ').toLocaleLowerCase('de-DE');
+        for (const phrase of section.emphasis) expect(text, `${lesson.id}: ${phrase}`).toContain(phrase.toLocaleLowerCase('de-DE'));
+        for (const paragraph of section.paragraphs) expect(paragraph.length, `${lesson.id}: ${section.title}`).toBeLessThanOrEqual(700);
+      }
     }
   });
 

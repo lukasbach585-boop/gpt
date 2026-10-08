@@ -1,0 +1,105 @@
+{
+  "repository": "microsoft/generative-ai-for-beginners",
+  "commit": "d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8",
+  "retrieved_on": "2026-10-08",
+  "license": "MIT",
+  "license_source": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/LICENSE",
+  "assets": [
+    {
+      "file": "tokens.png",
+      "source_path": "01-introduction-to-genai/images/tokenizer-example.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/01-introduction-to-genai/images/tokenizer-example.png",
+      "sha256": "a114257a743a6379e8642c2b8ee43af1b5d300c953261abf33dba25bde7a4ad1",
+      "bytes": 27366,
+      "modified": false
+    },
+    {
+      "file": "prompt-map.png",
+      "source_path": "04-prompt-engineering-fundamentals/images/04-prompt-engineering-sketchnote.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/04-prompt-engineering-fundamentals/images/04-prompt-engineering-sketchnote.png",
+      "sha256": "bcb10c04908ba5e46dfc903062c43a34d740cd768e6bd463aae6475f3a01f8fb",
+      "bytes": 3052381,
+      "modified": false
+    },
+    {
+      "file": "function-calling.png",
+      "source_path": "11-integrating-with-function-calling/images/Function-Flow.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/11-integrating-with-function-calling/images/Function-Flow.png",
+      "sha256": "c3ed8b488fcba6759de63943c66e31778edb869880c64f9c89e8d12699e25c62",
+      "bytes": 117547,
+      "modified": false
+    },
+    {
+      "file": "rag.png",
+      "source_path": "15-rag-and-vector-databases/images/how-rag-works.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/15-rag-and-vector-databases/images/how-rag-works.png",
+      "sha256": "0ef0f3f6ebd7bd6de40fdab663596cef908e6748a244a6c9f0cf442dbf1bbfd7",
+      "bytes": 1529875,
+      "modified": false
+    },
+    {
+      "file": "risk-cycle.png",
+      "source_path": "03-using-generative-ai-responsibly/images/mitigate-cycle.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/03-using-generative-ai-responsibly/images/mitigate-cycle.png",
+      "sha256": "ab67e30e881ffb907efce7c50cebef202ffa40b1fcc6ec6f0e7b7aae6d71c2c3",
+      "bytes": 321360,
+      "modified": false
+    },
+    {
+      "file": "defense-layers.png",
+      "source_path": "03-using-generative-ai-responsibly/images/mitigation-layers.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/03-using-generative-ai-responsibly/images/mitigation-layers.png",
+      "sha256": "7cc11eef731f7748b2e6230a246714204d8284bc919c3ab049b4617b05937e6e",
+      "bytes": 407475,
+      "modified": false
+    },
+    {
+      "file": "red-team.png",
+      "source_path": "13-securing-ai-applications/images/13-AI-red-team.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/13-securing-ai-applications/images/13-AI-red-team.png",
+      "sha256": "3950983080a8145b61f21c42885ccb581c2daa633645787c80152cfc92737a2f",
+      "bytes": 173763,
+      "modified": false
+    },
+    {
+      "file": "evaluation-loop.png",
+      "source_path": "14-the-generative-ai-application-lifecycle/images/03-llm-stage-flows.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/14-the-generative-ai-application-lifecycle/images/03-llm-stage-flows.png",
+      "sha256": "168d8c4a8b536d9aa429311f8836009cd04347a7a0371e5f402c2fbe544c401f",
+      "bytes": 484282,
+      "modified": false
+    },
+    {
+      "file": "ai-lifecycle.png",
+      "source_path": "14-the-generative-ai-application-lifecycle/images/02-llmops.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/14-the-generative-ai-application-lifecycle/images/02-llmops.png",
+      "sha256": "70500e1a9f123a9e229bc489b3a59db24027857c2f332aace07c32bd427afd64",
+      "bytes": 519335,
+      "modified": false
+    },
+    {
+      "file": "feedback.png",
+      "source_path": "12-designing-ux-for-ai-applications/images/feedback-loops.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/12-designing-ux-for-ai-applications/images/feedback-loops.png",
+      "sha256": "7e970f119b5899f6a1591f3b1e6a6d0e7fad7db0d570d0c0626601a13f1e05df",
+      "bytes": 145417,
+      "modified": false
+    },
+    {
+      "file": "ux.png",
+      "source_path": "12-designing-ux-for-ai-applications/images/uxinai.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/12-designing-ux-for-ai-applications/images/uxinai.png",
+      "sha256": "f31a77e5398ebc5c67367db79075c78679dc3625db74bb62f18d8c1a8b90231e",
+      "bytes": 104026,
+      "modified": false
+    },
+    {
+      "file": "agent.png",
+      "source_path": "17-ai-agents/images/what-agent.png",
+      "source_url": "https://github.com/microsoft/generative-ai-for-beginners/blob/d8ec07e31c4b32bd283d565c1abd9b58bb5cf2e8/17-ai-agents/images/what-agent.png",
+      "sha256": "cf8bde5f45f5af41e0c0502d4bde9e7e10c8df3d8a48ad86e0be95b5c3618fb0",
+      "bytes": 206677,
+      "modified": false
+    }
+  ]
+}

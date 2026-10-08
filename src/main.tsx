@@ -9,6 +9,8 @@ import './styles.css';
 import './visuals.css';
 import './lesson-reader-graphics.css';
 import './lesson-graphics.css';
+import './lesson-explanation.css';
+import './learning-media.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode><App /></React.StrictMode>,

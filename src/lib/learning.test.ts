@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import type { ContentPack, Flashcard, LearningVisual } from '../types';
+import type { ContentPack, ExplanationSection, Flashcard, LearningVisual } from '../types';
 import sourceLibrary from '../data/source-library.json';
 import { validateSourceLibrary } from './source-library';
 import {
@@ -59,6 +59,19 @@ function graphic(): LearningVisual {
     connections: ['gültiger Stand', 'Originalbeleg'],
     takeaway: 'Ein plausibles Ergebnis benötigt überprüfbare Quellen und passende Kontrollen.',
   };
+}
+
+function explanations(): ExplanationSection[] {
+  return [
+    {
+      title: 'Was Precision aussagt',
+      paragraphs: ['Precision misst die Richtigkeit der Meldungen. Sie zeigt, welcher Anteil tatsächlich zutrifft.', 'Eine hohe Precision belegt noch nicht, dass alle vorhandenen Abweichungen gefunden wurden.'],
+      emphasis: ['Precision', 'Meldungen'],
+      bullets: ['Alle Meldungen fachlich gegen das Original prüfen.', 'Übersehene Abweichungen mit Recall getrennt erfassen.'],
+      visual: { kind: 'equation', items: [{ label: 'Zutreffende Meldungen', text: '3 True Positives' }, { label: 'Alle Meldungen', text: '3 zutreffende + 2 falsche = 5' }, { label: 'Precision', text: '3 ÷ 5 = 60 %' }] },
+    },
+    { title: 'Auf den Arbeitsalltag übertragen', paragraphs: ['Prüfe einen Angebotsvergleich zuerst auf echte und falsche Meldungen und danach auf übersehene Abweichungen.'], emphasis: ['Angebotsvergleich'] },
+  ];
 }
 
 function storageMock() {
@@ -457,6 +470,95 @@ describe('Optionale Lerngrafiken', () => {
     const poisoned = validPack();
     poisoned.weeks[0].lessons[0].learningVisual = JSON.parse(JSON.stringify(graphic()).replace('"kind":"flow"', '"kind":"flow","__proto__":{"polluted":true}'));
     expect(() => validateContentPack(poisoned)).toThrow(/Unsichere/);
+    expect(({} as Record<string, unknown>).polluted).toBeUndefined();
+  });
+});
+
+describe('Strukturierte Erklärungen', () => {
+  it('preserves headings, paragraphs, emphasis, lists and inline diagrams through a complete update roundtrip', () => {
+    const pack = fullPack();
+    pack.weeks[0].lessons[0].learningVisual = graphic();
+    pack.weeks[0].lessons[0].explanationSections = explanations();
+    const imported = validateContentPack(JSON.parse(JSON.stringify(pack)));
+    expect(imported).toEqual(pack);
+    const sections = imported.weeks[0].lessons[0].explanationSections!;
+    expect(sections[0]).not.toBe(pack.weeks[0].lessons[0].explanationSections![0]);
+    expect(sections[0].paragraphs).not.toBe(pack.weeks[0].lessons[0].explanationSections![0].paragraphs);
+    expect(sections[0].visual?.items[0]).not.toBe(pack.weeks[0].lessons[0].explanationSections![0].visual?.items[0]);
+    sections[0].visual!.items[0].text = 'Neue Messung';
+    expect(pack.weeks[0].lessons[0].explanationSections![0].visual!.items[0].text).toBe('3 True Positives');
+    expect(sections[1]).not.toHaveProperty('bullets');
+    expect(sections[1]).not.toHaveProperty('visual');
+    expect(validateContentPack(validPack()).weeks[0].lessons[0]).not.toHaveProperty('explanationSections');
+  });
+
+  it.each<NonNullable<ExplanationSection['visual']>['kind']>(['flow', 'comparison', 'equation', 'hierarchy'])('accepts an inline %s without changing its labels or text', kind => {
+    const pack = validPack();
+    const sections = explanations();
+    sections[0].visual!.kind = kind;
+    pack.weeks[0].lessons[0].explanationSections = sections;
+    expect(validateContentPack(JSON.parse(JSON.stringify(pack))).weeks[0].lessons[0].explanationSections).toEqual(sections);
+  });
+
+  it('supports bounded detailed explanations and an explicit empty optional list', () => {
+    const pack = validPack();
+    const section: ExplanationSection = {
+      title: 't'.repeat(160), paragraphs: Array(3).fill('p'.repeat(700)), emphasis: Array(12).fill('e'.repeat(100)),
+      bullets: Array(6).fill('b'.repeat(400)),
+      visual: { kind: 'comparison', items: Array.from({ length: 5 }, () => ({ label: 'l'.repeat(80), text: 't'.repeat(220) })) },
+    };
+    const sections = Array.from({ length: 5 }, () => structuredClone(section));
+    sections[4].bullets = [];
+    pack.weeks[0].lessons[0].explanationSections = sections;
+    expect(validateContentPack(pack).weeks[0].lessons[0].explanationSections).toEqual(sections);
+  });
+
+  it.each([
+    ['too few sections', (s: ExplanationSection[]) => { s.pop(); }],
+    ['too many sections', (s: ExplanationSection[]) => { s.push(...Array.from({ length: 4 }, () => structuredClone(s[1]))); }],
+    ['oversized heading', (s: ExplanationSection[]) => { s[0].title = 'a'.repeat(161); }],
+    ['missing paragraphs', (s: ExplanationSection[]) => { s[0].paragraphs = []; }],
+    ['too many paragraphs', (s: ExplanationSection[]) => { s[0].paragraphs = Array(4).fill('Text'); }],
+    ['oversized paragraph', (s: ExplanationSection[]) => { s[0].paragraphs[0] = 'a'.repeat(701); }],
+    ['missing core terms', (s: ExplanationSection[]) => { s[0].emphasis = []; }],
+    ['too many core terms', (s: ExplanationSection[]) => { s[0].emphasis = Array(13).fill('Begriff'); }],
+    ['oversized core term', (s: ExplanationSection[]) => { s[0].emphasis[0] = 'a'.repeat(101); }],
+    ['too many bullets', (s: ExplanationSection[]) => { s[0].bullets = Array(7).fill('Punkt'); }],
+    ['oversized bullet', (s: ExplanationSection[]) => { s[0].bullets = ['a'.repeat(401)]; }],
+    ['invalid diagram kind', (s: ExplanationSection[]) => { (s[0].visual as unknown as Record<string, unknown>).kind = 'script'; }],
+    ['incomplete diagram', (s: ExplanationSection[]) => { s[0].visual!.items = [s[0].visual!.items[0]]; }],
+    ['excessive diagram', (s: ExplanationSection[]) => { s[0].visual!.items = Array.from({ length: 6 }, () => ({ label: 'Begriff', text: 'Erklärung' })); }],
+    ['oversized diagram label', (s: ExplanationSection[]) => { s[0].visual!.items[0].label = 'a'.repeat(81); }],
+    ['oversized diagram text', (s: ExplanationSection[]) => { s[0].visual!.items[0].text = 'a'.repeat(221); }],
+    ['HTML paragraph', (s: ExplanationSection[]) => { s[0].paragraphs[0] = '<script>alert(1)</script>'; }],
+    ['executable emphasis', (s: ExplanationSection[]) => { s[0].emphasis[0] = 'javascript:alert(1)'; }],
+    ['HTML bullet', (s: ExplanationSection[]) => { s[0].bullets = ['<img src=x onerror=alert(1)>']; }],
+    ['executable diagram text', (s: ExplanationSection[]) => { s[0].visual!.items[0].text = 'data:text/html;base64,PHNjcmlwdD4='; }],
+    ['blank diagram label', (s: ExplanationSection[]) => { s[0].visual!.items[0].label = '  '; }],
+    ['unknown section field', (s: ExplanationSection[]) => { (s[0] as unknown as Record<string, unknown>).html = 'Injected'; }],
+    ['unknown item field', (s: ExplanationSection[]) => { (s[0].visual!.items[0] as unknown as Record<string, unknown>).url = 'https://example.com'; }],
+  ])('rejects %s without silently repairing imported explanations', (_name, mutate) => {
+    const pack = validPack();
+    const sections = explanations();
+    mutate(sections);
+    pack.weeks[0].lessons[0].explanationSections = sections;
+    expect(() => validateContentPack(pack)).toThrow(/explanationSections/);
+  });
+
+  it('never executes nested getters and rejects pollution inside an inline diagram', () => {
+    const pack = validPack();
+    const sections = explanations();
+    Object.setPrototypeOf(sections[0], null);
+    Object.setPrototypeOf(sections[0].visual!.items[0], null);
+    pack.weeks[0].lessons[0].explanationSections = sections;
+    expect(validateContentPack(pack).weeks[0].lessons[0].explanationSections).toEqual(explanations());
+    const getter = vi.fn(() => '<script>bad</script>');
+    Object.defineProperty(sections[0].visual!.items[0], 'text', { get: getter, enumerable: true });
+    expect(() => validateContentPack(pack)).toThrow(/Unsichere/);
+    expect(getter).not.toHaveBeenCalled();
+    pack.weeks[0].lessons[0].explanationSections = explanations();
+    (pack.weeks[0].lessons[0].explanationSections![0].visual as unknown as Record<string, unknown>).unsafe = JSON.parse('{"__proto__":{"polluted":true}}');
+    expect(() => validateContentPack(pack)).toThrow(/Unsichere/);
     expect(({} as Record<string, unknown>).polluted).toBeUndefined();
   });
 });

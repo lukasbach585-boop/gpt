@@ -4,7 +4,8 @@ import { appBasePath } from './app-path.mjs';
 
 const base = appBasePath(process.env.APP_BASE_PATH || '/');
 const assets = (await readdir('dist/assets')).sort().map(name => `assets/${name}`);
-const paths = ['index.html', 'icon.svg', 'icon-192.png', 'icon-512.png', 'manifest.webmanifest', 'lernplan-original.xlsx', 'lernbibliothek-original.json', 'licenses/dm-sans.txt', 'licenses/react.txt', 'licenses/lucide-react.txt', ...assets];
+const media = (await readdir('dist/media')).sort().map(name => `media/${name}`);
+const paths = ['index.html', 'icon.svg', 'icon-192.png', 'icon-512.png', 'manifest.webmanifest', 'lernplan-original.xlsx', 'lernbibliothek-original.json', 'licenses/dm-sans.txt', 'licenses/react.txt', 'licenses/lucide-react.txt', ...assets, ...media];
 // Include all public content, not only the HTML and hashed bundle names.
 // A changed source download or manifest must also offer an offline update.
 const hash = createHash('sha256').update(base);
